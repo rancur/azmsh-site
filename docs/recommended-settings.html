@@ -50,6 +50,8 @@
       
     
     
+      <link rel="stylesheet" href="../assets/css/extra.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1205,8 +1207,24 @@ meshtastic<span class="w"> </span>--get<span class="w"> </span>neighbor_info
 <p>Once you have the broker details:</p>
 <ol>
 <li><strong>LoRa Settings</strong>: Enable <strong>"OK to MQTT"</strong> -- this allows your node's data to be uplinked.</li>
-<li><strong>MQTT Module</strong>: Enter the broker settings provided in Discord.</li>
-<li><strong>Channel Settings</strong> (for each channel you want to uplink):<ul>
+<li>
+<p><strong>MQTT Module</strong>: Enter the broker settings provided in Discord.</p>
+<p></p><div class="azmsh-locked">
+  <div class="azmsh-settings">
+    <div class="azmsh-row"><span class="azmsh-label">Server:</span> <span class="azmsh-value">broker.example.net:1883</span></div>
+    <div class="azmsh-row"><span class="azmsh-label">Username:</span> <span class="azmsh-value">azmesh_uplink</span></div>
+    <div class="azmsh-row"><span class="azmsh-label">Password:</span> <span class="azmsh-value">k7Qx29fNvB4w</span></div>
+    <div class="azmsh-row"><span class="azmsh-label">Topic:</span> <span class="azmsh-value">msh/XX/REGION</span></div>
+  </div>
+  <div class="azmsh-overlay">
+    <span class="azmsh-overlay-text">🔒 Broker settings are shared in Discord</span>
+    <a class="md-button md-button--primary" href="https://discord.gg/HrKtyuFEQk">Join The Discord</a>
+  </div>
+</div><p></p>
+</li>
+<li>
+<p><strong>Channel Settings</strong> (for each channel you want to uplink):</p>
+<ul>
 <li><strong>Uplink</strong>: <strong>ON</strong> -- sends your node's data to the MQTT server.</li>
 <li><strong>Downlink</strong>: <strong>OFF</strong> -- prevents MQTT messages from being injected back into the radio mesh.</li>
 </ul>
