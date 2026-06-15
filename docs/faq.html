@@ -3,11 +3,17 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Quick fixes for the most common snags — 403 " forbidden"="" on="" the="" map,="" claiming="" your="" node,="" flashing="" bricking,="" and="" dm="" "no="" channel"="" impersonation="" warnings."="">
       
       
-        <link rel="canonical" href="https://rancur.github.io/azmsh-site/docs/connect.html">
+      
+        <link rel="canonical" href="https://rancur.github.io/azmsh-site/docs/faq.html">
       
       
+        <link rel="prev" href="host-a-node.html">
+      
+      
+        <link rel="next" href="flashing-gotchas.html">
       
       
         
@@ -18,7 +24,7 @@
     
     
       
-        <title>How to Connect - Arizona Meshtastic Community</title>
+        <title>FAQ &amp; Troubleshooting - Arizona Meshtastic Community</title>
       
     
     
@@ -83,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#join-the-community" class="md-skip">
+        <a href="#faq-troubleshooting" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to Connect
+              FAQ &amp; Troubleshooting
             
           </span>
         </div>
@@ -399,8 +405,10 @@
   
   
   
+    
   
-    <li class="md-tabs__item">
+  
+    <li class="md-tabs__item md-tabs__item--active">
       <a href="faq.html" class="md-tabs__link">
         
   
@@ -469,7 +477,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden="">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -749,10 +759,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="faq.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ &amp; Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="faq.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -768,6 +805,109 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#forbidden-403" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The map / view says "Forbidden" or 403
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#claim-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claiming a node fails / "This interaction failed"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flashing-gotchas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flashing problems: boot loops, blank screen, bricking
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dm-no-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DM says "No Channel" or shows an impersonation warning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DM says &quot;No Channel&quot; or shows an impersonation warning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-channel-when-sending-a-direct-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "No Channel" when sending a direct message
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#possible-impersonation-key-warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Possible impersonation" / key warning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#still-need-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Still need help?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -834,6 +974,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -843,6 +985,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -851,10 +995,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#join-the-community" class="md-nav__link">
+  <a href="#forbidden-403" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Join the Community
+        The map / view says "Forbidden" or 403
       
     </span>
   </a>
@@ -862,22 +1006,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-connect" class="md-nav__link">
+  <a href="#claim-node" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How to Connect
+        Claiming a node fails / "This interaction failed"
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="How to Connect">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flashing-gotchas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flashing problems: boot loops, blank screen, bricking
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dm-no-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DM says "No Channel" or shows an impersonation warning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DM says &quot;No Channel&quot; or shows an impersonation warning">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#get-a-meshtastic-radio" class="md-nav__link">
+  <a href="#no-channel-when-sending-a-direct-message" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Get a Meshtastic Radio
+        "No Channel" when sending a direct message
       
     </span>
   </a>
@@ -885,10 +1051,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#set-up-the-meshtastic-app" class="md-nav__link">
+  <a href="#possible-impersonation-key-warning" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Set Up the Meshtastic App
+        "Possible impersonation" / key warning
       
     </span>
   </a>
@@ -901,63 +1067,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
+  <a href="#still-need-help" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Best Practices
+        Still need help?
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Best Practices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mqtt" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MQTT
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#device-roles" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Device Roles
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hop-count" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Hop Count
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#broadcast-intervals" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Broadcast Intervals
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -975,87 +1091,71 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+
 
 
   
   
 
 
-  <h1>How to Connect</h1>
-
-<h3 id="join-the-community">Join the Community</h3>
-<p>Beyond the meshtastic network, we're most active in our <a href="https://discord.gg/HrKtyuFEQk">Discord server</a>.</p>
-<h3 id="how-to-connect">How to Connect</h3>
-<h4 id="get-a-meshtastic-radio">Get a Meshtastic Radio</h4>
+<h1 id="faq-troubleshooting">FAQ &amp; Troubleshooting</h1>
+<p>Quick answers to the snags new Arizona operators hit most. If your issue is "I can receive but not send," that has its own page: <a href="/docs/cant-transmit.html">Receive works, can't send</a>.</p>
+<hr>
+<h2 id="forbidden-403">The map / view says "Forbidden" or 403</h2>
+<p>Visiting <a href="https://view.azmsh.net">view.azmsh.net</a> and getting <strong>Forbidden / 403</strong>? You almost certainly opened it <strong>before</strong> opting in on Discord, and your browser cached the denial.</p>
+<p><strong>Fix, in order:</strong></p>
+<ol>
+<li>In Discord, go to the <strong>#getting-started</strong> channel and <strong>react with the <img alt="🥧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f967.svg" title=":pie:"> pie emoji</strong> to grant yourself the access role. Do this <em>first</em>.</li>
+<li>Now open the map in an <strong>incognito/private window</strong> — or clear your cookies and cache for <code>azmsh.net</code> so the browser drops the old "denied" state.</li>
+<li>Still blocked after a few minutes? Ask in Discord; an admin can confirm your role.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">React first, then visit</p>
+<p>The order matters. If you visit before reacting, the site remembers the rejection until you clear the cache or use a fresh incognito window.</p>
+</div>
+<p><a class="md-button md-button--primary" href="https://discord.gg/HrKtyuFEQk"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"></path></svg></span> Get the access role on Discord</a></p>
+<hr>
+<h2 id="claim-node">Claiming a node fails / "This interaction failed"</h2>
+<p>The claim button in Discord sometimes times out, especially if your node hasn't been seen yet.</p>
+<p><strong>Two requirements before a claim will work:</strong></p>
+<ol>
+<li><strong>Your node must have hit MQTT at least once</strong> — it has to actually appear in the <strong>node-discovery</strong> list before it can be claimed. Turn on MQTT (see <a href="/docs/start-here.html#step-5-optional-turn-on-mqtt-for-the-map">Start Here, Step 5</a>) and give it a few minutes.</li>
+<li>
+<p>Use the slash command instead of the button if the button keeps failing:</p>
+<div class="highlight"><pre><span></span><code>/node action:claim node_identifier:&lt;your-node-id&gt;
+</code></pre></div>
+<p>Your node identifier can be the <strong>decimal</strong> node number or the <strong><code>!hex</code></strong> form (e.g. <code>!a1b2c3d4</code>). You can find it in the Meshtastic app under your node's details, or in the node-discovery list.</p>
+</li>
+</ol>
+<p>If you still get <strong>"This interaction failed,"</strong> wait a minute and run the slash command again — it's usually a transient timeout, not a permanent error.</p>
+<hr>
+<h2 id="flashing-gotchas">Flashing problems: boot loops, blank screen, bricking</h2>
+<p>See the dedicated page for the full walkthrough: <a href="/docs/flashing-gotchas.html">Flashing &amp; Recovery</a>.</p>
+<p>The short version:</p>
 <ul>
-<li><strong>DIY</strong>: Build your own for around $35. Check the <a href="https://meshtastic.org/docs/hardware/">official supported hardware</a> page for guidance.</li>
-<li><strong>Ready-to-go</strong>: Consider the <a href="https://meshtastic.org/docs/hardware/devices/seeed-studio/sensecap/card-tracker/">Seeed Studio SenseCAP Card Tracker</a>, an excellent option for quickly starting with Meshtastic, needing minimal setup.</li>
-<li><strong>Pre-built</strong>: Battery-powered radios with 3D-printed cases are available for $50-$100 on Etsy or eBay.</li>
-<li><strong>Outdoor Setup</strong>: A pre-built solar-powered node ($100-$200) is ideal if you can mount it high outdoors, or you can construct your own. ( Constructing one yourself could cost as little as $50.)</li>
+<li><strong>UNCHECK "Install Meshtastic UI" when flashing</strong> (the #1 cause of boot loops / blank screens, especially on Heltec V3/V4).</li>
+<li><strong>Never transmit with the antenna disconnected</strong> — it can permanently damage the radio.</li>
+<li>A "dead" node usually isn't dead — put it in <strong>DFU / bootloader mode</strong> and re-flash.</li>
 </ul>
-<h4 id="set-up-the-meshtastic-app">Set Up the Meshtastic App</h4>
-<ul>
-<li>Download the official Meshtastic app for <a href="https://play.google.com/store/apps/details?id=com.geeksville.mesh">Android</a> or <a href="https://apps.apple.com/us/app/meshtastic/id1586432531">iOS</a>.</li>
-<li>Pair your radio to your smartphone via Bluetooth.</li>
-<li>Open the Meshtastic app and start chatting!</li>
-</ul>
-<h3 id="best-practices">Best Practices</h3>
-<p><strong>Recommended Settings</strong></p>
-<ul>
-<li>
-<p><strong>MQTT</strong>: Disabled or limited use; follow etiquette below</p>
-</li>
-<li>
-<p><strong>Role</strong>: Client (avoid Router) (Router &amp; Client is actually Client in recent versions.)</p>
-</li>
-<li>
-<p><strong>Hop Count</strong>: 3 hops recommended </p>
-</li>
-<li>
-<p><strong>Broadcast Interval</strong>:</p>
-<ul>
-<li>Node Info &amp; Device Metrics: Every 4-6 hours</li>
-<li>Position &amp; Sensor Metrics: Every 1 hour (for mobile nodes; enable Smart Positioning with a minimum interval of 1 minute, minimum distance 100m). For stationary nodes, consider extending this interval to every 12-24 hours.</li>
-</ul>
-</li>
-</ul>
-<h4 id="mqtt">MQTT</h4>
-<p>MQTT is a useful tool for supplementing mesh connectivity but shouldn't be relied upon as a primary mesh component. Our recommended MQTT etiquette is:</p>
-<ul>
-<li><strong>Downlinking</strong> from the primary Meshtastic MQTT server is strongly discouraged, especially in the primary channel.</li>
-<li><strong>Uplinking</strong> to the primary Meshtastic MQTT server is acceptable but not strongly encouraged.</li>
-<li><strong>Uplinking</strong> to a local MQTT server is helpful for tracking deployed nodes not connected directly to your mesh segment.</li>
-<li><strong>Downlinking</strong> from a local MQTT server should be avoided in the primary channel; however, it's acceptable for secondary channels.</li>
-</ul>
-<h4 id="device-roles">Device Roles</h4>
-<p>Previously, Meshtastic did not have intelligent routing, causing nodes in 'client/router' mode to potentially create routing inefficiencies. <strong>With Meshtastic 2.6, intelligent routing for direct messages (DMs) has been introduced</strong>, significantly improving targeted message delivery and network efficiency. However, we still recommend primarily using the 'client' role to simplify network traffic and maintain redundancy.</p>
-<ul>
-<li><strong>Client Mode</strong>: Ideal for most stationary nodes, minimizing unnecessary rebroadcasts. (Maybe your roof node.)</li>
-<li><strong>Client Mute</strong>: Use for on the move nodes that do not contribute directly to message forwarding, reducing network congestion. (Maybe your mobile node.)</li>
-</ul>
-<h4 id="hop-count">Hop Count</h4>
-<p>Start with a hop count of 3, using only the minimum necessary hops to reach your intended destinations.</p>
-<ul>
-<li>
-<p>If consistently routing through a dedicated relay node, a hop count of 4 is reasonable.</p>
-</li>
-<li>
-<p>At network edges or challenging locations, up to 5-7 hops might be necessary, but ensure optimal node placement before increasing hops.</p>
-</li>
-</ul>
-<h4 id="broadcast-intervals">Broadcast Intervals</h4>
-<p>To minimize channel use and maintain high reliability:</p>
-<ul>
-<li>
-<p><strong>Node Information</strong>: Every 4-6 hours</p>
-</li>
-<li>
-<p><strong>Position Information</strong>: Every 1 hour if mobile; 12-24 hours if stationary</p>
-</li>
-<li>
-<p><strong>Telemetry/Sensors</strong>: Device metrics every 4-6 hours; sensor data hourly if mobile, longer intervals if stationary</p>
-</li>
-</ul>
+<hr>
+<h2 id="dm-no-channel">DM says "No Channel" or shows an impersonation warning</h2>
+<p>Both come down to key handshakes between two nodes.</p>
+<h3 id="no-channel-when-sending-a-direct-message">"No Channel" when sending a direct message</h3>
+<p>A direct message uses a <strong>per-node encrypted handshake</strong>. "No Channel" means your node and the other node haven't exchanged a good key yet.</p>
+<p><strong>Fix:</strong></p>
+<ol>
+<li>On <strong>both</strong> devices, <strong>forget / remove</strong> the other node.</li>
+<li>Bring the nodes back into range and let them re-exchange node info.</li>
+<li>Wait for the <strong>green lock</strong> icon to appear next to the node — that means the key handshake succeeded and DMs will work.</li>
+</ol>
+<h3 id="possible-impersonation-key-warning">"Possible impersonation" / key warning</h3>
+<p>This warning means a node is presenting <strong>low-entropy or duplicate keys</strong>, usually from very old firmware that generated weak keys.</p>
+<p><strong>Fix:</strong> on the affected node, <strong>regenerate its keys</strong> (flash current firmware and let it create fresh keys, or use the app's key-regeneration option). Then re-exchange node info so both sides record the new, unique key.</p>
+<hr>
+<h2 id="still-need-help">Still need help?</h2>
+<p>The community is friendly and fast. Start a thread in <strong>#i-need-help</strong> with your device, firmware version, and what you've already tried.</p>
+<p><a class="md-button md-button--primary" href="https://discord.gg/HrKtyuFEQk"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"></path></svg></span> Join the Discord</a></p>
 
 
 
@@ -1068,6 +1168,8 @@
 
 
 
+
+  
 
 
 
