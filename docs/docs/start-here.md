@@ -24,7 +24,7 @@ New to the Arizona mesh? This is the page to get going. Follow the steps **in or
 1. Open the [**Meshtastic Web Flasher**](https://flasher.meshtastic.org) in **Google Chrome** (other browsers often fail to connect to the serial port).
 2. Select your device, click **Flash**, and follow the prompts.
 
-!!! warning "Leave \"Install Meshtastic UI\" UNCHECKED on most devices"
+!!! warning "Leave “Install Meshtastic UI” UNCHECKED on most devices"
     The web flasher may offer an **"Install Meshtastic UI"** option. **Meshtastic UI (MUI)** is a separate on-device interface built for **color touchscreen** devices like the LilyGO T-Deck and SenseCAP Indicator. It is **not** meant for the small OLED screens on common boards like the **Heltec V3/V4** or RAK handhelds, and installing it there can leave you with a blank screen or a boot loop. Unless you have a touchscreen device and specifically want the on-device UI, leave this **unchecked** and use the phone app for the interface. If your screen is already stuck or blank, re-flash with it off. See [FAQ → Flashing problems](/docs/faq.html#flashing-gotchas).
 
 !!! danger "Never transmit without an antenna attached"

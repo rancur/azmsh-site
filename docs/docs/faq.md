@@ -147,7 +147,7 @@ Most "bricked" nodes aren't actually dead. They're just stuck after a flash, or 
 
 Use the official [**Meshtastic Web Flasher**](https://flasher.meshtastic.org) in **Google Chrome** (other browsers frequently fail to connect to the serial port).
 
-!!! warning "Leave \"Install Meshtastic UI\" UNCHECKED (the #1 flashing mistake)"
+!!! warning "Leave “Install Meshtastic UI” UNCHECKED (the #1 flashing mistake)"
     The web flasher may offer an **"Install Meshtastic UI"** option. **Meshtastic UI (MUI)** is a separate on-device interface designed for **color touchscreen** hardware (LilyGO T-Deck, SenseCAP Indicator, and similar). It is **not** built for the small OLED screens on common boards like the **Heltec V3 and V4**, which can boot-loop or show a **blank/black screen** if you flash MUI onto them. Unless you have a supported touchscreen device and specifically want the on-device UI, leave that checkbox **unchecked**; you can always use the phone app for the interface. (Note: this is different from **InkHUD**, the on-device UI for e-paper displays like the T-Echo. Neither belongs on a small-OLED Heltec.)
 
 !!! danger "Never power on or transmit without an antenna"
