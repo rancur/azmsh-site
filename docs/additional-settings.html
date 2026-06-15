@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="The deeper Meshtastic settings reference for Arizona operators, laid out in the same top-to-bottom order as the Meshtastic mobile app (Radio Configuration then Module Configuration), with iOS vs Android name differences noted.">
+        <meta name="description" content="The deeper Meshtastic settings reference for Arizona operators, laid out in the same section order as the iOS Meshtastic app (Radio Configuration, Device Configuration, Module Configuration), with Android name differences noted where they help.">
       
       
       
@@ -751,7 +751,7 @@
 
 
 <h1 id="additional-settings">Additional Settings</h1>
-<p>This is the deeper settings reference for your node: node roles, broadcast intervals, Neighbor Info, MQTT, and more. It's laid out in the <strong>same top-to-bottom order as the Meshtastic mobile app</strong>, so you can read down this page with the app open and follow along section by section.</p>
+<p>This is the deeper settings reference for your node: node roles, broadcast intervals, Neighbor Info, MQTT, and more. It's laid out in the <strong>same section order as the iOS Meshtastic app</strong>, grouped under <strong>Radio Configuration</strong>, <strong>Device Configuration</strong>, and <strong>Module Configuration</strong>, so you can read down this page with the app open and follow along section by section.</p>
 <div class="admonition tip">
 <p class="admonition-title">New here? Start with the Start Here guide first</p>
 <p>If you just unboxed a radio, <strong>don't start on this page.</strong> Go to <strong><a href="/docs/start-here.html">Start Here</a></strong> first; it walks you in order from flashing firmware to sending your first acknowledged message, and it already includes everything you need to get on the Arizona mesh. Come back here once you're connected and want to fine-tune your node.</p>
@@ -762,24 +762,52 @@
 <p>Your <strong>region, preset, frequency slot, primary channel name + key, and MQTT broker</strong> are shared in <a href="https://discord.gg/HrKtyuFEQk">Discord</a> so the whole mesh stays coordinated. Get those from Discord (see <a href="/docs/start-here.html#step-3-get-the-arizona-radio-settings-from-discord">Start Here → Step 3</a>). Everything on this page is general guidance that's the same for any operator.</p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">iOS and Android label some settings differently</p>
-<p>The two apps don't always use the same words for the same setting. Where they differ, we show both, like <strong>Presets (Android) / Modem Presets (iOS)</strong>. The path to reach the settings also differs slightly:</p>
+<p class="admonition-title">Names on this page follow the iOS app; Android differences are noted</p>
+<p>This page uses the <strong>iOS / iPadOS / macOS</strong> section names and setting names, in the order the iOS app lists them. Where Android uses a different word for the same setting, we note it in parentheses, like <strong>Modem Presets (Android: Presets)</strong>. The path to reach the settings also differs slightly:</p>
 <ul>
-<li><strong>Android:</strong> <strong>Settings</strong> tab → the section name (e.g. <strong>LoRa</strong>).</li>
-<li><strong>iOS / iPadOS / macOS:</strong> <strong>Settings → Radio Configuration →</strong> the section name (e.g. <strong>LoRa</strong>). Module settings live under <strong>Settings → Module Configuration</strong>.</li>
+<li><strong>iOS / iPadOS / macOS:</strong> <strong>Settings → Radio Configuration / Device Configuration / Module Configuration →</strong> the section name (e.g. <strong>LoRa</strong>).</li>
+<li><strong>Android:</strong> <strong>Settings</strong> tab → the section name (e.g. <strong>LoRa</strong>). Modules appear further down the same list.</li>
 </ul>
 <p>After changing anything on iOS, remember to <strong>Save / send the configuration</strong> back to your node.</p>
 </div>
 <hr>
 <h1 id="radio-configuration">Radio Configuration</h1>
-<p>These sections appear in this order in the app: <strong>User, Channels, Device, Position, Power, Network, Display, LoRa, Bluetooth, Security.</strong></p>
-<h2 id="user">User</h2>
-<p>The <strong>User</strong> section is where you set how your node identifies itself on the mesh.</p>
+<p>In the iOS app, <strong>Radio Configuration</strong> holds <strong>LoRa, Channels, and Security</strong>, in that order. These are the radio-level settings that put you on the Arizona mesh.</p>
+<h2 id="lora">LoRa</h2>
+<p>The <strong>LoRa</strong> section is the most important radio section: it's where <strong>Region, Modem Preset, and Frequency Slot</strong> live. Getting these exactly right is what puts you on the Arizona mesh.</p>
+<div class="admonition note">
+<p class="admonition-title">Name differences in this section</p>
 <ul>
-<li><strong>Long Name:</strong> your node's full name (e.g. "Will's Rooftop"). Shows up in everyone's node list.</li>
-<li><strong>Short Name:</strong> up to 4 characters, shown on small screens and maps. Make it recognizable.</li>
-<li><strong>Licensed amateur radio (Android) / Licensed Operator (iOS):</strong> <strong>leave this OFF</strong> unless you're a licensed ham operator running under Part 97. Turning it on disables encryption and changes how your node transmits. The Arizona community mesh uses the standard encrypted ISM-band setup, so almost everyone leaves this off.</li>
+<li><strong>Region</strong> is called <strong>Region</strong> on both apps (iOS may show it as <strong>Set LoRa Region</strong>).</li>
+<li>The preset is <strong>Modem Presets (iOS) / Presets (Android)</strong>.</li>
+<li><strong>Frequency Slot</strong> and <strong>Frequency Override</strong> are named the same on both.</li>
+<li>The hop setting is <strong>Hop Limit (iOS) / Number of Hops (Android)</strong>.</li>
 </ul>
+</div>
+<p>The Arizona <strong>Region, Modem Preset, and Frequency Slot</strong> values are shared in Discord. Set them exactly as listed; they are covered in <a href="/docs/start-here.html#step-3-get-the-arizona-radio-settings-from-discord">Start Here → Step 3</a>.</p>
+<div class="azmsh-locked">
+  <div class="azmsh-settings">
+    <p class="azmsh-group-title">Arizona LoRa settings</p>
+    <div class="azmsh-row"><span class="azmsh-label">Region:</span> <span class="azmsh-value">US</span></div>
+    <div class="azmsh-row"><span class="azmsh-label">Modem Preset / Preset:</span> <span class="azmsh-value">ExamplePreset_AZ</span></div>
+    <div class="azmsh-row"><span class="azmsh-label">Frequency Slot:</span> <span class="azmsh-value">00</span></div>
+  </div>
+  <div class="azmsh-overlay">
+    <span class="azmsh-overlay-text">🔒 Arizona radio settings are shared in Discord</span>
+    <a class="md-button md-button--primary" href="https://discord.gg/HrKtyuFEQk">Join The Discord</a>
+  </div>
+</div>
+
+<div class="admonition warning">
+<p class="admonition-title">The Frequency Slot is the #1 missed setting</p>
+<p>Lots of people set the preset correctly but leave the <strong>Frequency Slot</strong> at <code>0</code>/auto, so they land on the wrong frequency and can't hear anyone. Set it to the exact slot listed in Discord.</p>
+<p><strong>iOS gotcha:</strong> the Slot field is text entry. <strong>Double-tap the existing value</strong> to select it, then type the correct slot. Leave <strong>Frequency Override</strong> blank or <code>0</code>; entering a value there <em>locks</em> the Slot field. "Frequency Override" and "Frequency Slot" are different fields.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Hop Limit (iOS) / Number of Hops (Android)</p>
+<p>Leave this at the default (<strong>3</strong>) unless the community advises otherwise. Cranking up the hop count floods the mesh and rarely helps; more hops is not more range.</p>
+</div>
+<p>The <strong>"OK to MQTT"</strong> toggle also lives in the LoRa section. See the <a href="#mqtt">MQTT</a> section below for how it works with the MQTT module.</p>
 <hr>
 <h2 id="channels">Channels</h2>
 <p>The <strong>Channels</strong> section is where you set your <strong>primary</strong> channel and add <strong>secondary</strong> channels.</p>
@@ -789,6 +817,33 @@
 <li>Community channels (azmsh, Weather, Traffic, Trivia) are added here as <strong>secondary</strong> channels. The names, keys, and per-platform steps live on the <a href="/docs/suggested_channels.html">Suggested Channels</a> page.</li>
 </ul>
 <p>The fields are labeled <strong>Channel Name</strong> and <strong>PSK</strong> (the key) on both apps.</p>
+<hr>
+<h2 id="security">Security</h2>
+<p>The <strong>Security</strong> section holds your node's <strong>identity keys</strong>. These are what let other nodes verify it's really you and what make direct messages private.</p>
+<div class="admonition tip">
+<p class="admonition-title">Back up your keys before re-flashing</p>
+<p>Flashing can wipe your settings, including your node's identity keys. Export/back up your configuration from the Meshtastic app first, so you don't reappear as a brand-new node and trigger impersonation warnings for others.</p>
+</div>
+<ul>
+<li>If you ever see a <strong>"possible impersonation"</strong> warning about another node, or your own node is flagged, it usually means weak/duplicate keys from very old firmware. The fix is to regenerate keys on the affected node. See <a href="/docs/faq.html#dm-no-channel">FAQ → DM "No Channel" / impersonation</a>.</li>
+</ul>
+<hr>
+<h1 id="device-configuration">Device Configuration</h1>
+<p>In the iOS app, <strong>Device Configuration</strong> holds <strong>User, Bluetooth, Device, Display, Network, Position, and Power</strong>, in that order. These set how your node identifies itself, how it behaves, and how it connects.</p>
+<h2 id="user">User</h2>
+<p>The <strong>User</strong> section is where you set how your node identifies itself on the mesh.</p>
+<ul>
+<li><strong>Long Name:</strong> your node's full name (e.g. "Will's Rooftop"). Shows up in everyone's node list.</li>
+<li><strong>Short Name:</strong> up to 4 characters, shown on small screens and maps. Make it recognizable.</li>
+<li><strong>Licensed Operator (iOS) / Licensed amateur radio (Android):</strong> <strong>leave this OFF</strong> unless you're a licensed ham operator running under Part 97. Turning it on disables encryption and changes how your node transmits. The Arizona community mesh uses the standard encrypted ISM-band setup, so almost everyone leaves this off.</li>
+</ul>
+<hr>
+<h2 id="bluetooth">Bluetooth</h2>
+<p>The <strong>Bluetooth</strong> section controls how your phone pairs with the node.</p>
+<ul>
+<li><strong>Pairing Mode:</strong> most devices default to a fixed PIN or a random PIN shown on screen. If you have no screen, the PIN is usually <code>123456</code> or printed in the device docs.</li>
+<li>If pairing fails or keeps dropping, see <a href="/docs/faq.html#bluetooth">FAQ → Bluetooth won't pair or keeps dropping</a>.</li>
+</ul>
 <hr>
 <h2 id="device">Device</h2>
 <p>The <strong>Device</strong> section holds your node's <strong>role</strong> and rebroadcast behavior. Picking the right role is the single most important choice here, because it affects the whole mesh, not just you.</p>
@@ -831,7 +886,21 @@
 </tr>
 </tbody>
 </table>
-<p>On Android this is labeled <strong>Node Info Broadcast Interval</strong>. On iOS the same setting lives on the Device screen with the broadcast interval expressed in seconds.</p>
+<p>On iOS this setting lives on the Device screen with the broadcast interval expressed in seconds. On Android it is labeled <strong>Node Info Broadcast Interval</strong>.</p>
+<hr>
+<h2 id="display">Display</h2>
+<p>The <strong>Display</strong> section controls the on-device screen (brightness, screen timeout, units, orientation). These are personal-preference settings and don't affect the mesh.</p>
+<ul>
+<li>Set <strong>Display Units</strong> to your preference (the community generally uses imperial in Arizona).</li>
+<li>A shorter <strong>Screen Timeout</strong> saves battery on handhelds.</li>
+</ul>
+<hr>
+<h2 id="network">Network</h2>
+<p>The <strong>Network</strong> section is for <strong>WiFi and Ethernet</strong>, and only applies to <strong>ESP32-based</strong> nodes (Heltec, Station G2, T-Deck). Bluetooth-only nRF52 nodes (most handhelds and solar nodes) don't have this.</p>
+<ul>
+<li>Enter your <strong>WiFi SSID and password</strong> here if your rooftop ESP32 node will reach the community MQTT server over your home internet.</li>
+<li>A WiFi connection is what lets an ESP32 node uplink to MQTT <strong>without</strong> proxying through your phone.</li>
+</ul>
 <hr>
 <h2 id="position">Position</h2>
 <p>The <strong>Position</strong> section controls how often your node shares its GPS location and how often it reads its own GPS. Tuning these correctly reduces channel congestion and saves battery.</p>
@@ -839,7 +908,7 @@
 <p class="admonition-title">Name differences in this section</p>
 <ul>
 <li><strong>Smart Position</strong> is called the same on both apps (sometimes shown as <strong>Smart Position Enabled</strong>).</li>
-<li>The GPS read interval is <strong>GPS Polling Interval (Android) / Update Interval (iOS)</strong>.</li>
+<li>The GPS read interval is <strong>Update Interval (iOS) / GPS Polling Interval (Android)</strong>.</li>
 </ul>
 </div>
 <h3 id="mobile-nodes">Mobile Nodes</h3>
@@ -874,7 +943,7 @@
 <td style="text-align: left;">Fallback interval if GPS is enabled.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>GPS Polling Interval (Android) / Update Interval (iOS)</strong></td>
+<td style="text-align: left;"><strong>Update Interval (iOS) / GPS Polling Interval (Android)</strong></td>
 <td style="text-align: left;"><code>300</code> sec (5 minutes)</td>
 <td style="text-align: left;">How often the device checks its own GPS.</td>
 </tr>
@@ -902,7 +971,7 @@
 <td style="text-align: left;">Only if GPS is enabled. Your position is fixed.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>GPS Polling Interval (Android) / Update Interval (iOS)</strong></td>
+<td style="text-align: left;"><strong>Update Interval (iOS) / GPS Polling Interval (Android)</strong></td>
 <td style="text-align: left;"><code>21600</code> sec (6 hours)</td>
 <td style="text-align: left;">Minimal GPS checks since the node does not move.</td>
 </tr>
@@ -920,75 +989,8 @@
 <li>Battery and solar nodes: power-saving can extend runtime, but it also delays responses. Only enable it once your node is otherwise working, and test afterward.</li>
 </ul>
 <hr>
-<h2 id="network">Network</h2>
-<p>The <strong>Network</strong> section is for <strong>WiFi and Ethernet</strong>, and only applies to <strong>ESP32-based</strong> nodes (Heltec, Station G2, T-Deck). Bluetooth-only nRF52 nodes (most handhelds and solar nodes) don't have this.</p>
-<ul>
-<li>Enter your <strong>WiFi SSID and password</strong> here if your rooftop ESP32 node will reach the community MQTT server over your home internet.</li>
-<li>A WiFi connection is what lets an ESP32 node uplink to MQTT <strong>without</strong> proxying through your phone.</li>
-</ul>
-<hr>
-<h2 id="display">Display</h2>
-<p>The <strong>Display</strong> section controls the on-device screen (brightness, screen timeout, units, orientation). These are personal-preference settings and don't affect the mesh.</p>
-<ul>
-<li>Set <strong>Display Units</strong> to your preference (the community generally uses imperial in Arizona).</li>
-<li>A shorter <strong>Screen Timeout</strong> saves battery on handhelds.</li>
-</ul>
-<hr>
-<h2 id="lora">LoRa</h2>
-<p>The <strong>LoRa</strong> section is the most important radio section: it's where <strong>Region, Preset, and Frequency Slot</strong> live. Getting these exactly right is what puts you on the Arizona mesh.</p>
-<div class="admonition note">
-<p class="admonition-title">Name differences in this section</p>
-<ul>
-<li><strong>Region</strong> is called <strong>Region</strong> on both apps (iOS may show it as <strong>Set LoRa Region</strong>).</li>
-<li>The preset is <strong>Presets (Android) / Modem Presets (iOS)</strong>.</li>
-<li><strong>Frequency Slot</strong> and <strong>Frequency Override</strong> are named the same on both.</li>
-<li>The hop setting is <strong>Number of Hops (Android) / Hop Limit (iOS)</strong>.</li>
-</ul>
-</div>
-<p>The Arizona <strong>Region, Preset, and Frequency Slot</strong> values are shared in Discord. Set them exactly as listed; they are covered in <a href="/docs/start-here.html#step-3-get-the-arizona-radio-settings-from-discord">Start Here → Step 3</a>.</p>
-<div class="azmsh-locked">
-  <div class="azmsh-settings">
-    <p class="azmsh-group-title">Arizona LoRa settings</p>
-    <div class="azmsh-row"><span class="azmsh-label">Region:</span> <span class="azmsh-value">US</span></div>
-    <div class="azmsh-row"><span class="azmsh-label">Preset / Modem Preset:</span> <span class="azmsh-value">ExamplePreset_AZ</span></div>
-    <div class="azmsh-row"><span class="azmsh-label">Frequency Slot:</span> <span class="azmsh-value">00</span></div>
-  </div>
-  <div class="azmsh-overlay">
-    <span class="azmsh-overlay-text">🔒 Arizona radio settings are shared in Discord</span>
-    <a class="md-button md-button--primary" href="https://discord.gg/HrKtyuFEQk">Join The Discord</a>
-  </div>
-</div>
-
-<div class="admonition warning">
-<p class="admonition-title">The Frequency Slot is the #1 missed setting</p>
-<p>Lots of people set the preset correctly but leave the <strong>Frequency Slot</strong> at <code>0</code>/auto, so they land on the wrong frequency and can't hear anyone. Set it to the exact slot listed in Discord.</p>
-<p><strong>iOS gotcha:</strong> the Slot field is text entry. <strong>Double-tap the existing value</strong> to select it, then type the correct slot. Leave <strong>Frequency Override</strong> blank or <code>0</code>; entering a value there <em>locks</em> the Slot field. "Frequency Override" and "Frequency Slot" are different fields.</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Number of Hops (Android) / Hop Limit (iOS)</p>
-<p>Leave this at the default (<strong>3</strong>) unless the community advises otherwise. Cranking up the hop count floods the mesh and rarely helps; more hops is not more range.</p>
-</div>
-<p>The <strong>"OK to MQTT"</strong> toggle also lives in the LoRa section. See the <a href="#mqtt">MQTT</a> section below for how it works with the MQTT module.</p>
-<hr>
-<h2 id="bluetooth">Bluetooth</h2>
-<p>The <strong>Bluetooth</strong> section controls how your phone pairs with the node.</p>
-<ul>
-<li><strong>Pairing Mode:</strong> most devices default to a fixed PIN or a random PIN shown on screen. If you have no screen, the PIN is usually <code>123456</code> or printed in the device docs.</li>
-<li>If pairing fails or keeps dropping, see <a href="/docs/faq.html#bluetooth">FAQ → Bluetooth won't pair or keeps dropping</a>.</li>
-</ul>
-<hr>
-<h2 id="security">Security</h2>
-<p>The <strong>Security</strong> section holds your node's <strong>identity keys</strong>. These are what let other nodes verify it's really you and what make direct messages private.</p>
-<div class="admonition tip">
-<p class="admonition-title">Back up your keys before re-flashing</p>
-<p>Flashing can wipe your settings, including your node's identity keys. Export/back up your configuration from the Meshtastic app first, so you don't reappear as a brand-new node and trigger impersonation warnings for others.</p>
-</div>
-<ul>
-<li>If you ever see a <strong>"possible impersonation"</strong> warning about another node, or your own node is flagged, it usually means weak/duplicate keys from very old firmware. The fix is to regenerate keys on the affected node. See <a href="/docs/faq.html#dm-no-channel">FAQ → DM "No Channel" / impersonation</a>.</li>
-</ul>
-<hr>
 <h1 id="module-configuration">Module Configuration</h1>
-<p>Modules are optional add-ons. In the app they appear under <strong>Module Configuration</strong> (iOS) / further down the <strong>Settings</strong> list (Android), starting with <strong>MQTT</strong>. Below are the two modules Arizona operators use most.</p>
+<p>Modules are optional add-ons. In the iOS app they appear under <strong>Module Configuration</strong> (Android lists them further down the <strong>Settings</strong> list). The full iOS list is alphabetical (Ambient Lighting, Canned Messages, Detection Sensor, External Notification, MQTT, Neighbor Info, Range Test, Ringtone, Serial, Store &amp; Forward, TAK Server, Telemetry). Below are the modules Arizona operators use most.</p>
 <h2 id="mqtt">MQTT</h2>
 <p>MQTT lets your node upload diagnostic data to a shared server, which helps us monitor network health and see all nodes on the map. It does <strong>not</strong> send your personal messages or private data, only metadata like position, telemetry, and node info.</p>
 <div class="admonition danger">
@@ -1000,7 +1002,7 @@
 <ul>
 <li><strong>"OK to MQTT"</strong> (in the <strong>LoRa</strong> section, same name on both apps): <strong>ON</strong>. Lets your node's data be uplinked at all.</li>
 <li><strong>Channel Uplink</strong> (per channel): <strong>ON</strong>. Sends <em>that channel's</em> node/telemetry data to the server. Labeled <strong>Uplink Enabled</strong> on both apps.</li>
-<li><strong>Proxy to client enabled (Android) / Connect to MQTT via Proxy (iOS):</strong> turn <strong>ON only if the node has no WiFi of its own.</strong> It then relays MQTT through your phone's connection. If the node is on WiFi (most rooftop ESP32 nodes), leave it <strong>OFF</strong>.</li>
+<li><strong>Connect to MQTT via Proxy (iOS) / Proxy to client enabled (Android):</strong> turn <strong>ON only if the node has no WiFi of its own.</strong> It then relays MQTT through your phone's connection. If the node is on WiFi (most rooftop ESP32 nodes), leave it <strong>OFF</strong>.</li>
 </ul>
 </div>
 <p><strong>How to Enable MQTT</strong></p>
@@ -1039,7 +1041,7 @@
 <hr>
 <h2 id="neighbor-info">Neighbor Info</h2>
 <p>Neighbor Info is a module that periodically broadcasts a list of your node's direct neighbors along with the signal quality (SNR) of each link. When enabled across multiple nodes, the community can build a real picture of how the mesh is connected, which helps identify coverage gaps, optimize node placement, and understand how traffic actually flows through the network.</p>
-<p>Neighbor Info packets are small and infrequent, so the channel congestion impact is very low.</p>
+<p>In the iOS Module Configuration list, <strong>Neighbor Info</strong> appears alphabetically just after MQTT. Neighbor Info packets are small and infrequent, so the channel congestion impact is very low.</p>
 <p><strong>Recommended Update Interval</strong></p>
 <table>
 <thead>
