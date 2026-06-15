@@ -285,7 +285,7 @@ Put it in a waterproof junction box (~$10), add a 915 MHz antenna (~$15-40), and
 Don't want to build anything? These come fully assembled. Mount them, configure Meshtastic settings, done.
 
 !!! info "Node role for Arizona rooftop nodes"
-    Set your rooftop node to **CLIENT**. This is the recommended role for home installations. See the [Settings Reference → Node Roles](/docs/start-here.html#node-roles) for details on all roles.
+    Set your rooftop node to **CLIENT**. This is the recommended role for home installations. See [Additional Settings → Node Roles](/docs/additional-settings.html#device) for details on all roles.
 
 !!! warning "Understand Router roles before switching"
     **Router** and **Router Late** are intended for high-elevation, permanent fixed locations with good line-of-sight. Not typical home or rooftop installs. Using these roles in the wrong context can increase congestion and cause routing issues across the shared mesh. If you're considering Router or Router Late, read up on Meshtastic's guidance and ask the community on Discord before switching.
@@ -405,7 +405,7 @@ For most Arizona rooftop nodes, an **omnidirectional fiberglass antenna** is the
 #### Next Steps
 
 - [Start Here](/docs/start-here.html). Set up your new radio and join the Arizona mesh
-- [Settings Reference](/docs/start-here.html#settings-reference). Configure your node for the Arizona network
+- [Additional Settings](/docs/additional-settings.html). Tune your node for the Arizona network (roles, intervals, MQTT)
 - [Official Meshtastic Hardware List](https://meshtastic.org/docs/hardware/devices/)
 - [Meshtastic Getting Started Guide](https://meshtastic.org/docs/getting-started/)
 

@@ -37,8 +37,9 @@ repo_url: https://github.com/ArizonaMeshtasticCommunity/azmsh-site
 nav:
   - Home: index.md
   - Start Here: docs/start-here.md
-  - What Now?: docs/what-now.md
+  - How To Test: docs/how-to-test.md
   - FAQ & Troubleshooting: docs/faq.md
+  - Additional Settings: docs/additional-settings.md
   - Recommended Hardware: docs/recommended-hardware.md
   - Suggested Channels: docs/suggested_channels.md
   - Host a Node: docs/host-a-node.md
@@ -46,9 +47,11 @@ nav:
 
 # Pages intentionally kept out of the top nav.
 # Redirect stubs (meta-refresh) so old / external links never 404 after the
-# consolidation:
-#   how-to-connect, recommended-settings -> folded into Start Here
-#   cant-transmit, flashing-gotchas      -> folded into FAQ & Troubleshooting
+# consolidation / rename:
+#   how-to-connect            -> folded into Start Here
+#   recommended-settings      -> now redirects to the Additional Settings page
+#   cant-transmit, flashing-gotchas -> folded into FAQ & Troubleshooting
+#   what-now                  -> renamed to How To Test (how-to-test.md)
 # wismesh-repeater-mini-1w is a deep build guide linked from Recommended Hardware.
 # accessibility and privacy are linked from the footer.
 not_in_nav: |
@@ -56,6 +59,7 @@ not_in_nav: |
   /docs/recommended-settings.md
   /docs/cant-transmit.md
   /docs/flashing-gotchas.md
+  /docs/what-now.md
   /docs/wismesh-repeater-mini-1w.md
   /accessibility.md
   /privacy.md

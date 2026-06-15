@@ -9,7 +9,7 @@ title: Host a Node
 Thinking about letting us put a Meshtastic node on your property? Awesome! Here's everything you need to know, in plain English. No tech jargon required.
 
 !!! info "What is Arizona Meshtastic Community?"
-    We're a volunteer-run group building a **free, open-source mesh network** across the Phoenix metro and greater Arizona. Our network lets people send text messages without cell service, Wi-Fi, or monthly fees. Using small, low-power radios. Learn more at [azmsh.net](https://azmsh.net).
+    We're a volunteer-run group building a **free, open-source mesh network** across the Phoenix metro and greater Arizona. Our network lets people send text messages without cell service, WiFi, or monthly fees. Using small, low-power radios. Learn more at [azmsh.net](https://azmsh.net).
 
 ---
 
@@ -38,8 +38,8 @@ Thinking about letting us put a Meshtastic node on your property? Awesome! Here'
     !!! tip "Mounting is non-invasive"
         We use **magnetic mounts, pole clamps, or zip ties**. No drilling into your roof, walls, or structure unless you specifically approve it. The equipment can be removed without leaving any trace.
 
-??? question "Does it use my internet or Wi-Fi?"
-    **No.** The node communicates entirely over radio frequencies (the 900 MHz unlicensed ISM band). It does not connect to your Wi-Fi, use your internet bandwidth, or access any of your home network.
+??? question "Does it use my internet or WiFi?"
+    **No.** The node communicates entirely over radio frequencies (the 900 MHz unlicensed ISM band). It does not connect to your WiFi, use your internet bandwidth, or access any of your home network.
 
     There is an optional feature called MQTT that *can* connect to the internet for extended range, but that is never enabled without your knowledge and permission. The default setup is fully radio-only and self-contained.
 
@@ -49,7 +49,7 @@ Thinking about letting us put a Meshtastic node on your property? Awesome! Here'
     | Device | Transmit Power |
     |--------|---------------|
     | Cell phone | Up to 2,000 mW |
-    | Wi-Fi router | Up to 1,000 mW |
+    | WiFi router | Up to 1,000 mW |
     | **Meshtastic node** | **100-4,500 mW** |
     | Baby monitor | Up to 100 mW |
 
@@ -99,10 +99,10 @@ Thinking about letting us put a Meshtastic node on your property? Awesome! Here'
 
     The magic of a mesh network is that each node extends the range. Your node doesn't need to reach the whole city. It just needs to reach the *next* node, and the message hops along from there.
 
-??? question "Will it interfere with my Wi-Fi, TV, or garage door?"
+??? question "Will it interfere with my WiFi, TV, or garage door?"
     **No.** Meshtastic operates on the **900 MHz ISM band**, which is a completely different frequency from:
 
-    - Wi-Fi (2.4 GHz / 5 GHz / 6 GHz)
+    - WiFi (2.4 GHz / 5 GHz / 6 GHz)
     - Cell phones (700 MHz-2.5 GHz, different bands)
     - TV (VHF/UHF, different bands)
     - Bluetooth (2.4 GHz)

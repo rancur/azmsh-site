@@ -2,20 +2,48 @@
 hide:
   - navigation
 title: FAQ & Troubleshooting
-description: Every common snag in one place. Receive works but can't send, the 403 "Forbidden" map error, claiming your node, flashing / boot loops / bricking, and DM "No Channel" / impersonation warnings.
+description: Every common snag in one place. Not receiving messages, receive-works-but-can't-send, Bluetooth pairing, the 403 "Forbidden" map error, claiming your node, flashing / boot loops / bricking, and DM "No Channel" / impersonation warnings.
 ---
 
 # FAQ & Troubleshooting
 
 Everything that commonly goes wrong, in one place. Already set up and stuck? Jump to your problem:
 
+- [I'm not receiving every message, or no messages at all](#not-receiving)
 - [I can receive, but I can't send](#cant-send) (no acks / "Max Transmission Reached")
+- [Bluetooth won't pair or keeps dropping](#bluetooth)
 - [The map / view says "Forbidden" or 403](#forbidden-403)
 - [Claiming a node fails / "This interaction failed"](#claim-node)
 - [Flashing problems: boot loops, blank screen, bricking](#flashing-gotchas)
 - [DM says "No Channel" or shows an impersonation warning](#dm-no-channel)
 
 New here and not set up yet? Start with the [Start Here](/docs/start-here.html) guide; it walks you from an unboxed radio to your first acknowledged message.
+
+---
+
+## I'm not receiving every message, or no messages at all { #not-receiving }
+
+Missing some messages, or not seeing any traffic come in? Work through this in order.
+
+**1. Recheck every setting first.** The most common cause is a single wrong setting. Go back through the [Start Here](/docs/start-here.html) guide and confirm **all** of them match the Arizona values exactly, nothing more, nothing less:
+
+- **Region**, **Preset**, and especially the **Frequency Slot** (the [#1 missed setting](/docs/start-here.html#step-3-get-the-arizona-radio-settings-from-discord); leaving it on `0`/auto puts you on the wrong frequency).
+- Your **primary channel name + key**, copied exactly. A [renamed primary channel](/docs/start-here.html#step-4-set-up-your-primary-channel) drops you off the mesh.
+
+If you're not receiving a **single** message, it's almost always one of the above. Fix it and test again.
+
+**2. Settings confirmed but still missing traffic? Move and get higher.** If your settings are definitely right and you still can't reliably receive (or can't transmit), it's a physical/RF problem, not a configuration one. Try different locations and antenna placement:
+
+- **Get outside and get high.** Height beats almost everything. A window, balcony, second floor, or rooftop will pull in far more than an interior room. Even a 30-second outdoor test tells you whether your building is the problem.
+- **Try a better antenna.** Most handhelds ship with a weak stock antenna. A good whip is the cheapest range upgrade you can make. See the [Antenna Guide](/docs/recommended-hardware.html#antenna-guide).
+- **Try at a busier time of day.** The mesh ebbs and flows. If nobody's transmitting when you test, you'll hear nothing.
+
+**3. Still struggling? Consider a more capable radio.** If you've confirmed settings, moved around, tried different placement and an upgraded antenna, and reception is still poor, your hardware may be the limit. A higher-power radio or a rooftop relay node anchors coverage and pulls weak signals in. See [Recommended Hardware](/docs/recommended-hardware.html) for a more powerful radio and rooftop options.
+
+!!! tip "Missing only *some* messages is normal to a degree"
+    Meshtastic is a best-effort radio network, not the internet. Distant or low-power nodes won't always reach you, and busy-channel collisions can drop the occasional packet. If you're getting *most* traffic, your setup is working; the steps above help you catch more of it.
+
+If you can receive fine but your own messages never get acknowledged, that's a transmit problem with its own fix-list below.
 
 ---
 
@@ -44,6 +72,30 @@ When you send on the primary channel, your node waits to hear the message relaye
     Sending without an antenna can fry the radio. Always attach the antenna before powering on or transmitting.
 
 Still stuck? Bring it to **#i-need-help** on Discord with your hardware, antenna, and where you tested from.
+
+[:fontawesome-brands-discord: Ask in #i-need-help](https://discord.gg/HrKtyuFEQk){ .md-button .md-button--primary }
+
+---
+
+## Bluetooth won't pair or keeps dropping { #bluetooth }
+
+Can't get your phone to connect to the node over Bluetooth, or the connection keeps freezing or dropping? This is one of the most common snags people bring to **#i-need-help**, and it's almost always one of these.
+
+**Pairing won't complete / freezes on "Connecting":**
+
+1. **Use the right pairing code.** If your node asks for a PIN, the default is usually `123456`, or it's shown on the device's screen, or printed in the device docs. Type it exactly.
+2. **Forget the device and retry.** In your phone's **Bluetooth settings** (not just the Meshtastic app), forget/remove the node, then pair again from inside the Meshtastic app with **+** → select your device.
+3. **Toggle Bluetooth off and on** on the phone, and **power-cycle the node** (off, wait 5 seconds, on).
+4. **Make sure only one phone is connected.** A node holds one Bluetooth connection at a time. If another phone or tablet is already paired to it, your phone will get stuck connecting.
+5. **Grant location/Bluetooth permissions** to the Meshtastic app. Android in particular won't scan for the node without the right permissions enabled.
+
+**It pairs but the connection is flaky or keeps dropping:**
+
+- **Distance and obstructions matter.** Bluetooth is short-range. A rooftop or far-room node will drop often. Stay close while configuring, then let it run.
+- **Stuck after a firmware update or weird state?** A node that connected fine before and suddenly won't is often fixed by a **reboot**, and failing that, **re-flashing the same firmware version** (back up your keys first; see [Flashing problems](#flashing-gotchas)).
+- **Configure over USB serial as a fallback.** If Bluetooth is completely uncooperative, you can connect the node by USB cable and use the [Meshtastic Web Client](https://client.meshtastic.org) (in Chrome or Edge) or the CLI to change settings, then sort out Bluetooth afterward.
+
+Still stuck? Bring it to **#i-need-help** with your device model and firmware version.
 
 [:fontawesome-brands-discord: Ask in #i-need-help](https://discord.gg/HrKtyuFEQk){ .md-button .md-button--primary }
 
@@ -83,7 +135,7 @@ The claim button in Discord sometimes times out, especially if your node hasn't 
 
 If you still get **"This interaction failed,"** wait a minute and run the slash command again. It's usually a transient timeout, not a permanent error.
 
-The full post-setup walkthrough (claim, opt in, read the map) lives on [What Now?](/docs/what-now.html).
+The full post-setup walkthrough (claim, opt in, read the map) lives on [How To Test](/docs/how-to-test.html).
 
 ---
 
@@ -95,8 +147,8 @@ Most "bricked" nodes aren't actually dead. They're just stuck after a flash, or 
 
 Use the official [**Meshtastic Web Flasher**](https://flasher.meshtastic.org) in **Google Chrome** (other browsers frequently fail to connect to the serial port).
 
-!!! warning "UNCHECK \"Install Meshtastic UI\" (the #1 flashing mistake)"
-    Many devices, **especially the Heltec V3 and V4**, will boot-loop or show a **blank/black screen** if you flash with the on-device "Meshtastic UI" (InkHUD) option enabled. Unless you specifically want and have confirmed support for the on-device UI, leave that checkbox **unchecked**. You can always use the phone app for the interface.
+!!! warning "Leave \"Install Meshtastic UI\" UNCHECKED (the #1 flashing mistake)"
+    The web flasher may offer an **"Install Meshtastic UI"** option. **Meshtastic UI (MUI)** is a separate on-device interface designed for **color touchscreen** hardware (LilyGO T-Deck, SenseCAP Indicator, and similar). It is **not** built for the small OLED screens on common boards like the **Heltec V3 and V4**, which can boot-loop or show a **blank/black screen** if you flash MUI onto them. Unless you have a supported touchscreen device and specifically want the on-device UI, leave that checkbox **unchecked**; you can always use the phone app for the interface. (Note: this is different from **InkHUD**, the on-device UI for e-paper displays like the T-Echo. Neither belongs on a small-OLED Heltec.)
 
 !!! danger "Never power on or transmit without an antenna"
     The radio's power amplifier can be permanently damaged if it transmits with no antenna attached. Screw the antenna on **before** powering the device or sending anything.
