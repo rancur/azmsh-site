@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Avoid the common flashing mistakes — boot loops, blank screens, and bricked nodes — and recover a node that won't boot using DFU / bootloader mode.">
+        <meta name="description" content="Avoid the common flashing mistakes (boot loops, blank screens, and bricked nodes) and recover a node that won't boot using DFU / bootloader mode.">
       
       
       
@@ -254,36 +254,18 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="start-here.html" class="md-tabs__link">
-        
-  
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="start-here.html" class="md-tabs__link">
+          
+  
   
   Start Here
 
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="how-to-connect.html" class="md-tabs__link">
-        
-  
-  
+        </a>
+      </li>
     
-  
-  How to Connect
-
-      </a>
-    </li>
   
 
       
@@ -312,25 +294,6 @@
   
   
     <li class="md-tabs__item">
-      <a href="cant-transmit.html" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Can't Send?
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
       <a href="recommended-hardware.html" class="md-tabs__link">
         
   
@@ -338,25 +301,6 @@
     
   
   Recommended Hardware
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="recommended-settings.html" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Recommended Settings
 
       </a>
     </li>
@@ -545,6 +489,56 @@
   
   
   
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start Here
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Start Here
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="start-here.html" class="md-nav__link">
         
@@ -565,22 +559,23 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
   
     <li class="md-nav__item">
-      <a href="how-to-connect.html" class="md-nav__link">
+      <a href="cant-transmit.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    How to Connect
+    Receive Works, Can't Send
   
 
     
@@ -589,6 +584,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -627,33 +630,6 @@
   
   
     <li class="md-nav__item">
-      <a href="cant-transmit.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Can't Send?
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="recommended-hardware.html" class="md-nav__link">
         
   
@@ -662,33 +638,6 @@
     
   
     Recommended Hardware
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="recommended-settings.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Recommended Settings
   
 
     
@@ -1022,12 +971,12 @@
 
 
 <h1 id="flashing-recovery">Flashing &amp; Recovery</h1>
-<p>Most "bricked" nodes aren't actually dead — they're just stuck after a flash, or were flashed with an option that doesn't suit the hardware. Here's how to avoid the common traps and recover a node that won't boot.</p>
+<p>Most "bricked" nodes aren't actually dead. They're just stuck after a flash, or were flashed with an option that doesn't suit the hardware. Here's how to avoid the common traps and recover a node that won't boot.</p>
 <hr>
 <h2 id="before-you-flash">Before you flash</h2>
 <p>Use the official <a href="https://flasher.meshtastic.org"><strong>Meshtastic Web Flasher</strong></a> in <strong>Google Chrome</strong> (other browsers frequently fail to connect to the serial port).</p>
 <div class="admonition warning">
-<p class="admonition-title">UNCHECK \"Install Meshtastic UI\" — the #1 flashing mistake</p>
+<p class="admonition-title">UNCHECK \"Install Meshtastic UI\" (the #1 flashing mistake)</p>
 <p>Many devices, <strong>especially the Heltec V3 and V4</strong>, will boot-loop or show a <strong>blank/black screen</strong> if you flash with the on-device "Meshtastic UI" (InkHUD) option enabled. Unless you specifically want and have confirmed support for the on-device UI, leave that checkbox <strong>unchecked</strong>. You can always use the phone app for the interface.</p>
 </div>
 <div class="admonition danger">
@@ -1049,14 +998,14 @@
 <h2 id="my-node-is-completely-dead-the-flasher-cant-see-it">My node is completely dead / the flasher can't see it</h2>
 <p>The device probably needs to be put into <strong>DFU (bootloader) mode</strong> so the flasher can talk to it.</p>
 <ul>
-<li><strong>How to enter DFU varies by device</strong> — it usually means <strong>holding a button (often BOOT/USR) while plugging in USB or pressing reset</strong>. Check your specific device's documentation for the exact button combo.</li>
-<li>nRF52 devices (RAK, T-Echo, etc.) typically expose a <strong>USB drive</strong> when in bootloader mode — you can drag a firmware file onto it, or use the Web Flasher.</li>
+<li><strong>How to enter DFU varies by device.</strong> It usually means <strong>holding a button (often BOOT/USR) while plugging in USB or pressing reset</strong>. Check your specific device's documentation for the exact button combo.</li>
+<li>nRF52 devices (RAK, T-Echo, etc.) typically expose a <strong>USB drive</strong> when in bootloader mode. You can drag a firmware file onto it, or use the Web Flasher.</li>
 <li>ESP32 devices (Heltec, Station G2, T-Deck) enter download mode via the <strong>BOOT button</strong>; the Web Flasher will then detect the serial port.</li>
 </ul>
 <p>Once the device is in DFU/bootloader mode, the Web Flasher should detect it. Re-flash current firmware (UI option unchecked) and it should come back to life.</p>
 <hr>
 <h2 id="still-stuck">Still stuck?</h2>
-<p>Post your device model and what happens at power-on in <strong>#i-need-help</strong> on Discord — someone has almost certainly recovered the same board.</p>
+<p>Post your device model and what happens at power-on in <strong>#i-need-help</strong> on Discord. Someone has almost certainly recovered the same board.</p>
 <p><a class="md-button md-button--primary" href="https://discord.gg/HrKtyuFEQk"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"></path></svg></span> Ask in #i-need-help</a></p>
 
 

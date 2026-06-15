@@ -252,36 +252,18 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="start-here.html" class="md-tabs__link">
-        
-  
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="start-here.html" class="md-tabs__link">
+          
+  
   
   Start Here
 
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="how-to-connect.html" class="md-tabs__link">
-        
-  
-  
+        </a>
+      </li>
     
-  
-  How to Connect
-
-      </a>
-    </li>
   
 
       
@@ -310,25 +292,6 @@
   
   
     <li class="md-tabs__item">
-      <a href="cant-transmit.html" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Can't Send?
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
       <a href="recommended-hardware.html" class="md-tabs__link">
         
   
@@ -336,25 +299,6 @@
     
   
   Recommended Hardware
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="recommended-settings.html" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Recommended Settings
 
       </a>
     </li>
@@ -543,6 +487,56 @@
   
   
   
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start Here
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Start Here
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="start-here.html" class="md-nav__link">
         
@@ -563,22 +557,23 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
   
     <li class="md-nav__item">
-      <a href="how-to-connect.html" class="md-nav__link">
+      <a href="cant-transmit.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    How to Connect
+    Receive Works, Can't Send
   
 
     
@@ -587,6 +582,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -625,33 +628,6 @@
   
   
     <li class="md-nav__item">
-      <a href="cant-transmit.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Can't Send?
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="recommended-hardware.html" class="md-nav__link">
         
   
@@ -660,33 +636,6 @@
     
   
     Recommended Hardware
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="recommended-settings.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Recommended Settings
   
 
     
@@ -1010,7 +959,7 @@
 </details>
 <details class="question">
 <summary>Does it use my internet or Wi-Fi?</summary>
-<p><strong>No.</strong> The node communicates entirely over radio frequencies (the 906.875 MHz unlicensed band). It does not connect to your Wi-Fi, use your internet bandwidth, or access any of your home network.</p>
+<p><strong>No.</strong> The node communicates entirely over radio frequencies (the 900 MHz unlicensed ISM band). It does not connect to your Wi-Fi, use your internet bandwidth, or access any of your home network.</p>
 <p>There is an optional feature called MQTT that <em>can</em> connect to the internet for extended range, but that is never enabled without your knowledge and permission. The default setup is fully radio-only and self-contained.</p>
 </details>
 <details class="question">
@@ -1095,7 +1044,7 @@
 </details>
 <details class="question">
 <summary>Will it interfere with my Wi-Fi, TV, or garage door?</summary>
-<p><strong>No.</strong> Meshtastic operates on <strong>906.875 MHz</strong>, which is a completely different frequency from:</p>
+<p><strong>No.</strong> Meshtastic operates on the <strong>900 MHz ISM band</strong>, which is a completely different frequency from:</p>
 <ul>
 <li>Wi-Fi (2.4 GHz / 5 GHz / 6 GHz)</li>
 <li>Cell phones (700 MHz-2.5 GHz, different bands)</li>

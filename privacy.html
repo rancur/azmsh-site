@@ -248,36 +248,18 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="docs/start-here.html" class="md-tabs__link">
-        
-  
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="docs/start-here.html" class="md-tabs__link">
+          
+  
   
   Start Here
 
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="docs/how-to-connect.html" class="md-tabs__link">
-        
-  
-  
+        </a>
+      </li>
     
-  
-  How to Connect
-
-      </a>
-    </li>
   
 
       
@@ -306,25 +288,6 @@
   
   
     <li class="md-tabs__item">
-      <a href="docs/cant-transmit.html" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Can't Send?
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
       <a href="docs/recommended-hardware.html" class="md-tabs__link">
         
   
@@ -332,25 +295,6 @@
     
   
   Recommended Hardware
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="docs/recommended-settings.html" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Recommended Settings
 
       </a>
     </li>
@@ -537,6 +481,56 @@
   
   
   
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start Here
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Start Here
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="docs/start-here.html" class="md-nav__link">
         
@@ -557,22 +551,23 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
   
     <li class="md-nav__item">
-      <a href="docs/how-to-connect.html" class="md-nav__link">
+      <a href="docs/cant-transmit.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    How to Connect
+    Receive Works, Can't Send
   
 
     
@@ -581,6 +576,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -619,33 +622,6 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/cant-transmit.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Can't Send?
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="docs/recommended-hardware.html" class="md-nav__link">
         
   
@@ -654,33 +630,6 @@
     
   
     Recommended Hardware
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="docs/recommended-settings.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Recommended Settings
   
 
     
@@ -1083,7 +1032,7 @@ how they connect to each other, and how well the mesh is performing.</p>
 <li>A node on the mesh that is connected to MQTT relays that packet to an MQTT
    broker.</li>
 <li>Our ingestion tool reads the packet from the broker and decodes it using the
-   public default key (AQ==).</li>
+   well-known public default key that ships with every Meshtastic device.</li>
 <li>The decoded data is shown in our tools, such as view.azmsh.net.</li>
 </ol>
 <p>Our broker is set up for uploads only. Nodes can send data to it, but downlink is
@@ -1093,9 +1042,9 @@ broker so we can display the data. <strong>Nothing we run transmits on the netwo
 changes how your node behaves.</strong></p>
 <h2 id="important-public-channel-data-is-not-private">Important: public-channel data is not private</h2>
 <p>Meshtastic's standard channels are secured only with a default encryption key
-(AQ==) that ships with every device and is publicly known. This is not unique to
-one channel. The same default key is used by the common presets, such as LongFast
-and MediumFast, whenever a channel is left on the default key. Because that key is
+that ships with every device and is publicly known. This is not unique to
+one channel. The same default key is used by the common modem presets whenever a
+channel is left on the default key. Because that key is
 public, anyone running Meshtastic can read traffic that uses it. It is not
 private, even though it is technically "encrypted."</p>
 <p>When a node is configured to uplink to MQTT, that traffic can be received by any
