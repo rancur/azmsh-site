@@ -1127,7 +1127,7 @@
 <p class="admonition-title">If you receive ANY messages, your settings are already correct</p>
 <p>Receiving other people's traffic proves your <strong>region, preset, frequency slot, and primary channel</strong> are all set right — the radio is decoding the mesh. So this is <strong>not</strong> a settings problem. It's an <strong>asymmetric RF link</strong>: you can hear a strong, high-up node, but your lower-power signal can't make the trip back. The fix is physical, not in the app.</p>
 </div>
-<p>If you have <em>never</em> received a single message, that's a different problem — recheck your settings on <a href="/docs/start-here.html#step-3-set-the-arizona-lora-radio-settings">Start Here, Step 3</a> (most likely a wrong Frequency Slot or a renamed primary channel).</p>
+<p>If you have <em>never</em> received a single message, that's a different problem — recheck your settings on <a href="/azmsh-site/docs/start-here.html#step-3-set-the-arizona-lora-radio-settings">Start Here, Step 3</a> (most likely a wrong Frequency Slot or a renamed primary channel).</p>
 <hr>
 <h2 id="what-max-transmission-reached-no-acks-actually-means">What "Max Transmission Reached" / no acks actually means</h2>
 <p>When you send on the primary channel, your node waits to hear the message relayed back (an implicit acknowledgement). If it never hears the relay after several attempts, it reports <strong>Max Transmission Reached</strong> or shows no acknowledgement. It means your packet isn't reaching a node that can repeat it — your <em>transmit</em> path is weak, even though your <em>receive</em> path is fine. Big rooftop nodes transmit at several watts from high up; a handheld indoors might be a fraction of a watt behind a wall.</p>
@@ -1146,17 +1146,17 @@
 <p>Most handhelds ship with a weak stock antenna (often ~69% efficient). A good whip is the single cheapest range upgrade you can make.</p>
 <ul>
 <li>Handheld: the <a href="https://muzi.works/products/whip-antenna-17cm">Muziworks 17cm whip (~$12)</a> is the community favorite.</li>
-<li>See the full <a href="/docs/recommended-hardware.html#antenna-guide">Antenna Guide</a> for rooftop options.</li>
+<li>See the full <a href="/azmsh-site/docs/recommended-hardware.html#antenna-guide">Antenna Guide</a> for rooftop options.</li>
 </ul>
 <div class="admonition danger">
 <p class="admonition-title">Never transmit with the antenna disconnected</p>
 <p>Sending without an antenna can fry the radio. Always attach the antenna before powering on or transmitting.</p>
 </div>
 <h3 id="4-add-a-rooftop-relay-node">4. Add a rooftop relay node</h3>
-<p>If you live in a dead spot, the real fix is a permanent node up high that relays for you. A <a href="/docs/recommended-hardware.html#rooftop-base-station-nodes">Station G2 or a solar rooftop node</a> on your roof anchors coverage for your whole area — and it relays <em>your</em> handheld back into the mesh. This is the #1 long-term fix.</p>
+<p>If you live in a dead spot, the real fix is a permanent node up high that relays for you. A <a href="/azmsh-site/docs/recommended-hardware.html#rooftop-base-station-nodes">Station G2 or a solar rooftop node</a> on your roof anchors coverage for your whole area — and it relays <em>your</em> handheld back into the mesh. This is the #1 long-term fix.</p>
 <h3 id="5-check-power-then-time-of-day">5. Check power, then time of day</h3>
 <ul>
-<li>Solar/battery nodes often transmit at very low power (<strong>0.05W–0.5W</strong>). If you've maxed out placement and antenna, a <a href="/docs/recommended-hardware.html#rooftop-base-station-nodes">higher-power node (1W+)</a> may be the answer.</li>
+<li>Solar/battery nodes often transmit at very low power (<strong>0.05W–0.5W</strong>). If you've maxed out placement and antenna, a <a href="/azmsh-site/docs/recommended-hardware.html#rooftop-base-station-nodes">higher-power node (1W+)</a> may be the answer.</li>
 <li>The mesh ebbs and flows. If nobody's on when you test, you'll hear nothing. Try again at a busier time.</li>
 </ul>
 <hr>

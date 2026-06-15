@@ -1100,7 +1100,7 @@
 
 
 <h1 id="faq-troubleshooting">FAQ &amp; Troubleshooting</h1>
-<p>Quick answers to the snags new Arizona operators hit most. If your issue is "I can receive but not send," that has its own page: <a href="/docs/cant-transmit.html">Receive works, can't send</a>.</p>
+<p>Quick answers to the snags new Arizona operators hit most. If your issue is "I can receive but not send," that has its own page: <a href="/azmsh-site/docs/cant-transmit.html">Receive works, can't send</a>.</p>
 <hr>
 <h2 id="forbidden-403">The map / view says "Forbidden" or 403</h2>
 <p>Visiting <a href="https://view.azmsh.net">view.azmsh.net</a> and getting <strong>Forbidden / 403</strong>? You almost certainly opened it <strong>before</strong> opting in on Discord, and your browser cached the denial.</p>
@@ -1120,7 +1120,7 @@
 <p>The claim button in Discord sometimes times out, especially if your node hasn't been seen yet.</p>
 <p><strong>Two requirements before a claim will work:</strong></p>
 <ol>
-<li><strong>Your node must have hit MQTT at least once</strong> — it has to actually appear in the <strong>node-discovery</strong> list before it can be claimed. Turn on MQTT (see <a href="/docs/start-here.html#step-5-optional-turn-on-mqtt-for-the-map">Start Here, Step 5</a>) and give it a few minutes.</li>
+<li><strong>Your node must have hit MQTT at least once</strong> — it has to actually appear in the <strong>node-discovery</strong> list before it can be claimed. Turn on MQTT (see <a href="/azmsh-site/docs/start-here.html#step-5-optional-turn-on-mqtt-for-the-map">Start Here, Step 5</a>) and give it a few minutes.</li>
 <li>
 <p>Use the slash command instead of the button if the button keeps failing:</p>
 <div class="highlight"><pre><span></span><code>/node action:claim node_identifier:&lt;your-node-id&gt;
@@ -1131,7 +1131,7 @@
 <p>If you still get <strong>"This interaction failed,"</strong> wait a minute and run the slash command again — it's usually a transient timeout, not a permanent error.</p>
 <hr>
 <h2 id="flashing-gotchas">Flashing problems: boot loops, blank screen, bricking</h2>
-<p>See the dedicated page for the full walkthrough: <a href="/docs/flashing-gotchas.html">Flashing &amp; Recovery</a>.</p>
+<p>See the dedicated page for the full walkthrough: <a href="/azmsh-site/docs/flashing-gotchas.html">Flashing &amp; Recovery</a>.</p>
 <p>The short version:</p>
 <ul>
 <li><strong>UNCHECK "Install Meshtastic UI" when flashing</strong> (the #1 cause of boot loops / blank screens, especially on Heltec V3/V4).</li>
