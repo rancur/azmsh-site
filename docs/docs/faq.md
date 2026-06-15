@@ -2,7 +2,7 @@
 hide:
   - navigation
 title: FAQ & Troubleshooting
-description: Quick fixes for the most common snags — 403 "Forbidden" on the map, claiming your node, flashing/bricking, and DM "No Channel" / impersonation warnings.
+description: Quick fixes for the most common snags. 403 "Forbidden" on the map, claiming your node, flashing/bricking, and DM "No Channel" / impersonation warnings.
 ---
 
 # FAQ & Troubleshooting
@@ -18,7 +18,7 @@ Visiting [view.azmsh.net](https://view.azmsh.net) and getting **Forbidden / 403*
 **Fix, in order:**
 
 1. In Discord, go to the **#getting-started** channel and **react with the :pie: pie emoji** to grant yourself the access role. Do this *first*.
-2. Now open the map in an **incognito/private window** — or clear your cookies and cache for `azmsh.net` so the browser drops the old "denied" state.
+2. Now open the map in an **incognito/private window**, or clear your cookies and cache for `azmsh.net` so the browser drops the old "denied" state.
 3. Still blocked after a few minutes? Ask in Discord; an admin can confirm your role.
 
 !!! tip "React first, then visit"
@@ -34,7 +34,7 @@ The claim button in Discord sometimes times out, especially if your node hasn't 
 
 **Two requirements before a claim will work:**
 
-1. **Your node must have hit MQTT at least once** — it has to actually appear in the **node-discovery** list before it can be claimed. Turn on MQTT (see [Start Here, Step 5](/docs/start-here.html#step-5-optional-turn-on-mqtt-for-the-map)) and give it a few minutes.
+1. **Your node must have hit MQTT at least once.** It has to actually appear in the **node-discovery** list before it can be claimed. Turn on MQTT (see [Start Here, Step 5](/docs/start-here.html#step-5-optional-turn-on-mqtt-for-the-map)) and give it a few minutes.
 2. Use the slash command instead of the button if the button keeps failing:
 
     ```
@@ -43,7 +43,7 @@ The claim button in Discord sometimes times out, especially if your node hasn't 
 
     Your node identifier can be the **decimal** node number or the **`!hex`** form (e.g. `!a1b2c3d4`). You can find it in the Meshtastic app under your node's details, or in the node-discovery list.
 
-If you still get **"This interaction failed,"** wait a minute and run the slash command again — it's usually a transient timeout, not a permanent error.
+If you still get **"This interaction failed,"** wait a minute and run the slash command again. It's usually a transient timeout, not a permanent error.
 
 ---
 
@@ -54,8 +54,8 @@ See the dedicated page for the full walkthrough: [Flashing & Recovery](/docs/fla
 The short version:
 
 - **UNCHECK "Install Meshtastic UI" when flashing** (the #1 cause of boot loops / blank screens, especially on Heltec V3/V4).
-- **Never transmit with the antenna disconnected** — it can permanently damage the radio.
-- A "dead" node usually isn't dead — put it in **DFU / bootloader mode** and re-flash.
+- **Never transmit with the antenna disconnected.** It can permanently damage the radio.
+- A "dead" node usually isn't dead. Put it in **DFU / bootloader mode** and re-flash.
 
 ---
 
@@ -71,7 +71,7 @@ A direct message uses a **per-node encrypted handshake**. "No Channel" means you
 
 1. On **both** devices, **forget / remove** the other node.
 2. Bring the nodes back into range and let them re-exchange node info.
-3. Wait for the **green lock** icon to appear next to the node — that means the key handshake succeeded and DMs will work.
+3. Wait for the **green lock** icon to appear next to the node. That means the key handshake succeeded and DMs will work.
 
 ### "Possible impersonation" / key warning
 

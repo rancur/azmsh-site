@@ -34,17 +34,29 @@ repo_url: https://github.com/ArizonaMeshtasticCommunity/azmsh-site
 
 nav:
   - Home: index.md
-  - Start Here: docs/start-here.md
-  - How to Connect: docs/how-to-connect.md
+  - Start Here:
+      - Start Here: docs/start-here.md
+      - Receive Works, Can't Send: docs/cant-transmit.md
   - What Now?: docs/what-now.md
-  - Can't Send?: docs/cant-transmit.md
   - Recommended Hardware: docs/recommended-hardware.md
-  - Recommended Settings: docs/recommended-settings.md
   - Suggested Channels: docs/suggested_channels.md
   - Host a Node: docs/host-a-node.md
   - FAQ & Troubleshooting: docs/faq.md
   - Flashing & Recovery: docs/flashing-gotchas.md
   - Reach Out: reach_out.md
+
+# Pages intentionally kept out of the top nav.
+# how-to-connect and recommended-settings are now redirect stubs that fold into
+# Start Here (their content was merged in). connect.md and
+# recommended_configuration_settings.md are legacy reference stubs. accessibility
+# and privacy are linked from the footer.
+not_in_nav: |
+  /docs/how-to-connect.md
+  /docs/recommended-settings.md
+  /docs/connect.md
+  /docs/recommended_configuration_settings.md
+  /accessibility.md
+  /privacy.md
 
 plugins:
   - offline

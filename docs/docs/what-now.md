@@ -9,7 +9,7 @@ description: You set up your node and configured your settings. Now how do you c
 
 So you've got your node set up, the app downloaded, all your settings configured. You connected. **Now what? How do you know if it's actually working, if anyone out there can hear you?**
 
-This page is the moment right after [How to Connect](/docs/how-to-connect.html). Your radio is on, your settings are dialed in, and you're staring at the screen wondering: *did I do this right?*
+This page is the moment right after [Start Here](/docs/start-here.html). Your radio is on, your settings are dialed in, and you're staring at the screen wondering: *did I do this right?*
 
 Here's how to find out.
 
@@ -45,7 +45,7 @@ Keep doing the above until you see something land. Try every location, see what 
 
 The **#1 issue** we see new operators run into is missing a setting. Or turning something on that shouldn't be on.
 
-Make sure every setting on the [Recommended Settings](/docs/recommended-settings.html) page is configured correctly, and nothing else.
+Make sure every setting in the [Start Here](/docs/start-here.html) guide is configured correctly, and nothing else.
 
 !!! tip "When in doubt, leave it alone"
     If you aren't fully sure what a setting does, don't mess with it. If you want someone to check your settings, start a thread in **#i-need-help** on Discord. We're happy to take a look.
@@ -138,6 +138,6 @@ Here's what to do next:
 
 - **Join more channels.** Hop into the topic channels on Discord for traceroutes, hardware, and the help threads.
 - **Sunday night chat.** Join us every Sunday at **5pm** on the **Primary MediumFast** channel for our weekly community chat.
-- **Get your friends and family on the mesh.** The more nodes we have, the better the network works for everyone. Send them to [How to Connect](/docs/how-to-connect.html) to get started.
+- **Get your friends and family on the mesh.** The more nodes we have, the better the network works for everyone. Send them to [Start Here](/docs/start-here.html) to get started.
 
 [:fontawesome-brands-discord: Join the Discord](https://discord.gg/HrKtyuFEQk){ .md-button .md-button--primary }

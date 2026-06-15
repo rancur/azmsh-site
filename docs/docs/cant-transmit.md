@@ -2,23 +2,23 @@
 hide:
   - navigation
 title: Receive Works, Can't Send
-description: You can see other people's messages but yours never get acknowledged, or you see "Max Transmission Reached". This is the most common issue on the mesh — and it's almost always physical placement, not a settings bug.
+description: You can see other people's messages but yours never get acknowledged, or you see "Max Transmission Reached". This is the most common issue on the mesh, and it's almost always physical placement, not a settings bug.
 ---
 
 # I Can Receive, But I Can't Send
 
-This is by far the most common issue people bring to the community — "I see everyone else's messages, but mine never get acknowledged," or "I keep getting **Max Transmission Reached**."
+This is by far the most common issue people bring to the community: "I see everyone else's messages, but mine never get acknowledged," or "I keep getting **Max Transmission Reached**."
 
 !!! success "If you receive ANY messages, your settings are already correct"
-    Receiving other people's traffic proves your **region, preset, frequency slot, and primary channel** are all set right — the radio is decoding the mesh. So this is **not** a settings problem. It's an **asymmetric RF link**: you can hear a strong, high-up node, but your lower-power signal can't make the trip back. The fix is physical, not in the app.
+    Receiving other people's traffic proves your **region, preset, frequency slot, and primary channel** are all set right; the radio is decoding the mesh. So this is **not** a settings problem. It's an **asymmetric RF link**: you can hear a strong, high-up node, but your lower-power signal can't make the trip back. The fix is physical, not in the app.
 
-If you have *never* received a single message, that's a different problem — recheck your settings on [Start Here, Step 3](/docs/start-here.html#step-3-set-the-arizona-lora-radio-settings) (most likely a wrong Frequency Slot or a renamed primary channel).
+If you have *never* received a single message, that's a different problem. Recheck your settings on [Start Here, Step 3](/docs/start-here.html#step-3-get-the-arizona-radio-settings-from-discord) (most likely a wrong Frequency Slot or a renamed primary channel).
 
 ---
 
 ## What "Max Transmission Reached" / no acks actually means
 
-When you send on the primary channel, your node waits to hear the message relayed back (an implicit acknowledgement). If it never hears the relay after several attempts, it reports **Max Transmission Reached** or shows no acknowledgement. It means your packet isn't reaching a node that can repeat it — your *transmit* path is weak, even though your *receive* path is fine. Big rooftop nodes transmit at several watts from high up; a handheld indoors might be a fraction of a watt behind a wall.
+When you send on the primary channel, your node waits to hear the message relayed back (an implicit acknowledgement). If it never hears the relay after several attempts, it reports **Max Transmission Reached** or shows no acknowledgement. It means your packet isn't reaching a node that can repeat it: your *transmit* path is weak, even though your *receive* path is fine. Big rooftop nodes transmit at several watts from high up; a handheld indoors might be a fraction of a watt behind a wall.
 
 ---
 
@@ -28,7 +28,7 @@ When you send on the primary channel, your node waits to hear the message relaye
 
 Walls, roofs, stucco with metal lath, and Low-E windows all crush a 915 MHz signal. Step **completely outside** and send `test` again. Even a 30-second outdoor test tells you whether your building is the problem.
 
-### 2. Get high — height is might
+### 2. Get high (height is might)
 
 Elevation beats almost everything else.
 
@@ -48,7 +48,7 @@ Most handhelds ship with a weak stock antenna (often ~69% efficient). A good whi
 
 ### 4. Add a rooftop relay node
 
-If you live in a dead spot, the real fix is a permanent node up high that relays for you. A [Station G2 or a solar rooftop node](/docs/recommended-hardware.html#rooftop-base-station-nodes) on your roof anchors coverage for your whole area — and it relays *your* handheld back into the mesh. This is the #1 long-term fix.
+If you live in a dead spot, the real fix is a permanent node up high that relays for you. A [Station G2 or a solar rooftop node](/docs/recommended-hardware.html#rooftop-base-station-nodes) on your roof anchors coverage for your whole area, and it relays *your* handheld back into the mesh. This is the #1 long-term fix.
 
 ### 5. Check power, then time of day
 
@@ -59,6 +59,6 @@ If you live in a dead spot, the real fix is a permanent node up high that relays
 
 ## Still stuck?
 
-Bring it to the community. A quick thread in **#i-need-help** on Discord — with your hardware, antenna, and where you tested from — usually gets you sorted fast.
+Bring it to the community. A quick thread in **#i-need-help** on Discord, with your hardware, antenna, and where you tested from, usually gets you sorted fast.
 
 [:fontawesome-brands-discord: Ask in #i-need-help](https://discord.gg/HrKtyuFEQk){ .md-button .md-button--primary }
