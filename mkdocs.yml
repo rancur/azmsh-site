@@ -32,29 +32,31 @@ site_url: https://azmsh.net
 repo_name: azmsh-site
 repo_url: https://github.com/ArizonaMeshtasticCommunity/azmsh-site
 
+# A single linear newcomer journey (Home -> Start Here -> What Now?) followed by
+# reference pages, plus one consolidated troubleshooting hub.
 nav:
   - Home: index.md
-  - Start Here:
-      - Start Here: docs/start-here.md
-      - Receive Works, Can't Send: docs/cant-transmit.md
+  - Start Here: docs/start-here.md
   - What Now?: docs/what-now.md
+  - FAQ & Troubleshooting: docs/faq.md
   - Recommended Hardware: docs/recommended-hardware.md
   - Suggested Channels: docs/suggested_channels.md
   - Host a Node: docs/host-a-node.md
-  - FAQ & Troubleshooting: docs/faq.md
-  - Flashing & Recovery: docs/flashing-gotchas.md
   - Reach Out: reach_out.md
 
 # Pages intentionally kept out of the top nav.
-# how-to-connect and recommended-settings are now redirect stubs that fold into
-# Start Here (their content was merged in). connect.md and
-# recommended_configuration_settings.md are legacy reference stubs. accessibility
-# and privacy are linked from the footer.
+# Redirect stubs (meta-refresh) so old / external links never 404 after the
+# consolidation:
+#   how-to-connect, recommended-settings -> folded into Start Here
+#   cant-transmit, flashing-gotchas      -> folded into FAQ & Troubleshooting
+# wismesh-repeater-mini-1w is a deep build guide linked from Recommended Hardware.
+# accessibility and privacy are linked from the footer.
 not_in_nav: |
   /docs/how-to-connect.md
   /docs/recommended-settings.md
-  /docs/connect.md
-  /docs/recommended_configuration_settings.md
+  /docs/cant-transmit.md
+  /docs/flashing-gotchas.md
+  /docs/wismesh-repeater-mini-1w.md
   /accessibility.md
   /privacy.md
 

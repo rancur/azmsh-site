@@ -39,6 +39,9 @@ If `test` is getting crickets, the most common fixes are physical, not technical
 
 Keep doing the above until you see something land. Try every location, see what works best for you.
 
+!!! tip "Can receive but can't send? That's the most common snag, and it has a full fix-list"
+    If you can see *other people's* messages but yours never get acknowledged (or you see **Max Transmission Reached**), your settings are fine; it's an RF/placement issue. The complete, ordered fix list lives in the [FAQ → I can receive, but I can't send](/docs/faq.html#cant-send).
+
 ---
 
 ## Step 3. Still Nothing? Check Your Settings.
@@ -50,11 +53,7 @@ Make sure every setting in the [Start Here](/docs/start-here.html) guide is conf
 !!! tip "When in doubt, leave it alone"
     If you aren't fully sure what a setting does, don't mess with it. If you want someone to check your settings, start a thread in **#i-need-help** on Discord. We're happy to take a look.
 
-### Still receiving or transmitting unreliably?
-
-A lot of solar and battery-powered nodes transmit at very low wattage: **0.05W to 0.5W**. If you've tried every location, gotten your node as high as possible, and confirmed your settings, it might be time to look at the **1W and higher** options on our [Recommended Hardware](/docs/recommended-hardware.html) page.
-
-A better antenna is often the **single biggest** improvement you can make before upgrading the radio itself.
+Still stuck after all of the above? Work through the [FAQ & Troubleshooting](/docs/faq.html) page; it covers the "can't send" RF fixes, the 403 map error, node-claim failures, and flashing problems in one place.
 
 ---
 

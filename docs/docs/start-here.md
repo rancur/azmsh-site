@@ -25,7 +25,7 @@ New to the Arizona mesh? This is the only page you need to get going. Follow the
 2. Select your device, click **Flash**, and follow the prompts.
 
 !!! warning "UNCHECK \"Install Meshtastic UI\" when flashing"
-    On many devices (especially Heltec V3/V4), leaving the "Meshtastic UI" / "InkHUD" option checked causes boot loops or a blank screen. If you don't specifically want the on-device UI, leave it **unchecked**. If your screen is already stuck or blank, re-flash with it off. See [Flashing & Recovery](/docs/flashing-gotchas.html).
+    On many devices (especially Heltec V3/V4), leaving the "Meshtastic UI" / "InkHUD" option checked causes boot loops or a blank screen. If you don't specifically want the on-device UI, leave it **unchecked**. If your screen is already stuck or blank, re-flash with it off. See [FAQ → Flashing problems](/docs/faq.html#flashing-gotchas).
 
 !!! danger "Never transmit without an antenna attached"
     Powering on or sending with the antenna disconnected can permanently damage the radio. Always screw the antenna on first.
@@ -121,13 +121,13 @@ This is the moment of truth.
 **No tapbacks after a few tries?** That's almost always physical placement, not a settings bug. Keep reading.
 
 !!! tip "If you can RECEIVE any messages, your settings are correct"
-    Seeing *other people's* messages come in means your radio, preset, slot, and channel are all right. If you can hear them but they can't hear you, it's an RF/placement problem, not a configuration problem. Go to [Receive works, can't send](/docs/cant-transmit.html).
+    Seeing *other people's* messages come in means your radio, preset, slot, and channel are all right. If you can hear them but they can't hear you, it's an RF/placement problem, not a configuration problem. Go to [FAQ -> I can receive, but I can't send](/docs/faq.html#cant-send).
 
 ---
 
 ## Where to go next
 
-- :material-help-circle: **Can't send / no acks / "Max Transmission Reached"?** → [Receive works, can't send](/docs/cant-transmit.html)
+- :material-help-circle: **Can't send / no acks / "Max Transmission Reached"?** → [FAQ → I can receive, but I can't send](/docs/faq.html#cant-send)
 - :material-radio-tower: **Add community channels** → [Suggested Channels](/docs/suggested_channels.html)
 - :material-map: **Claim your node + see yourself on the map** → [What Now?](/docs/what-now.html)
 - :material-frequently-asked-questions: **Site says "Forbidden", node won't claim, flashing problems** → [FAQ & Troubleshooting](/docs/faq.html)
