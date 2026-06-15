@@ -837,13 +837,14 @@
 name and encryption key so the right messages reach the right people.</p>
 <p>Adding the channels below lets you join the wider <strong>azmsh.net</strong> community. Chat on the
 Arizona channel, watch the weather roll in from rooftop stations, keep an eye on traffic, and
-even play a little trivia. The channel names and keys are shared with the community in our
-<a href="https://discord.gg/HrKtyuFEQk">Discord server</a> so they stay coordinated.</p>
+even play a little trivia. These community channel names and keys are public and listed
+<a href="#the-channels">in the table below</a>. (Your <strong>primary</strong> channel, region, preset, and frequency
+slot are coordinated in <a href="https://discord.gg/HrKtyuFEQk">Discord</a>; see <a href="/docs/start-here.html">Start Here</a>.)</p>
 <div class="admonition tip">
 <p class="admonition-title">Two things to get right</p>
 <ul>
 <li><strong>Channel names are case-sensitive.</strong> <code>Weather</code> and <code>weather</code> are <em>not</em> the same channel.</li>
-<li><strong>Keys must match exactly.</strong> Copy each key from Discord character-for-character.
+<li><strong>Keys must match exactly.</strong> Copy each key from the table below character-for-character.
   They're short, pre-shared keys (PSKs). That's by design for community channels.</li>
 </ul>
 </div>
@@ -852,7 +853,7 @@ even play a little trivia. The channel names and keys are shared with the commun
 <p>Pick your platform below. The flow is the same idea everywhere: open the Meshtastic app,
 find the <strong>Channels</strong> editor, add a channel, and enter the <strong>Name</strong> and <strong>Key</strong> from the
 <a href="#the-channels">table further down</a> exactly as written.</p>
-<details class="note" open="open">
+<details class="note">
 <summary>Android</summary>
 <ol>
 <li>Open the <strong>Meshtastic</strong> app and make sure your node is connected over Bluetooth.</li>
@@ -905,36 +906,60 @@ on your iPhone first (see the iOS steps above) and they'll sync to the Watch.</p
 <p>If you have the <a href="https://meshtastic.org/docs/software/python/cli/installation/">Meshtastic CLI</a>
 installed, you can add a secondary channel directly. For example, to add <strong>azmsh</strong>:</p>
 <div class="highlight"><pre><span></span><code>meshtastic --ch-add azmsh
-meshtastic --ch-index 1 --ch-set psk base64:&lt;KEY_FROM_DISCORD&gt; --ch-set name azmsh
+meshtastic --ch-index 1 --ch-set psk base64:AQ== --ch-set name azmsh
 </code></pre></div>
 <p>Adjust the <code>--ch-index</code> and values for each channel you want. Use the exact names and keys
-shared in <a href="https://discord.gg/HrKtyuFEQk">Discord</a>. Names are case-sensitive.</p>
+from the table below. Names are case-sensitive.</p>
 </details>
 <hr>
 <h2 id="the-channels">The Channels</h2>
-<p>Each Arizona community channel has a <strong>name</strong> and a <strong>key (PSK)</strong>. The keys are shared with
-the community in our <a href="https://discord.gg/HrKtyuFEQk">Discord server</a> so they stay coordinated.
-Join, grab the exact name + key for each channel, and add them as described above. The names
-below tell you what each channel is for; the keys are behind the Discord gate.</p>
-<div class="azmsh-locked">
-  <div class="azmsh-settings">
-    <p class="azmsh-group-title">Primary (default) — leave the name blank, Default key size</p>
-    <div class="azmsh-row"><span class="azmsh-label">Key (PSK):</span> <span class="azmsh-value">ExampleKey==</span></div>
-    <p class="azmsh-group-title">azmsh — Arizona chatter + tests, Default key size</p>
-    <div class="azmsh-row"><span class="azmsh-label">Key (PSK):</span> <span class="azmsh-value">ExampleKey==</span></div>
-    <p class="azmsh-group-title">Weather — rooftop weather stations, 1-byte key size</p>
-    <div class="azmsh-row"><span class="azmsh-label">Key (PSK):</span> <span class="azmsh-value">ExampleKey==</span></div>
-    <p class="azmsh-group-title">Traffic — local traffic reports + waypoints, 1-byte key size</p>
-    <div class="azmsh-row"><span class="azmsh-label">Key (PSK):</span> <span class="azmsh-value">ExampleKey==</span></div>
-    <p class="azmsh-group-title">Trivia — play trivia (type !help in-channel), 1-byte key size</p>
-    <div class="azmsh-row"><span class="azmsh-label">Key (PSK):</span> <span class="azmsh-value">ExampleKey==</span></div>
-  </div>
-  <div class="azmsh-overlay">
-    <span class="azmsh-overlay-text">🔒 Channel names + keys are shared in Discord</span>
-    <a class="md-button md-button--primary" href="https://discord.gg/HrKtyuFEQk">Join The Discord</a>
-  </div>
+<p>These Arizona <strong>community</strong> channels are public. Add them as <strong>secondary</strong> channels (they
+don't replace your primary). Each one has a <strong>name</strong> and a short pre-shared <strong>key (PSK)</strong>.
+Keys are shown in monospace so you can tell them apart at a glance (<code>AQ==</code> vs <code>Ww==</code>). The
+table scrolls sideways on small screens; swipe to see every column.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Channel Name (case sensitive)</th>
+<th style="text-align: left;">Key</th>
+<th style="text-align: left;">Size (iOS only)</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>azmsh</code></td>
+<td style="text-align: left;"><code>AQ==</code></td>
+<td style="text-align: left;">Default</td>
+<td style="text-align: left;">The Arizona channel, great for running tests and general chatter.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Weather</code></td>
+<td style="text-align: left;"><code>Ww==</code></td>
+<td style="text-align: left;">1-byte</td>
+<td style="text-align: left;">Users post from their weather stations on their roofs, great for checking the weather every hour and making sure your node is consistently receiving.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Traffic</code></td>
+<td style="text-align: left;"><code>TQ==</code></td>
+<td style="text-align: left;">1-byte</td>
+<td style="text-align: left;">Local traffic reports along with waypoints showing where there is traffic on the map.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Trivia</code></td>
+<td style="text-align: left;"><code>MQ==</code></td>
+<td style="text-align: left;">1-byte</td>
+<td style="text-align: left;">Play trivia with your fellow users. Type <code>!help</code> in the channel to learn how to play.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Your primary channel is separate</p>
+<p>The community-specific <strong>primary</strong> channel name + key (and the region, preset, and frequency
+slot) are still coordinated in <a href="https://discord.gg/HrKtyuFEQk">Discord</a>. Set those up first on
+<a href="/docs/start-here.html#step-3-get-the-arizona-radio-settings-from-discord">Start Here → Step 3 &amp; 4</a>,
+then add the public community channels above as <strong>secondary</strong> channels.</p>
 </div>
-
 <div class="admonition question">
 <p class="admonition-title">Need a hand?</p>
 <p>Stuck getting a channel to show up? Hop into our <a href="https://discord.gg/HrKtyuFEQk">Discord</a>
