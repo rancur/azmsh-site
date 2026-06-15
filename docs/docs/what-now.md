@@ -19,7 +19,7 @@ Here's how to find out.
 
 Meshtastic is part art and part science. The art part is trying a lot of things and testing to see what works. Everyone's setup and location is different.
 
-1. Type `test` in the **Primary MediumFast** channel. Send it. (Send it as many times as you want.)
+1. Type `test` in your **primary** channel. Send it. (Send it as many times as you want.)
 2. A lot of our users run **MeshMonitor** which will respond automatically with a tapback emoji:
    - :one: :two: :three: :four: :five: :six: :seven:. How many hops away that user is from you
    - :asterisk:. Direct hit (no hops, they heard you straight)
@@ -137,7 +137,7 @@ You can also see your traceroutes on [view.azmsh.net](https://view.azmsh.net) as
 Here's what to do next:
 
 - **Join more channels.** Hop into the topic channels on Discord for traceroutes, hardware, and the help threads.
-- **Sunday night chat.** Join us every Sunday at **5pm** on the **Primary MediumFast** channel for our weekly community chat.
+- **Sunday night chat.** Join us every Sunday at **5pm** on the **primary** channel for our weekly community chat.
 - **Get your friends and family on the mesh.** The more nodes we have, the better the network works for everyone. Send them to [Start Here](/docs/start-here.html) to get started.
 
 [:fontawesome-brands-discord: Join the Discord](https://discord.gg/HrKtyuFEQk){ .md-button .md-button--primary }

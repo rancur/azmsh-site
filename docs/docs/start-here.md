@@ -53,11 +53,22 @@ New to the Arizona mesh? This is the only page you need to get going. Follow the
 
 This is where most new nodes go wrong, and it's why this step points you to Discord.
 
-To join the Arizona mesh you need the community-specific **region, preset, and frequency slot**. We keep those values in our [Discord server](https://discord.gg/HrKtyuFEQk) so they stay coordinated and current. Join, head to the setup channel, and you'll find the exact values to enter.
+To join the Arizona mesh you need the community-specific **region, preset, and frequency slot**. We keep those values in our [Discord server](https://discord.gg/HrKtyuFEQk) so they stay coordinated and current, then you enter them in the app.
 
-[:fontawesome-brands-discord: Join the Discord for the Arizona radio settings](https://discord.gg/HrKtyuFEQk){ .md-button .md-button--primary }
+In your Meshtastic app, open **Settings → LoRa (Radio Configuration)** and set these:
 
-Then, in the app, open **Settings → LoRa (Radio Configuration)** and enter the **region, preset, and frequency slot** exactly as listed in Discord.
+<div class="azmsh-locked">
+  <div class="azmsh-settings">
+    <p class="azmsh-group-title">Arizona LoRa settings</p>
+    <div class="azmsh-row"><span class="azmsh-label">1. Region:</span> <span class="azmsh-value">US</span></div>
+    <div class="azmsh-row"><span class="azmsh-label">2. Preset:</span> <span class="azmsh-value">ExamplePreset_AZ</span></div>
+    <div class="azmsh-row"><span class="azmsh-label">3. Frequency Slot:</span> <span class="azmsh-value">00</span></div>
+  </div>
+  <div class="azmsh-overlay">
+    <span class="azmsh-overlay-text">🔒 Arizona radio settings are shared in Discord</span>
+    <a class="md-button md-button--primary" href="https://discord.gg/HrKtyuFEQk">Join The Discord</a>
+  </div>
+</div>
 
 !!! warning "The Frequency Slot is the #1 missed setting"
     Lots of people set the preset correctly but leave the **Frequency Slot** at `0`/auto, so they land on the wrong frequency and can't hear anyone. Set it to the exact slot listed in Discord.
@@ -69,6 +80,18 @@ Then, in the app, open **Settings → LoRa (Radio Configuration)** and enter the
 ## Step 4: Set up your primary channel
 
 Open **Settings → Channels** and configure the **primary** channel (index 0) using the values from Discord.
+
+<div class="azmsh-locked">
+  <div class="azmsh-settings">
+    <p class="azmsh-group-title">Primary channel (index 0)</p>
+    <div class="azmsh-row"><span class="azmsh-label">Name:</span> <span class="azmsh-value">ExampleName</span></div>
+    <div class="azmsh-row"><span class="azmsh-label">Key (PSK):</span> <span class="azmsh-value">ExampleKey==</span></div>
+  </div>
+  <div class="azmsh-overlay">
+    <span class="azmsh-overlay-text">🔒 Primary channel name + key are shared in Discord</span>
+    <a class="md-button md-button--primary" href="https://discord.gg/HrKtyuFEQk">Join The Discord</a>
+  </div>
+</div>
 
 !!! danger "Do NOT rename your primary channel"
     Renaming the primary channel to "AZ Mesh", "azmsh", or anything custom puts you on a *different* channel and you fall off the mesh entirely. Use exactly the name and key listed in Discord.
