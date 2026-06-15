@@ -1,6 +1,7 @@
 site_name: Arizona Meshtastic Community
 theme:
   name: material
+  custom_dir: overrides
   language: en
   logo: assets/images/logo.png
   favicon: assets/images/favicon.png
@@ -95,10 +96,11 @@ extra_javascript:
   - assets/js/nodeData.js # Node Info
   - assets/js/a11y.js # Skip-link focus management
 
+# The Accessibility / Privacy footer links are rendered by the custom
+# overrides/partials/copyright.html partial using {{ base_url }} so they
+# resolve at every page depth on both azmsh.net and the preview sub-path.
 copyright: >
   Copyright &copy; 2026 Arizona Meshtastic Community
-  &nbsp;&middot;&nbsp; <a href="/accessibility.html">Accessibility</a>
-  &nbsp;&middot;&nbsp; <a href="/privacy.html">Privacy Policy</a>
 extra:
   social:
     - icon: fontawesome/brands/discord

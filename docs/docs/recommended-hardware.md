@@ -12,7 +12,7 @@ New to Meshtastic? Here's what to buy. No monthly fees, no subscriptions. Just a
     **1. A handheld radio**. Carry it with you, pairs with your phone via Bluetooth<br>
     **2. A rooftop/attic node**. Put it up high at your home to keep you connected
 
-    That's it. Buy these two things, follow our [Start Here](/docs/start-here.html) guide, and you're on the mesh.
+    That's it. Buy these two things, follow our [Start Here](start-here.md) guide, and you're on the mesh.
 
 ---
 
@@ -38,7 +38,7 @@ New to Meshtastic? Here's what to buy. No monthly fees, no subscriptions. Just a
 
     **~$125-150 in parts**. Every step is documented for first-time builders.
 
-    [:material-tools: Full Build Guide](/docs/wismesh-repeater-mini-1w.html){ .md-button .md-button--primary }
+    [:material-tools: Full Build Guide](wismesh-repeater-mini-1w.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -230,12 +230,12 @@ Our #1 rooftop node. A community build that puts the RAK 1W Booster Kit (RAK3401
 Plus small hardware: lever nuts (e.g. Wago) for parallel battery wiring, 3M double-sided foam tape, M3 machine screws, and hose clamps for mast mounting. A 3D printer is optional. Only the mast bracket and battery spacer are printed.
 
 !!! success "Community build by prayingmedic"
-    This build was designed and field-tested by **prayingmedic**, a member of the Arizona Meshtastic Community. Huge thanks to him for documenting it and sharing the photos and STL files. The [full build guide](/docs/wismesh-repeater-mini-1w.html) walks through every step.
+    This build was designed and field-tested by **prayingmedic**, a member of the Arizona Meshtastic Community. Huge thanks to him for documenting it and sharing the photos and STL files. The [full build guide](wismesh-repeater-mini-1w.md) walks through every step.
 
 !!! info "EIRP stays compliant"
     30 dBm TX + the 5.8 dBi Alfa whip ≈ **35.8 dBm EIRP**. Just under the **36 dBm** US 915 MHz ISM limit. Don't pair this build with a higher-gain antenna at full power, or you'll go over.
 
-:material-cart: **[Full Build Guide → WisMesh Repeater Mini 1W](/docs/wismesh-repeater-mini-1w.html){ .md-button .md-button--primary }**
+:material-cart: **[Full Build Guide → WisMesh Repeater Mini 1W](wismesh-repeater-mini-1w.md){ .md-button .md-button--primary }**
 
 ---
 
@@ -285,7 +285,7 @@ Put it in a waterproof junction box (~$10), add a 915 MHz antenna (~$15-40), and
 Don't want to build anything? These come fully assembled. Mount them, configure Meshtastic settings, done.
 
 !!! info "Node role for Arizona rooftop nodes"
-    Set your rooftop node to **CLIENT**. This is the recommended role for home installations. See [Additional Settings → Node Roles](/docs/additional-settings.html#device) for details on all roles.
+    Set your rooftop node to **CLIENT**. This is the recommended role for home installations. See [Additional Settings → Node Roles](additional-settings.md#device) for details on all roles.
 
 !!! warning "Understand Router roles before switching"
     **Router** and **Router Late** are intended for high-elevation, permanent fixed locations with good line-of-sight. Not typical home or rooftop installs. Using these roles in the wrong context can increase congestion and cause routing issues across the shared mesh. If you're considering Router or Router Late, read up on Meshtastic's guidance and ask the community on Discord before switching.
@@ -301,7 +301,7 @@ Don't want to build anything? These come fully assembled. Mount them, configure 
 
 - **Best value:** SenseCAP Solar P1 Pro. 5W solar panel, 4x 18650 batteries, GPS, ~$90
 - **Easiest deploy:** WisMesh Repeater. IP67 weatherproof, mount and forget
-- **Want the Repeater Mini?** Skip the stock version and build the **1W upgrade** instead. It's [our #1 rooftop pick](/docs/wismesh-repeater-mini-1w.html): same enclosure, 6x the TX power, no soldering.
+- **Want the Repeater Mini?** Skip the stock version and build the **1W upgrade** instead. It's [our #1 rooftop pick](wismesh-repeater-mini-1w.md): same enclosure, 6x the TX power, no soldering.
 - **Premium turnkey:** Atlavox Beacon. Professional mounting hardware, dual SMA connectors, rugged build
 - **Need WiFi/MQTT?** Heltec V4 Solar Node. Heltec V4 board (+28 dBm), 25W solar panel, 6x 18650 battery bay, 5.5 dBi IP67 antenna, mast brackets included
 
@@ -404,8 +404,8 @@ For most Arizona rooftop nodes, an **omnidirectional fiberglass antenna** is the
 
 #### Next Steps
 
-- [Start Here](/docs/start-here.html). Set up your new radio and join the Arizona mesh
-- [Additional Settings](/docs/additional-settings.html). Tune your node for the Arizona network (roles, intervals, MQTT)
+- [Start Here](start-here.md). Set up your new radio and join the Arizona mesh
+- [Additional Settings](additional-settings.md). Tune your node for the Arizona network (roles, intervals, MQTT)
 - [Official Meshtastic Hardware List](https://meshtastic.org/docs/hardware/devices/)
 - [Meshtastic Getting Started Guide](https://meshtastic.org/docs/getting-started/)
 

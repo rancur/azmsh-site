@@ -20,7 +20,7 @@ Everything that commonly goes wrong, in one place. Already set up and stuck? Jum
 - [Flashing problems: boot loops, blank screen, bricking](#flashing-gotchas)
 - [DM says "No Channel" or shows an impersonation warning](#dm-no-channel)
 
-New here and not set up yet? Start with the [Start Here](/docs/start-here.html) guide; it walks you from an unboxed radio to your first acknowledged message.
+New here and not set up yet? Start with the [Start Here](start-here.md) guide; it walks you from an unboxed radio to your first acknowledged message.
 
 ---
 
@@ -28,20 +28,20 @@ New here and not set up yet? Start with the [Start Here](/docs/start-here.html) 
 
 Missing some messages, or not seeing any traffic come in? Work through this in order.
 
-**1. Recheck every setting first.** The most common cause is a single wrong setting. Go back through the [Start Here](/docs/start-here.html) guide and confirm **all** of them match the Arizona values exactly, nothing more, nothing less:
+**1. Recheck every setting first.** The most common cause is a single wrong setting. Go back through the [Start Here](start-here.md) guide and confirm **all** of them match the Arizona values exactly, nothing more, nothing less:
 
-- **Region**, **Preset**, and especially the **Frequency Slot** (the [#1 missed setting](/docs/start-here.html#step-3-get-the-arizona-radio-settings-from-discord); leaving it on `0`/auto puts you on the wrong frequency).
-- Your **primary channel name + key**, copied exactly. A [renamed primary channel](/docs/start-here.html#step-4-set-up-your-primary-channel) drops you off the mesh.
+- **Region**, **Preset**, and especially the **Frequency Slot** (the [#1 missed setting](start-here.md#step-3-get-the-arizona-radio-settings-from-discord); leaving it on `0`/auto puts you on the wrong frequency).
+- Your **primary channel name + key**, copied exactly. A [renamed primary channel](start-here.md#step-4-set-up-your-primary-channel) drops you off the mesh.
 
 If you're not receiving a **single** message, it's almost always one of the above. Fix it and test again.
 
 **2. Settings confirmed but still missing traffic? Move and get higher.** If your settings are definitely right and you still can't reliably receive (or can't transmit), it's a physical/RF problem, not a configuration one. Try different locations and antenna placement:
 
 - **Get outside and get high.** Height beats almost everything. A window, balcony, second floor, or rooftop will pull in far more than an interior room. Even a 30-second outdoor test tells you whether your building is the problem.
-- **Try a better antenna.** Most handhelds ship with a weak stock antenna. A good whip is the cheapest range upgrade you can make. See the [Antenna Guide](/docs/recommended-hardware.html#antenna-guide).
+- **Try a better antenna.** Most handhelds ship with a weak stock antenna. A good whip is the cheapest range upgrade you can make. See the [Antenna Guide](recommended-hardware.md#antenna-guide).
 - **Try at a busier time of day.** The mesh ebbs and flows. If nobody's transmitting when you test, you'll hear nothing.
 
-**3. Still struggling? Consider a more capable radio.** If you've confirmed settings, moved around, tried different placement and an upgraded antenna, and reception is still poor, your hardware may be the limit. A higher-power radio or a rooftop relay node anchors coverage and pulls weak signals in. See [Recommended Hardware](/docs/recommended-hardware.html) for a more powerful radio and rooftop options.
+**3. Still struggling? Consider a more capable radio.** If you've confirmed settings, moved around, tried different placement and an upgraded antenna, and reception is still poor, your hardware may be the limit. A higher-power radio or a rooftop relay node anchors coverage and pulls weak signals in. See [Recommended Hardware](recommended-hardware.md) for a more powerful radio and rooftop options.
 
 !!! tip "Missing only *some* messages is normal to a degree"
     Meshtastic is a best-effort radio network, not the internet. Distant or low-power nodes won't always reach you, and busy-channel collisions can drop the occasional packet. If you're getting *most* traffic, your setup is working; the steps above help you catch more of it.
@@ -57,7 +57,7 @@ This is by far the most common issue people bring to the community: "I see every
 !!! success "If you receive ANY messages, your settings are already correct"
     Receiving other people's traffic proves your **region, preset, frequency slot, and primary channel** are all set right; the radio is decoding the mesh. So this is **not** a settings problem. It's an **asymmetric RF link**: you can hear a strong, high-up node, but your lower-power signal can't make the trip back. The fix is physical, not in the app.
 
-If you have *never* received a single message, that's a different problem; it's almost always a wrong **Frequency Slot** or a renamed primary channel. Recheck [Start Here → Step 3](/docs/start-here.html#step-3-get-the-arizona-radio-settings-from-discord).
+If you have *never* received a single message, that's a different problem; it's almost always a wrong **Frequency Slot** or a renamed primary channel. Recheck [Start Here → Step 3](start-here.md#step-3-get-the-arizona-radio-settings-from-discord).
 
 ### What "Max Transmission Reached" / no acks actually means
 
@@ -67,9 +67,9 @@ When you send on the primary channel, your node waits to hear the message relaye
 
 1. **Get outside.** Walls, roofs, stucco with metal lath, and Low-E windows all crush a 915 MHz signal. Step **completely outside** and send `test` again. Even a 30-second outdoor test tells you whether your building is the problem.
 2. **Get high (height is might).** Elevation beats almost everything else. Move to a **second floor, balcony, or rooftop**. For a fixed home node, put the antenna in the **attic or on the roof**, not on a desk. A basic antenna up high will out-perform an expensive antenna down low, every time.
-3. **Upgrade the antenna.** Most handhelds ship with a weak stock antenna (often ~69% efficient). A good whip is the single cheapest range upgrade you can make. Handheld: the [Muziworks 17cm whip (~$12)](https://muzi.works/products/whip-antenna-17cm) is the community favorite. See the full [Antenna Guide](/docs/recommended-hardware.html#antenna-guide) for rooftop options.
-4. **Add a rooftop relay node.** If you live in a dead spot, the real fix is a permanent node up high that relays for you. A [Station G2 or a solar rooftop node](/docs/recommended-hardware.html#rooftop-base-station-nodes) on your roof anchors coverage for your whole area, and it relays *your* handheld back into the mesh. This is the #1 long-term fix.
-5. **Check power, then time of day.** Solar/battery nodes often transmit at very low power (**0.05W-0.5W**). If you've maxed out placement and antenna, a [higher-power node (1W+)](/docs/recommended-hardware.html#rooftop-base-station-nodes) may be the answer. The mesh also ebbs and flows; if nobody's on when you test, you'll hear nothing. Try again at a busier time.
+3. **Upgrade the antenna.** Most handhelds ship with a weak stock antenna (often ~69% efficient). A good whip is the single cheapest range upgrade you can make. Handheld: the [Muziworks 17cm whip (~$12)](https://muzi.works/products/whip-antenna-17cm) is the community favorite. See the full [Antenna Guide](recommended-hardware.md#antenna-guide) for rooftop options.
+4. **Add a rooftop relay node.** If you live in a dead spot, the real fix is a permanent node up high that relays for you. A [Station G2 or a solar rooftop node](recommended-hardware.md#rooftop-base-station-nodes) on your roof anchors coverage for your whole area, and it relays *your* handheld back into the mesh. This is the #1 long-term fix.
+5. **Check power, then time of day.** Solar/battery nodes often transmit at very low power (**0.05W-0.5W**). If you've maxed out placement and antenna, a [higher-power node (1W+)](recommended-hardware.md#rooftop-base-station-nodes) may be the answer. The mesh also ebbs and flows; if nobody's on when you test, you'll hear nothing. Try again at a busier time.
 
 !!! danger "Never transmit with the antenna disconnected"
     Sending without an antenna can fry the radio. Always attach the antenna before powering on or transmitting.
@@ -92,7 +92,7 @@ A very common new-user worry: "I can see everyone else's traffic and lots of nod
 **Work through it:**
 
 1. **Look for the acknowledgement in the app first, not in Discord.** A checkmark / "Acknowledged" on your message is the real proof you were heard. `#messages` is a convenience mirror, not the source of truth.
-2. **If you want to see yourself in `#messages`, turn on MQTT.** Enable **"OK to MQTT"** and channel **Uplink**; see [Additional Settings → MQTT](/docs/additional-settings.html#mqtt). Give it a few minutes.
+2. **If you want to see yourself in `#messages`, turn on MQTT.** Enable **"OK to MQTT"** and channel **Uplink**; see [Additional Settings → MQTT](additional-settings.md#mqtt). Give it a few minutes.
 3. **"I see nodes but no replies" usually means you are heard but your own transmit is weak.** If your messages never get a checkmark, that is the classic receive-works/can't-send problem; work the [I can receive, but I can't send](#cant-send) fix-list (get outside, get high, better antenna).
 4. **Missing *some* messages is normal.** Meshtastic is best-effort radio, not the internet. Distant or busy-channel packets drop sometimes. Getting most traffic means your setup is working.
 
@@ -140,7 +140,7 @@ Trying to flash or configure over USB (Web Flasher, [Web Client](https://client.
 Showing up in the middle of the desert, at 0,0, or not on the map at all? This is a position-data issue, not a connection problem.
 
 - **Rooftop and indoor nodes often never get a GPS fix.** Walls and roofs block GPS just like they block your signal, so a stationary node may report no location or a stale one.
-- **The fix is to set a Fixed Position.** In the app, enable **Fixed Position** and enter your coordinates manually so your node always reports the right spot. Full context and the recommended position intervals are on [Additional Settings → Position](/docs/additional-settings.html#position).
+- **The fix is to set a Fixed Position.** In the app, enable **Fixed Position** and enter your coordinates manually so your node always reports the right spot. Full context and the recommended position intervals are on [Additional Settings → Position](additional-settings.md#position).
 - **Grab your coordinates** from any maps app (long-press your location → copy the latitude/longitude) and paste them in.
 - **Wrong spot from earlier testing?** If you moved the node or set coordinates while testing, update Fixed Position to the real location and **save/send the config**; the map updates after your next position broadcast.
 - **Don't want to publish your exact home location?** You can set Fixed Position to a nearby intersection rather than your doorstep, or leave position broadcast off entirely; you'll still be on the mesh, just without a precise pin.
@@ -170,7 +170,7 @@ The claim button in Discord sometimes times out, especially if your node hasn't 
 
 **Two requirements before a claim will work:**
 
-1. **Your node must have hit MQTT at least once.** It has to actually appear in the **node-discovery** list before it can be claimed. Turn on MQTT (see [Start Here, Step 5](/docs/start-here.html#step-5-optional-turn-on-mqtt-for-the-map)) and give it a few minutes.
+1. **Your node must have hit MQTT at least once.** It has to actually appear in the **node-discovery** list before it can be claimed. Turn on MQTT (see [Start Here, Step 5](start-here.md#step-5-optional-turn-on-mqtt-for-the-map)) and give it a few minutes.
 2. Use the slash command instead of the button if the button keeps failing:
 
     ```
@@ -181,7 +181,7 @@ The claim button in Discord sometimes times out, especially if your node hasn't 
 
 If you still get **"This interaction failed,"** wait a minute and run the slash command again. It's usually a transient timeout, not a permanent error.
 
-The full post-setup walkthrough (claim, opt in, read the map) lives on [How To Test](/docs/how-to-test.html).
+The full post-setup walkthrough (claim, opt in, read the map) lives on [How To Test](how-to-test.md).
 
 ---
 

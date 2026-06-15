@@ -12,7 +12,7 @@ Adding the channels below lets you join the wider **azmsh.net** community. Chat 
 Arizona channel, watch the weather roll in from rooftop stations, keep an eye on traffic, and
 even play a little trivia. These community channel names and keys are public and listed
 [in the table below](#the-channels). (Your **primary** channel, region, preset, and frequency
-slot are coordinated in [Discord](https://discord.gg/HrKtyuFEQk); see [Start Here](/docs/start-here.html).)
+slot are coordinated in [Discord](https://discord.gg/HrKtyuFEQk); see [Start Here](start-here.md).)
 
 !!! tip "Two things to get right"
 
@@ -104,7 +104,7 @@ table scrolls sideways on small screens; swipe to see every column.
 
     The community-specific **primary** channel name + key (and the region, preset, and frequency
     slot) are still coordinated in [Discord](https://discord.gg/HrKtyuFEQk). Set those up first on
-    [Start Here → Step 3 & 4](/docs/start-here.html#step-3-get-the-arizona-radio-settings-from-discord),
+    [Start Here → Step 3 & 4](start-here.md#step-3-get-the-arizona-radio-settings-from-discord),
     then add the public community channels above as **secondary** channels.
 
 !!! question "Need a hand?"

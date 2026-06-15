@@ -9,7 +9,7 @@ description: You set up your node and configured your settings. Now how do you c
 
 So you've got your node set up, the app downloaded, all your settings configured. You connected. **Now what? How do you know if it's actually working, if anyone out there can hear you?**
 
-This page is the moment right after [Start Here](/docs/start-here.html). Your radio is on, your settings are dialed in, and you're staring at the screen wondering: *did I do this right?*
+This page is the moment right after [Start Here](start-here.md). Your radio is on, your settings are dialed in, and you're staring at the screen wondering: *did I do this right?*
 
 Here's how to find out.
 
@@ -40,7 +40,7 @@ If `test` is getting crickets, the most common fixes are physical, not technical
 Keep doing the above until you see something land. Try every location, see what works best for you.
 
 !!! tip "Can receive but can't send? That's the most common snag, and it has a full fix-list"
-    If you can see *other people's* messages but yours never get acknowledged (or you see **Max Transmission Reached**), your settings are fine; it's an RF/placement issue. The complete, ordered fix list lives in the [FAQ → I can receive, but I can't send](/docs/faq.html#cant-send).
+    If you can see *other people's* messages but yours never get acknowledged (or you see **Max Transmission Reached**), your settings are fine; it's an RF/placement issue. The complete, ordered fix list lives in the [FAQ → I can receive, but I can't send](faq.md#cant-send).
 
 ---
 
@@ -48,12 +48,12 @@ Keep doing the above until you see something land. Try every location, see what 
 
 The **#1 issue** we see new operators run into is missing a setting. Or turning something on that shouldn't be on.
 
-Make sure every setting in the [Start Here](/docs/start-here.html) guide is configured correctly, and nothing else.
+Make sure every setting in the [Start Here](start-here.md) guide is configured correctly, and nothing else.
 
 !!! tip "When in doubt, leave it alone"
     If you aren't fully sure what a setting does, don't mess with it. If you want someone to check your settings, start a thread in **#i-need-help** on Discord. We're happy to take a look.
 
-Still stuck after all of the above? Work through the [FAQ & Troubleshooting](/docs/faq.html) page; it covers the "can't send" RF fixes, the 403 map error, node-claim failures, and flashing problems in one place.
+Still stuck after all of the above? Work through the [FAQ & Troubleshooting](faq.md) page; it covers the "can't send" RF fixes, the 403 map error, node-claim failures, and flashing problems in one place.
 
 ---
 
@@ -61,7 +61,7 @@ Still stuck after all of the above? Work through the [FAQ & Troubleshooting](/do
 
 Now that you're heard on the mesh, plug into the community side.
 
-**Claim your node.** In Discord, run the `/node` slash command and choose the **claim** action (`/node action:claim node_identifier:<your-node-id>`). Discord will autocomplete the options as you type. This helps others know the node is yours, so they can tag you when they have questions, hear you on the air, or want to know if you can hear them. If the claim fails or times out, see [FAQ → Claiming a node fails](/docs/faq.html#claim-node).
+**Claim your node.** In Discord, run the `/node` slash command and choose the **claim** action (`/node action:claim node_identifier:<your-node-id>`). Discord will autocomplete the options as you type. This helps others know the node is yours, so they can tag you when they have questions, hear you on the air, or want to know if you can hear them. If the claim fails or times out, see [FAQ → Claiming a node fails](faq.md#claim-node).
 
 **Opt in for diagnostic data.** Click the :pie: reaction in the **#getting-started** channel on Discord. Opting in unlocks:
 
@@ -69,7 +69,7 @@ Now that you're heard on the mesh, plug into the community side.
 - Access to [view.azmsh.net](https://view.azmsh.net). Our community map and MQTT diagnostics tool
 
 !!! warning "Map says “Forbidden” / 403? React with the pie emoji FIRST"
-    If you open [view.azmsh.net](https://view.azmsh.net) **before** reacting with the :pie: emoji, your browser caches the denied state and keeps showing **Forbidden**. React first, then open the map in an **incognito window** (or clear your cache/cookies for the site). Full steps: [FAQ → Forbidden / 403](/docs/faq.html#forbidden-403).
+    If you open [view.azmsh.net](https://view.azmsh.net) **before** reacting with the :pie: emoji, your browser caches the denied state and keeps showing **Forbidden**. React first, then open the map in an **incognito window** (or clear your cache/cookies for the site). Full steps: [FAQ → Forbidden / 403](faq.md#forbidden-403).
 
 [:fontawesome-brands-discord: Join the Discord](https://discord.gg/HrKtyuFEQk){ .md-button .md-button--primary }
 
@@ -137,6 +137,6 @@ Here's what to do next:
 
 - **Join more channels.** Hop into the topic channels on Discord for traceroutes, hardware, and the help threads.
 - **Sunday night chat.** Join us every Sunday at **5pm** on the **primary** channel for our weekly community chat.
-- **Get your friends and family on the mesh.** The more nodes we have, the better the network works for everyone. Send them to [Start Here](/docs/start-here.html) to get started.
+- **Get your friends and family on the mesh.** The more nodes we have, the better the network works for everyone. Send them to [Start Here](start-here.md) to get started.
 
 [:fontawesome-brands-discord: Join the Discord](https://discord.gg/HrKtyuFEQk){ .md-button .md-button--primary }

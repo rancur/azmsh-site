@@ -12,11 +12,11 @@ Meshtastic is a free, open-source mesh network that lets you send text messages,
 Whether you're brand new to radio or a seasoned operator, this is your hub to get started and connect with the Arizona Meshtastic Community.
 
 <span style="display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-    [:material-rocket-launch: Start Here](/docs/start-here.html){ .md-button .md-button--primary }
+    [:material-rocket-launch: Start Here](docs/start-here.md){ .md-button .md-button--primary }
     [:fontawesome-brands-discord: Join us on Discord](https://discord.gg/HrKtyuFEQk){ .md-button target="_blank"}
 </span>
 
-<p style="text-align: center; opacity: 0.8;">New to the mesh? The <a href="/docs/start-here.html">Start Here</a> guide gets you from an unboxed radio to your first acknowledged message in about 30 minutes.</p>
+<p style="text-align: center; opacity: 0.8;">New to the mesh? The <a href="docs/start-here.html">Start Here</a> guide gets you from an unboxed radio to your first acknowledged message in about 30 minutes.</p>
 
 <div class="grid cards" markdown>
 

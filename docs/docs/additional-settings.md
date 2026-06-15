@@ -10,12 +10,12 @@ description: The deeper Meshtastic settings reference for Arizona operators, lai
 This is the deeper settings reference for your node: node roles, broadcast intervals, Neighbor Info, MQTT, and more. It's laid out in the **same section order as the iOS Meshtastic app**, grouped under **Radio Configuration**, **Device Configuration**, and **Module Configuration**, so you can read down this page with the app open and follow along section by section.
 
 !!! tip "New here? Start with the Start Here guide first"
-    If you just unboxed a radio, **don't start on this page.** Go to **[Start Here](/docs/start-here.html)** first; it walks you in order from flashing firmware to sending your first acknowledged message, and it already includes everything you need to get on the Arizona mesh. Come back here once you're connected and want to fine-tune your node.
+    If you just unboxed a radio, **don't start on this page.** Go to **[Start Here](start-here.md)** first; it walks you in order from flashing firmware to sending your first acknowledged message, and it already includes everything you need to get on the Arizona mesh. Come back here once you're connected and want to fine-tune your node.
 
-    [:material-rocket-launch: Go to Start Here](/docs/start-here.html){ .md-button .md-button--primary }
+    [:material-rocket-launch: Go to Start Here](start-here.md){ .md-button .md-button--primary }
 
 !!! info "The Arizona-specific values aren't repeated here"
-    Your **region, preset, frequency slot, primary channel name + key, and MQTT broker** are shared in [Discord](https://discord.gg/HrKtyuFEQk) so the whole mesh stays coordinated. Get those from Discord (see [Start Here → Step 3](/docs/start-here.html#step-3-get-the-arizona-radio-settings-from-discord)). Everything on this page is general guidance that's the same for any operator.
+    Your **region, preset, frequency slot, primary channel name + key, and MQTT broker** are shared in [Discord](https://discord.gg/HrKtyuFEQk) so the whole mesh stays coordinated. Get those from Discord (see [Start Here → Step 3](start-here.md#step-3-get-the-arizona-radio-settings-from-discord)). Everything on this page is general guidance that's the same for any operator.
 
 !!! note "Names on this page follow the iOS app; Android differences are noted"
     This page uses the **iOS / iPadOS / macOS** section names and setting names, in the order the iOS app lists them. Where Android uses a different word for the same setting, we note it in parentheses, like **Modem Presets (Android: Presets)**. The path to reach the settings also differs slightly:
@@ -41,7 +41,7 @@ The **LoRa** section is the most important radio section: it's where **Region, M
     - **Frequency Slot** and **Frequency Override** are named the same on both.
     - The hop setting is **Hop Limit (iOS) / Number of Hops (Android)**.
 
-The Arizona **Region, Modem Preset, and Frequency Slot** values are shared in Discord. Set them exactly as listed; they are covered in [Start Here → Step 3](/docs/start-here.html#step-3-get-the-arizona-radio-settings-from-discord).
+The Arizona **Region, Modem Preset, and Frequency Slot** values are shared in Discord. Set them exactly as listed; they are covered in [Start Here → Step 3](start-here.md#step-3-get-the-arizona-radio-settings-from-discord).
 
 <div class="azmsh-locked">
   <div class="azmsh-settings">
@@ -72,9 +72,9 @@ The **"OK to MQTT"** toggle also lives in the LoRa section. See the [MQTT](#mqtt
 
 The **Channels** section is where you set your **primary** channel and add **secondary** channels.
 
-- Your **primary channel** (index 0) must match the Arizona settings exactly. Setting it up is covered in [Start Here → Step 4](/docs/start-here.html#step-4-set-up-your-primary-channel).
+- Your **primary channel** (index 0) must match the Arizona settings exactly. Setting it up is covered in [Start Here → Step 4](start-here.md#step-4-set-up-your-primary-channel).
 - **Do not rename your primary channel.** Renaming it to "AZ Mesh", "azmsh", or anything custom puts you on a *different* channel and you fall off the mesh.
-- Community channels (azmsh, Weather, Traffic, Trivia) are added here as **secondary** channels. The names, keys, and per-platform steps live on the [Suggested Channels](/docs/suggested_channels.html) page.
+- Community channels (azmsh, Weather, Traffic, Trivia) are added here as **secondary** channels. The names, keys, and per-platform steps live on the [Suggested Channels](suggested_channels.md) page.
 
 The fields are labeled **Channel Name** and **PSK** (the key) on both apps.
 
@@ -87,7 +87,7 @@ The **Security** section holds your node's **identity keys**. These are what let
 !!! tip "Back up your keys before re-flashing"
     Flashing can wipe your settings, including your node's identity keys. Export/back up your configuration from the Meshtastic app first, so you don't reappear as a brand-new node and trigger impersonation warnings for others.
 
-- If you ever see a **"possible impersonation"** warning about another node, or your own node is flagged, it usually means weak/duplicate keys from very old firmware. The fix is to regenerate keys on the affected node. See [FAQ → DM "No Channel" / impersonation](/docs/faq.html#dm-no-channel).
+- If you ever see a **"possible impersonation"** warning about another node, or your own node is flagged, it usually means weak/duplicate keys from very old firmware. The fix is to regenerate keys on the affected node. See [FAQ → DM "No Channel" / impersonation](faq.md#dm-no-channel).
 
 ---
 
@@ -110,7 +110,7 @@ The **User** section is where you set how your node identifies itself on the mes
 The **Bluetooth** section controls how your phone pairs with the node.
 
 - **Pairing Mode:** most devices default to a fixed PIN or a random PIN shown on screen. If you have no screen, the PIN is usually `123456` or printed in the device docs.
-- If pairing fails or keeps dropping, see [FAQ → Bluetooth won't pair or keeps dropping](/docs/faq.html#bluetooth).
+- If pairing fails or keeps dropping, see [FAQ → Bluetooth won't pair or keeps dropping](faq.md#bluetooth).
 
 ---
 
@@ -339,8 +339,8 @@ In the iOS Module Configuration list, **Neighbor Info** appears alphabetically j
 
 ## Where to go next
 
-- :material-rocket-launch: **Not set up yet?** → [Start Here](/docs/start-here.html)
-- :material-test-tube: **Confirm the mesh can hear you** → [How To Test](/docs/how-to-test.html)
-- :material-frequently-asked-questions: **Something's not working** → [FAQ & Troubleshooting](/docs/faq.html)
-- :material-radio-tower: **Add community channels** → [Suggested Channels](/docs/suggested_channels.html)
-- :material-radio-handheld: **Need better hardware** → [Recommended Hardware](/docs/recommended-hardware.html)
+- :material-rocket-launch: **Not set up yet?** → [Start Here](start-here.md)
+- :material-test-tube: **Confirm the mesh can hear you** → [How To Test](how-to-test.md)
+- :material-frequently-asked-questions: **Something's not working** → [FAQ & Troubleshooting](faq.md)
+- :material-radio-tower: **Add community channels** → [Suggested Channels](suggested_channels.md)
+- :material-radio-handheld: **Need better hardware** → [Recommended Hardware](recommended-hardware.md)

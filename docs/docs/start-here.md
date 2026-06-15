@@ -7,10 +7,10 @@ description: The first 30 minutes on the Arizona mesh. A single, in-order guide 
 
 # Start Here: Your First 30 Minutes
 
-New to the Arizona mesh? This is the page to get going. Follow the steps **in order, top to bottom** (don't skip ahead). By the end you'll have a working node, the right Arizona settings, and proof that the mesh can hear you. Once you're connected and want to fine-tune your node, the deeper settings reference (roles, broadcast intervals, MQTT) lives on [Additional Settings](/docs/additional-settings.html).
+New to the Arizona mesh? This is the page to get going. Follow the steps **in order, top to bottom** (don't skip ahead). By the end you'll have a working node, the right Arizona settings, and proof that the mesh can hear you. Once you're connected and want to fine-tune your node, the deeper settings reference (roles, broadcast intervals, MQTT) lives on [Additional Settings](additional-settings.md).
 
 !!! info "What you need before you begin"
-    - A Meshtastic radio. Don't have one? See [Recommended Hardware](/docs/recommended-hardware.html). You can get on the mesh for about $30.
+    - A Meshtastic radio. Don't have one? See [Recommended Hardware](recommended-hardware.md). You can get on the mesh for about $30.
     - The Meshtastic app on your phone (links in Step 2).
     - About 30 minutes. Most of it is waiting for firmware to flash.
     - Our Discord, which is where the Arizona radio settings live (link in Step 3).
@@ -25,7 +25,7 @@ New to the Arizona mesh? This is the page to get going. Follow the steps **in or
 2. Select your device, click **Flash**, and follow the prompts.
 
 !!! warning "Leave “Install Meshtastic UI” UNCHECKED on most devices"
-    The web flasher may offer an **"Install Meshtastic UI"** option. **Meshtastic UI (MUI)** is a separate on-device interface built for **color touchscreen** devices like the LilyGO T-Deck and SenseCAP Indicator. It is **not** meant for the small OLED screens on common boards like the **Heltec V3/V4** or RAK handhelds, and installing it there can leave you with a blank screen or a boot loop. Unless you have a touchscreen device and specifically want the on-device UI, leave this **unchecked** and use the phone app for the interface. If your screen is already stuck or blank, re-flash with it off. See [FAQ → Flashing problems](/docs/faq.html#flashing-gotchas).
+    The web flasher may offer an **"Install Meshtastic UI"** option. **Meshtastic UI (MUI)** is a separate on-device interface built for **color touchscreen** devices like the LilyGO T-Deck and SenseCAP Indicator. It is **not** meant for the small OLED screens on common boards like the **Heltec V3/V4** or RAK handhelds, and installing it there can leave you with a blank screen or a boot loop. Unless you have a touchscreen device and specifically want the on-device UI, leave this **unchecked** and use the phone app for the interface. If your screen is already stuck or blank, re-flash with it off. See [FAQ → Flashing problems](faq.md#flashing-gotchas).
 
 !!! danger "Never transmit without an antenna attached"
     Powering on or sending with the antenna disconnected can permanently damage the radio. Always screw the antenna on first.
@@ -96,13 +96,13 @@ Open **Settings → Channels** and configure the **primary** channel (index 0) u
 !!! danger "Do NOT rename your primary channel"
     Renaming the primary channel to "AZ Mesh", "azmsh", or anything custom puts you on a *different* channel and you fall off the mesh entirely. Use exactly the name and key listed in Discord.
 
-Want the extra Arizona community channels (azmsh, Weather, Traffic, Trivia)? Those are public and live on the [Suggested Channels](/docs/suggested_channels.html) page. Add them as **secondary** channels; they don't replace your primary.
+Want the extra Arizona community channels (azmsh, Weather, Traffic, Trivia)? Those are public and live on the [Suggested Channels](suggested_channels.md) page. Add them as **secondary** channels; they don't replace your primary.
 
 ---
 
 ## Step 5: (Optional) Turn on MQTT for the map
 
-MQTT puts your node on the community map and shares diagnostics. It does **not** carry your text messages. The full MQTT walkthrough, including the broker details, is on [Additional Settings → MQTT](/docs/additional-settings.html#mqtt).
+MQTT puts your node on the community map and shares diagnostics. It does **not** carry your text messages. The full MQTT walkthrough, including the broker details, is on [Additional Settings → MQTT](additional-settings.md#mqtt).
 
 ---
 
@@ -116,19 +116,19 @@ This is the moment of truth.
     - :one: :two: :three: … = how many hops away that node was when it heard you
     - :asterisk: = a direct hit, no hops
 
-**You got tapbacks?** :tada: You're on the Arizona mesh. Head to [How To Test](/docs/how-to-test.html) to claim your node and explore the map.
+**You got tapbacks?** :tada: You're on the Arizona mesh. Head to [How To Test](how-to-test.md) to claim your node and explore the map.
 
 **No tapbacks after a few tries?** That's almost always physical placement, not a settings bug. Keep reading.
 
 !!! tip "If you can RECEIVE any messages, your settings are correct"
-    Seeing *other people's* messages come in means your radio, preset, slot, and channel are all right. If you can hear them but they can't hear you, it's an RF/placement problem, not a configuration problem. Go to [FAQ → I can receive, but I can't send](/docs/faq.html#cant-send).
+    Seeing *other people's* messages come in means your radio, preset, slot, and channel are all right. If you can hear them but they can't hear you, it's an RF/placement problem, not a configuration problem. Go to [FAQ → I can receive, but I can't send](faq.md#cant-send).
 
 ---
 
 ## Where to go next
 
-- :material-test-tube: **Test your setup / see yourself on the map** → [How To Test](/docs/how-to-test.html)
-- :material-help-circle: **Can't send / no acks / "Max Transmission Reached"?** → [FAQ → I can receive, but I can't send](/docs/faq.html#cant-send)
-- :material-radio-tower: **Add community channels** → [Suggested Channels](/docs/suggested_channels.html)
-- :material-tune: **Tune your node (roles, intervals, MQTT)** → [Additional Settings](/docs/additional-settings.html)
-- :material-frequently-asked-questions: **Site says "Forbidden", node won't claim, flashing problems** → [FAQ & Troubleshooting](/docs/faq.html)
+- :material-test-tube: **Test your setup / see yourself on the map** → [How To Test](how-to-test.md)
+- :material-help-circle: **Can't send / no acks / "Max Transmission Reached"?** → [FAQ → I can receive, but I can't send](faq.md#cant-send)
+- :material-radio-tower: **Add community channels** → [Suggested Channels](suggested_channels.md)
+- :material-tune: **Tune your node (roles, intervals, MQTT)** → [Additional Settings](additional-settings.md)
+- :material-frequently-asked-questions: **Site says "Forbidden", node won't claim, flashing problems** → [FAQ & Troubleshooting](faq.md)

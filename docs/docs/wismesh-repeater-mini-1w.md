@@ -213,8 +213,8 @@ The nRF52840 chip flashes by drag-and-drop. No special software, just a web brow
 
 Flashing is not configuring. **Do not skip this part.** Set the node up the same way as every other node on the Arizona mesh:
 
-1. **Follow the [Start Here](/docs/start-here.html) guide** to pair the node and get it on the mesh.
-2. **Apply everything in [Additional Settings](/docs/additional-settings.html).** Region, role, channels, and broadcast intervals all live there. Those settings keep the whole Arizona mesh healthy; this guide doesn't repeat them.
+1. **Follow the [Start Here](start-here.md) guide** to pair the node and get it on the mesh.
+2. **Apply everything in [Additional Settings](additional-settings.md).** Region, role, channels, and broadcast intervals all live there. Those settings keep the whole Arizona mesh healthy; this guide doesn't repeat them.
 
 ### Settings specific to this build
 
@@ -227,7 +227,7 @@ Only a few settings differ from a standard node because of the 1W radio and sola
 | **Bluetooth** | Off if not needed | Saves power. If you turn BT off, plan to manage the node with an **admin node** remotely. |
 
 !!! warning "Don't pick Router/Router Late just because it's powerful"
-    A 1W node is tempting to set as a Router. **Don't, unless your site genuinely calls for it.** Router roles are for high-elevation, permanent, line-of-sight repeater sites. For a home rooftop, stick with the role guidance in [Additional Settings → Node Roles](/docs/additional-settings.html#device). If you think your location qualifies, ask the community on Discord first.
+    A 1W node is tempting to set as a Router. **Don't, unless your site genuinely calls for it.** Router roles are for high-elevation, permanent, line-of-sight repeater sites. For a home rooftop, stick with the role guidance in [Additional Settings → Node Roles](additional-settings.md#device). If you think your location qualifies, ask the community on Discord first.
 
 !!! danger "EIRP compliance. Stay legal"
     Your **effective radiated power** is TX power **plus** antenna gain:
@@ -291,10 +291,10 @@ Want to go deeper on the RAK 1W kit and its power behavior? **Atlavox** has two 
 
 #### Next Steps
 
-- [Recommended Hardware](/docs/recommended-hardware.html). See how this stacks up against other rooftop nodes
-- [Start Here](/docs/start-here.html). Get your node on the Arizona mesh
-- [Additional Settings](/docs/additional-settings.html). The full settings reference (roles, broadcast intervals, MQTT)
-- [How To Test](/docs/how-to-test.html). Confirm the mesh can actually hear you
+- [Recommended Hardware](recommended-hardware.md). See how this stacks up against other rooftop nodes
+- [Start Here](start-here.md). Get your node on the Arizona mesh
+- [Additional Settings](additional-settings.md). The full settings reference (roles, broadcast intervals, MQTT)
+- [How To Test](how-to-test.md). Confirm the mesh can actually hear you
 
 ---
 
