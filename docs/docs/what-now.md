@@ -69,6 +69,9 @@ Now that you're heard on the mesh, plug into the community side.
 - More diagnostic data on your node
 - Access to [view.azmsh.net](https://view.azmsh.net). Our community map and MQTT diagnostics tool
 
+!!! warning "Map says \"Forbidden\" / 403? React with the pie emoji FIRST"
+    If you open [view.azmsh.net](https://view.azmsh.net) **before** reacting with the :pie: emoji, your browser caches the denied state and keeps showing **Forbidden**. React first, then open the map in an **incognito window** (or clear your cache/cookies for the site). Full steps: [FAQ → Forbidden / 403](/docs/faq.html#forbidden-403).
+
 [:fontawesome-brands-discord: Join the Discord](https://discord.gg/HrKtyuFEQk){ .md-button .md-button--primary }
 
 ---

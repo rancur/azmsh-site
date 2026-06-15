@@ -8,10 +8,64 @@ title: Recommended Settings
 
 These settings are based on real-world experience from the Arizona Meshtastic community. Following them helps keep our shared mesh network healthy and reliable for everyone. If you still need a radio, check our [Recommended Hardware](/docs/recommended-hardware.html) page first.
 
-!!! note "Preset and Frequency"
-    The Arizona-specific **preset** and **frequency slot** are shared in our Discord server. Join to get these settings before configuring your device.
+!!! tip "Just want the fast path?"
+    If you're setting up your very first node, follow the linear [Start Here](/docs/start-here.html) guide instead — it walks you through the essentials in order and ends with a self-test. This page is the full reference: the in-order checklist below, then deeper detail on roles, broadcast intervals, neighbor info, and MQTT.
 
-    [:fontawesome-brands-discord: Join the Discord to Get Settings](https://discord.gg/HrKtyuFEQk){ .md-button .md-button--primary }
+---
+
+## Setup Checklist (in order)
+
+Do these in order. There are two distinct screens in the app and people constantly mix them up: **LoRa (radio) settings** decide *which mesh you're on*; **Channels** decide *which conversations you see*. Get the radio right first, then channels.
+
+### 1. LoRa radio settings
+
+Open **Settings → LoRa (Radio Configuration)**:
+
+| Setting | Value | Notes |
+|:--------|:------|:------|
+| **Region** | `US` | Required for legal 915 MHz operation. |
+| **Preset / Modem** | **MediumFast** | The standard Arizona preset. Not MediumSlow, not LongFast. |
+| **Frequency Slot** | **18** (906.375 MHz) | The single most-missed setting — see warning below. |
+| **Frequency Override** | blank / `0` | Leave empty. It is **not** the same as the Slot. |
+| **OK to MQTT** | **On** | Allows map/diagnostics uplink (not your messages). |
+
+!!! warning "Frequency Slot must be 18 — this is the #1 missed setting"
+    Lots of people pick **MediumFast** but leave the **Frequency Slot** at `0`/auto, so they land on the wrong frequency and can't hear anyone.
+
+    **iOS gotcha:** the Slot field is text entry — **double-tap the `0`** to select it, then type `18`. Leave **Frequency Override** blank or `0`; entering a value there *locks* the Slot field. "Override" and "Slot" are different fields.
+
+### 2. Primary channel (leave the name BLANK)
+
+Open **Settings → Channels** and look at the **primary** channel (index 0):
+
+| Field | Value |
+|:------|:------|
+| **Name** | leave **BLANK** (preferred) — a blank primary is the standard `MediumFast` channel |
+| **Pre-shared key** | `AQ==` |
+
+!!! danger "Do NOT rename your primary channel"
+    Renaming the primary to "AZ Mesh", "azmsh", or anything custom puts you on a *different* channel and you fall off the mesh. Leave it blank, or set it to exactly `MediumFast` with key `AQ==`.
+
+### 3. (Optional) Community channels
+
+Add the Arizona community channels (azmsh, Weather, Traffic, Trivia) as **secondary** channels — they don't replace your primary. Names and public keys are on the [Suggested Channels](/docs/suggested_channels.html) page.
+
+### 4. (Optional) MQTT for the map
+
+Turn on MQTT to appear on the community map and share diagnostics. See the [MQTT section below](#mqtt) for the toggles and the Discord-gated broker settings.
+
+!!! note "Copy-paste reference — the non-secret Arizona settings"
+    These values are public and the same for everyone on the Arizona mesh. The MQTT **broker server, username, and password** are *not* here — those are shared in Discord (see [MQTT](#mqtt)).
+
+    | Setting | Value |
+    |:--------|:------|
+    | Region | `US` |
+    | Preset | `MediumFast` |
+    | Frequency Slot | `18` |
+    | Frequency Override | (blank / `0`) |
+    | OK to MQTT | `On` |
+    | Primary channel name | (blank) or `MediumFast` |
+    | Primary channel key | `AQ==` |
 
 ---
 
@@ -149,6 +203,14 @@ Neighbor Info packets are small and infrequent, so the channel congestion impact
 ## MQTT
 
 MQTT lets your node upload diagnostic data to a shared server, which helps us monitor network health and see all nodes on the map. It does **not** send your personal messages or private data -- only metadata like position, telemetry, and node info.
+
+!!! danger "MQTT does NOT send your messages — it's map + diagnostics only"
+    A common misconception is that MQTT carries your text messages over the internet. It does **not**. MQTT shares only **map position, telemetry, and node info** for the community map and monitoring tools. Your text messages always travel over the LoRa radio mesh, encrypted, and are never uplinked.
+
+!!! info "The three toggles that make MQTT work"
+    - **"OK to MQTT"** (LoRa settings): **ON** — lets your node's data be uplinked at all.
+    - **Channel Uplink**: **ON** — sends *that channel's* node/telemetry data to the server.
+    - **"Proxy to Client"**: turn **ON only if the node has no WiFi of its own** — it then relays MQTT through your phone's connection. If the node is on WiFi (most rooftop ESP32 nodes), leave it **OFF**.
 
 !!! info "What MQTT does and does not do"
     - **Does**: Shares your node's position, battery level, signal metrics, and channel utilization with the community map and monitoring tools.

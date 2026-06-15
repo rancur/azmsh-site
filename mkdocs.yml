@@ -34,12 +34,16 @@ repo_url: https://github.com/ArizonaMeshtasticCommunity/azmsh-site
 
 nav:
   - Home: index.md
+  - Start Here: docs/start-here.md
   - How to Connect: docs/how-to-connect.md
   - What Now?: docs/what-now.md
+  - Can't Send?: docs/cant-transmit.md
   - Recommended Hardware: docs/recommended-hardware.md
   - Recommended Settings: docs/recommended-settings.md
   - Suggested Channels: docs/suggested_channels.md
   - Host a Node: docs/host-a-node.md
+  - FAQ & Troubleshooting: docs/faq.md
+  - Flashing & Recovery: docs/flashing-gotchas.md
   - Reach Out: reach_out.md
 
 plugins:
