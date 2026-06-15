@@ -20,7 +20,7 @@ Here's how to find out.
 Meshtastic is part art and part science. The art part is trying a lot of things and testing to see what works. Everyone's setup and location is different.
 
 1. Type `test` in your **primary** channel. Send it. (Send it as many times as you want.)
-2. A lot of our users run **MeshMonitor** which will respond automatically with a tapback emoji:
+2. Many Arizona nodes run an auto-responder (such as **MeshMonitor**, a community tool that watches the mesh) that reacts to your message with a **tapback**: an emoji reaction attached to your message, like a thumbs-up on a text. The number in the reaction tells you how far away that node is:
    - :one: :two: :three: :four: :five: :six: :seven:. How many hops away that user is from you
    - :asterisk:. Direct hit (no hops, they heard you straight)
 3. **Got tapbacks? Congrats. You're on the mesh.** Skip to [Step 4](#step-4-claim-your-node-opt-in-for-diagnostics).
@@ -61,7 +61,7 @@ Still stuck after all of the above? Work through the [FAQ & Troubleshooting](/do
 
 Now that you're heard on the mesh, plug into the community side.
 
-**Claim your node.** Type `/node claim` in Discord. This helps others know the node is yours. They can tag you when they have questions, hear you on the air, or want to know if you can hear them.
+**Claim your node.** In Discord, run the `/node` slash command and choose the **claim** action (`/node action:claim node_identifier:<your-node-id>`). Discord will autocomplete the options as you type. This helps others know the node is yours, so they can tag you when they have questions, hear you on the air, or want to know if you can hear them. If the claim fails or times out, see [FAQ → Claiming a node fails](/docs/faq.html#claim-node).
 
 **Opt in for diagnostic data.** Click the :pie: reaction in the **#getting-started** channel on Discord. Opting in unlocks:
 

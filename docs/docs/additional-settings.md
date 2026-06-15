@@ -271,6 +271,9 @@ Once you have the broker details:
 !!! warning "Always keep Downlink OFF"
     Downlinking from MQTT into the primary channel floods the radio mesh with traffic from the internet. Keep downlink disabled unless you have a specific reason and have discussed it with the community.
 
+!!! tip "Root topic: use your city"
+    A frequent question is what to put in **Root topic**. The Arizona convention is `msh/US/AZ/{city}`, where `{city}` is your local area, for example `msh/US/AZ/Phoenix`, `msh/US/AZ/Tucson`, or `msh/US/AZ/Flagstaff`. This groups nodes by region on the map and tools. If you change it, it can take a few minutes for your node to show up under the new topic. The exact broker host, username, and password (the parts that must stay coordinated) are in [Discord](https://discord.gg/HrKtyuFEQk).
+
 ---
 
 ## Neighbor Info { #neighbor-info }

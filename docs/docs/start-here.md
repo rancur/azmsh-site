@@ -112,7 +112,7 @@ This is the moment of truth.
 
 1. Go to the **Messages** tab and open your **primary** channel.
 2. Send the message: **`test`** (send it as many times as you want).
-3. Wait up to a minute, then watch for **emoji tapbacks** on your message. Many Arizona nodes run an auto-responder that reacts with a number:
+3. Wait up to a minute, then watch for **emoji tapbacks** on your message. A tapback is an emoji reaction attached to your message (like a thumbs-up on a text). Many Arizona nodes run an auto-responder that reacts with a number:
     - :one: :two: :three: … = how many hops away that node was when it heard you
     - :asterisk: = a direct hit, no hops
 
@@ -132,11 +132,3 @@ This is the moment of truth.
 - :material-radio-tower: **Add community channels** → [Suggested Channels](/docs/suggested_channels.html)
 - :material-tune: **Tune your node (roles, intervals, MQTT)** → [Additional Settings](/docs/additional-settings.html)
 - :material-frequently-asked-questions: **Site says "Forbidden", node won't claim, flashing problems** → [FAQ & Troubleshooting](/docs/faq.html)
-
----
-
-## Want to go deeper?
-
-Everything above gets you on the Arizona mesh. Once you're connected and want to fine-tune your node (node roles, broadcast intervals, Neighbor Info, the full MQTT walkthrough), head to the **[Additional Settings](/docs/additional-settings.html)** reference. It's laid out in the same order as the Meshtastic app, with iOS vs Android name differences noted.
-
-[:material-tune: Open Additional Settings](/docs/additional-settings.html){ .md-button }

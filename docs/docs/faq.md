@@ -11,7 +11,10 @@ Everything that commonly goes wrong, in one place. Already set up and stuck? Jum
 
 - [I'm not receiving every message, or no messages at all](#not-receiving)
 - [I can receive, but I can't send](#cant-send) (no acks / "Max Transmission Reached")
+- [I don't see my own messages (or replies) in the app or in #messages](#own-messages)
 - [Bluetooth won't pair or keeps dropping](#bluetooth)
+- [My computer won't detect the node over USB](#usb-not-detected)
+- [My node is in the wrong place on the map, or has no location](#wrong-location)
 - [The map / view says "Forbidden" or 403](#forbidden-403)
 - [Claiming a node fails / "This interaction failed"](#claim-node)
 - [Flashing problems: boot loops, blank screen, bricking](#flashing-gotchas)
@@ -77,6 +80,24 @@ Still stuck? Bring it to **#i-need-help** on Discord with your hardware, antenna
 
 ---
 
+## I don't see my own messages (or replies) in the app or in #messages { #own-messages }
+
+A very common new-user worry: "I can see everyone else's traffic and lots of nodes, but I don't see my own `test` message land, or I don't see anyone's replies under it." There are a few different things going on here, and most of them are normal.
+
+**Where messages actually show up:**
+
+- **In the Meshtastic app:** your sent message appears in the channel thread with a small status icon. A **checkmark / "Acknowledged"** means a node heard you and relayed it back. **Emoji tapbacks** (number reactions) under your message come from auto-responders and tell you how many hops away each node was. Replies people type appear as new messages in the same channel, not always directly "under" yours.
+- **In Discord `#messages`:** this channel mirrors traffic that reaches the community MQTT server. **Your message only appears there if your node (or a node that heard you) is uplinking to MQTT.** If MQTT is off on your node and no nearby node relays you to MQTT, you can be fully on the mesh and still not see yourself in `#messages`. That is expected, not a fault.
+
+**Work through it:**
+
+1. **Look for the acknowledgement in the app first, not in Discord.** A checkmark / "Acknowledged" on your message is the real proof you were heard. `#messages` is a convenience mirror, not the source of truth.
+2. **If you want to see yourself in `#messages`, turn on MQTT.** Enable **"OK to MQTT"** and channel **Uplink**; see [Additional Settings → MQTT](/docs/additional-settings.html#mqtt). Give it a few minutes.
+3. **"I see nodes but no replies" usually means you are heard but your own transmit is weak.** If your messages never get a checkmark, that is the classic receive-works/can't-send problem; work the [I can receive, but I can't send](#cant-send) fix-list (get outside, get high, better antenna).
+4. **Missing *some* messages is normal.** Meshtastic is best-effort radio, not the internet. Distant or busy-channel packets drop sometimes. Getting most traffic means your setup is working.
+
+---
+
 ## Bluetooth won't pair or keeps dropping { #bluetooth }
 
 Can't get your phone to connect to the node over Bluetooth, or the connection keeps freezing or dropping? This is one of the most common snags people bring to **#i-need-help**, and it's almost always one of these.
@@ -98,6 +119,31 @@ Can't get your phone to connect to the node over Bluetooth, or the connection ke
 Still stuck? Bring it to **#i-need-help** with your device model and firmware version.
 
 [:fontawesome-brands-discord: Ask in #i-need-help](https://discord.gg/HrKtyuFEQk){ .md-button .md-button--primary }
+
+---
+
+## My computer won't detect the node over USB { #usb-not-detected }
+
+Trying to flash or configure over USB (Web Flasher, [Web Client](https://client.meshtastic.org), or CLI) and your computer never sees the device? It's almost always the cable, the browser, or a driver, not a dead node.
+
+1. **Use a real data cable, not a charge-only cable.** Many USB cables (especially ones that came with a battery pack) carry power but no data. Swap to a known-good cable and try a different USB port. This is the single most common cause.
+2. **Use Chrome or Edge.** Web Serial (what the Flasher and Web Client use) only works in **Chromium-based browsers**. Firefox and Safari won't connect to the serial port. On a phone, use the app instead; mobile browsers can't do Web Serial.
+3. **Wake the device / put it in bootloader mode.** If the port still doesn't appear, hold the **BOOT/USR button while plugging in USB** (ESP32 boards like Heltec, Station G2, T-Deck) so it enters download mode. nRF52 boards (RAK, T-Echo) usually appear as a **USB drive** in bootloader mode. See [Flashing problems](#flashing-gotchas) for the per-chip details.
+4. **Windows: install the USB-serial driver.** If Windows shows an unknown device, install the **CP210x** or **CH340** USB-to-UART driver (the chip varies by board; the device docs say which). After installing, unplug and replug.
+5. **macOS:** modern macOS includes the driver, but you may need to **approve the device** under System Settings → Privacy & Security if it's blocked the first time.
+6. **Still nothing?** Try another computer to rule out the cable/port, then bring it to **#i-need-help** with your board model and OS.
+
+---
+
+## My node is in the wrong place on the map, or has no location { #wrong-location }
+
+Showing up in the middle of the desert, at 0,0, or not on the map at all? This is a position-data issue, not a connection problem.
+
+- **Rooftop and indoor nodes often never get a GPS fix.** Walls and roofs block GPS just like they block your signal, so a stationary node may report no location or a stale one.
+- **The fix is to set a Fixed Position.** In the app, enable **Fixed Position** and enter your coordinates manually so your node always reports the right spot. Full context and the recommended position intervals are on [Additional Settings → Position](/docs/additional-settings.html#position).
+- **Grab your coordinates** from any maps app (long-press your location → copy the latitude/longitude) and paste them in.
+- **Wrong spot from earlier testing?** If you moved the node or set coordinates while testing, update Fixed Position to the real location and **save/send the config**; the map updates after your next position broadcast.
+- **Don't want to publish your exact home location?** You can set Fixed Position to a nearby intersection rather than your doorstep, or leave position broadcast off entirely; you'll still be on the mesh, just without a precise pin.
 
 ---
 
