@@ -7,7 +7,7 @@
       
       
       
-        <link rel="canonical" href="https://rancur.github.io/azmsh-site/docs/how-to-test.html">
+        <link rel="canonical" href="https://azmsh.net/docs/how-to-test.html">
       
       
         <link rel="prev" href="start-here.html">
@@ -51,6 +51,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
       <link rel="stylesheet" href="../assets/css/extra.css">
     
@@ -970,7 +972,7 @@
 <p>Meshtastic is part art and part science. The art part is trying a lot of things and testing to see what works. Everyone's setup and location is different.</p>
 <ol>
 <li>Type <code>test</code> in your <strong>primary</strong> channel. Send it. (Send it as many times as you want.)</li>
-<li>A lot of our users run <strong>MeshMonitor</strong> which will respond automatically with a tapback emoji:</li>
+<li>Many Arizona nodes run an auto-responder (such as <strong>MeshMonitor</strong>, a community tool that watches the mesh) that reacts to your message with a <strong>tapback</strong>: an emoji reaction attached to your message, like a thumbs-up on a text. The number in the reaction tells you how far away that node is:</li>
 <li><img alt="1⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/31-20e3.svg" title=":one:"> <img alt="2⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/32-20e3.svg" title=":two:"> <img alt="3⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/33-20e3.svg" title=":three:"> <img alt="4⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/34-20e3.svg" title=":four:"> <img alt="5⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/35-20e3.svg" title=":five:"> <img alt="6⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/36-20e3.svg" title=":six:"> <img alt="7⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/37-20e3.svg" title=":seven:">. How many hops away that user is from you</li>
 <li><img alt="*⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2a-20e3.svg" title=":asterisk:">. Direct hit (no hops, they heard you straight)</li>
 <li><strong>Got tapbacks? Congrats. You're on the mesh.</strong> Skip to <a href="#step-4-claim-your-node-opt-in-for-diagnostics">Step 4</a>.</li>
@@ -1002,7 +1004,7 @@
 <hr>
 <h2 id="step-4-claim-your-node-opt-in-for-diagnostics">Step 4. Claim Your Node + Opt In for Diagnostics</h2>
 <p>Now that you're heard on the mesh, plug into the community side.</p>
-<p><strong>Claim your node.</strong> Type <code>/node claim</code> in Discord. This helps others know the node is yours. They can tag you when they have questions, hear you on the air, or want to know if you can hear them.</p>
+<p><strong>Claim your node.</strong> In Discord, run the <code>/node</code> slash command and choose the <strong>claim</strong> action (<code>/node action:claim node_identifier:&lt;your-node-id&gt;</code>). Discord will autocomplete the options as you type. This helps others know the node is yours, so they can tag you when they have questions, hear you on the air, or want to know if you can hear them. If the claim fails or times out, see <a href="/docs/faq.html#claim-node">FAQ → Claiming a node fails</a>.</p>
 <p><strong>Opt in for diagnostic data.</strong> Click the <img alt="🥧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f967.svg" title=":pie:"> reaction in the <strong>#getting-started</strong> channel on Discord. Opting in unlocks:</p>
 <ul>
 <li>More diagnostic data on your node</li>
@@ -1105,7 +1107,8 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright © 2025 Arizona Meshtastic Community
+      Copyright © 2026 Arizona Meshtastic Community &nbsp;·&nbsp; <a href="/accessibility.html">Accessibility</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy Policy</a>
+
     </div>
   
   
@@ -1152,18 +1155,18 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
-    
     
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../assets/js/nodeData.js"></script>
+      
+        <script src="../assets/js/a11y.js"></script>
       
     
   

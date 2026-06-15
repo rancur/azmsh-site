@@ -7,7 +7,7 @@
       
       
       
-        <link rel="canonical" href="https://rancur.github.io/azmsh-site/docs/additional-settings.html">
+        <link rel="canonical" href="https://azmsh.net/docs/additional-settings.html">
       
       
         <link rel="prev" href="faq.html">
@@ -51,6 +51,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
       <link rel="stylesheet" href="../assets/css/extra.css">
     
@@ -1038,6 +1040,10 @@
 <p class="admonition-title">Always keep Downlink OFF</p>
 <p>Downlinking from MQTT into the primary channel floods the radio mesh with traffic from the internet. Keep downlink disabled unless you have a specific reason and have discussed it with the community.</p>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Root topic: use your city</p>
+<p>A frequent question is what to put in <strong>Root topic</strong>. The Arizona convention is <code>msh/US/AZ/{city}</code>, where <code>{city}</code> is your local area, for example <code>msh/US/AZ/Phoenix</code>, <code>msh/US/AZ/Tucson</code>, or <code>msh/US/AZ/Flagstaff</code>. This groups nodes by region on the map and tools. If you change it, it can take a few minutes for your node to show up under the new topic. The exact broker host, username, and password (the parts that must stay coordinated) are in <a href="https://discord.gg/HrKtyuFEQk">Discord</a>.</p>
+</div>
 <hr>
 <h2 id="neighbor-info">Neighbor Info</h2>
 <p>Neighbor Info is a module that periodically broadcasts a list of your node's direct neighbors along with the signal quality (SNR) of each link. When enabled across multiple nodes, the community can build a real picture of how the mesh is connected, which helps identify coverage gaps, optimize node placement, and understand how traffic actually flows through the network.</p>
@@ -1156,7 +1162,8 @@ meshtastic<span class="w"> </span>--get<span class="w"> </span>neighbor_info
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright © 2025 Arizona Meshtastic Community
+      Copyright © 2026 Arizona Meshtastic Community &nbsp;·&nbsp; <a href="/accessibility.html">Accessibility</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy Policy</a>
+
     </div>
   
   
@@ -1203,18 +1210,18 @@ meshtastic<span class="w"> </span>--get<span class="w"> </span>neighbor_info
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
-    
     
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../assets/js/nodeData.js"></script>
+      
+        <script src="../assets/js/a11y.js"></script>
       
     
   
