@@ -27,10 +27,63 @@ once their predecessor lands.
 
 - `mkdocs build --strict` passes on **every branch standing alone**, merged onto
   upstream `main` by itself. (Same install list as `.github/workflows/deploy.yml`.)
-- **All seven merge cleanly on top of Logan's #30**, tested by applying `#30.diff`
-  to `main` and merging each branch into it. Details below.
 - All seven merge cleanly with each other, and the union builds `--strict`.
 - No absolute `/docs/*.html` link survives anywhere in the union.
+
+## Logan's #30 is safe — here is the proof
+
+`@logans-stuff`'s [#30](https://github.com/ArizonaMeshtasticCommunity/azmsh-site/pull/30)
+(Seeed affiliate links, refreshed prices, disclosure box) touches exactly one
+file, `docs/docs/recommended-hardware.md`. Three of my seven branches touch that
+same file. So this got checked properly rather than eyeballed.
+
+**No line is rewritten by both sides.** Computed from the diffs, on upstream
+`main` line numbers:
+
+| | Lines rewritten in `recommended-hardware.md` |
+|---|---|
+| Logan's #30 | 61, 62, 89, 91, 97, 99, 193, 298, 302, 398 |
+| `split-01` | 41, 233, 238, 304 |
+| `split-06` | 15, 407 |
+| `split-07` | 15, 288, 407, 408 |
+
+Disjoint. Two hunk *ranges* overlap — #30 inserts the disclosure box just below
+line 15, and its price hunk spans line 304 — but in both cases #30 carries that
+line as unchanged context while my branch rewrites it, which is precisely the
+case git's three-way merge handles.
+
+**Confirmed empirically in four merge orders**, each ending in a tree that builds
+`--strict`, with an assertion that all 13 lines #30 adds are present verbatim and
+all 10 lines it replaces are gone:
+
+| Order | Result |
+|---|---|
+| A — #30 first, then all seven | clean · #30 fully intact |
+| B — all seven first, then #30 | clean · #30 fully intact |
+| C — 1–4, then #30, then 5→6→7 rebased | clean · #30 fully intact |
+| D — every PR **squash**-merged | clean · #30 fully intact |
+
+The final built HTML carries all five affiliate URLs with
+`sensecap_affiliate=jjSRQDC` intact, the disclosure box, and the updated ~$34 /
+~$53 / ~$101 prices.
+
+**Nothing from #30 is duplicated into my branches** — that would create the
+conflict this is trying to avoid. The affiliate work stays entirely in #30 and
+merges independently. My branches only ever change *internal* link targets on
+that page.
+
+**One operational note for the chained PRs (5 → 6 → 7).** Rebase each with
+`--onto` against its predecessor branch, not a plain `git rebase main`:
+
+```bash
+git fetch origin
+git rebase --onto origin/main claude/split-06-start-here claude/split-07-additional-settings
+```
+
+A plain rebase tries to replay the predecessor's commits a second time and will
+conflict with #30's disclosure box — that is a rebase-strategy artifact, not a
+content clash. With `--onto` it is clean, including when GitHub squash-merges
+(order D above).
 
 ---
 
@@ -188,9 +241,17 @@ Discord", because otherwise a screen reader reads `ExampleKey==` out as if it
 were the real key; and a `min-height` so the overlay can't clip out of the box at
 200–400% zoom.
 
-**Logan's #30:** merges clean. This PR rewrites the line directly above where
-#30 inserts the affiliate disclosure; I test-merged them and the result keeps
-the disclosure intact with the link updated.
+**Logan's #30:** merges clean in every order tested. This PR rewrites line 15,
+the line directly above where #30 inserts the affiliate disclosure — #30 carries
+it as context, so git resolves it. Merged output keeps the disclosure verbatim
+with the link updated to Start Here:
+
+```
+    That's it. Buy these two things, follow our [Start Here](start-here.md) guide, and you're on the mesh.
+
+!!! info "Affiliate links"
+    Our links to **Seeed Studio** are affiliate links. If you buy through them, AZMSH earns a small commission at no extra cost to you.
+```
 
 ---
 
