@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>azmsh-site &mdash; PR previews</title>
+<style>
+  :root { color-scheme: light dark; --fg:#1b1b1b; --muted:#5b5b5b; --bg:#fff; --card:#f6f6f6; --line:#e0e0e0; --accent:#e64a19; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#e8e8e8; --muted:#a6a6a6; --bg:#131313; --card:#1e1e1e; --line:#2e2e2e; --accent:#ff7043; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:2rem 1rem 4rem; background:var(--bg); color:var(--fg);
+         font:16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 60rem; margin: 0 auto; }
+  h1 { font-size:1.6rem; margin:0 0 .3rem; }
+  .sub { color:var(--muted); margin:0 0 2rem; }
+  .note { background:var(--card); border:1px solid var(--line); border-left:3px solid var(--accent);
+          border-radius:.4rem; padding:.9rem 1rem; margin:0 0 2rem; font-size:.92rem; }
+  h2 { font-size:1.05rem; margin:2rem 0 .75rem; padding-bottom:.35rem; border-bottom:1px solid var(--line); }
+  ul { list-style:none; margin:0; padding:0; display:grid; gap:.6rem; }
+  li { background:var(--card); border:1px solid var(--line); border-radius:.4rem; padding:.85rem 1rem; }
+  a.t { font-weight:600; color:var(--accent); text-decoration:none; font-size:1rem; }
+  a.t:hover { text-decoration:underline; }
+  .d { color:var(--muted); font-size:.9rem; margin-top:.2rem; }
+  code { background:rgba(128,128,128,.16); padding:.1em .35em; border-radius:.2em; font-size:.88em; }
+  footer { margin-top:3rem; color:var(--muted); font-size:.85rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>azmsh-site &mdash; rendered previews</h1>
+  <p class="sub">One build per pull request, so you can see the change before reading the diff.</p>
+
+  <div class="note">
+    These are built from a fork and served from <code>rancur.github.io</code>. They are
+    <strong>not</strong> the live site &mdash; azmsh.net is unaffected. Each build is the branch
+    merged onto upstream <code>main</code> on its own.
+  </div>
+
+  <h2>Before</h2>
+  <ul>
+    <li><a class="t" href="main/">upstream main</a>
+      <div class="d">The site as it stands today. Use this as the &ldquo;before&rdquo; side of any comparison.</div></li>
+  </ul>
+
+  <h2>Independent &mdash; merge in any order</h2>
+  <ul>
+    <li><a class="t" href="split-01-footer-links/">1 &middot; Footer links resolve at any base path</a>
+      <div class="d">Check the Accessibility / Privacy links in the footer on any page. On the
+        &ldquo;before&rdquo; build they 404 here; on this one they work.</div></li>
+    <li><a class="t" href="split-02-dehardcode-presets/">2 &middot; Stop hardcoding the default PSK and preset names</a>
+      <div class="d">Suggested Channels (table, Android accordion) and the Privacy Policy.</div></li>
+    <li><a class="t" href="split-03-host-a-node-band/">3 &middot; 900 MHz ISM band, not one channel</a>
+      <div class="d">Host a Node &rarr; the internet/Wi-Fi and interference questions.</div></li>
+    <li><a class="t" href="split-04-remove-orphan-pages/">4 &middot; Remove two unreachable pages</a>
+      <div class="d">Nothing visible changes; two URLs nobody links to stop existing.</div></li>
+  </ul>
+
+  <h2>Sequential &mdash; merge 5, then 6, then 7</h2>
+  <ul>
+    <li><a class="t" href="split-05-faq-hub/">5 &middot; FAQ &amp; Troubleshooting</a>
+      <div class="d">New page in the nav. Ten anchored sections, each deep-linkable into
+        #i-need-help.</div></li>
+    <li><a class="t" href="split-06-start-here/">6 &middot; Start Here, then How To Test</a>
+      <div class="d">New home page call to action; new Start Here with the Discord-gated boxes;
+        What Now? renamed to How To Test. Old URLs
+        (<code>docs/how-to-connect.html</code>, <code>docs/what-now.html</code>) should redirect.</div></li>
+    <li><a class="t" href="split-07-additional-settings/">7 &middot; Additional Settings</a>
+      <div class="d">Settings reference in the app's own order. <code>docs/recommended-settings.html</code>
+        should redirect here.</div></li>
+  </ul>
+
+  <footer>Rebuilt by hand; not wired to CI. If a branch moves, this build is stale.</footer>
+</main>
+</body>
+</html>

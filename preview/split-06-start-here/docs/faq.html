@@ -1,0 +1,1524 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Every common snag in one place. Not receiving messages, receive-works-but-can't-send, Bluetooth pairing, the 403 " forbidden"="" map="" error,="" claiming="" your="" node,="" flashing="" boot="" loops="" bricking,="" and="" dm="" "no="" channel"="" impersonation="" warnings."="">
+      
+      
+      
+        <link rel="canonical" href="https://azmsh.net/docs/faq.html">
+      
+      
+        <link rel="prev" href="how-to-test.html">
+      
+      
+        <link rel="next" href="recommended-hardware.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>FAQ &amp; Troubleshooting - Arizona Meshtastic Community</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../assets/css/discord-gate.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#faq-troubleshooting" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="Arizona Meshtastic Community" class="md-header__button md-logo" aria-label="Arizona Meshtastic Community" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Arizona Meshtastic Community
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FAQ &amp; Troubleshooting
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="amber" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="amber" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard="" data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ArizonaMeshtasticCommunity/azmsh-site" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    azmsh-site
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="start-here.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Start Here
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="how-to-test.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  How To Test
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="faq.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ &amp; Troubleshooting
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="recommended-hardware.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Recommended Hardware
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="recommended-settings.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Recommended Settings
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="suggested_channels.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Suggested Channels
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="host-a-node.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Host a Node
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../reach_out.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Reach Out
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden="">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Arizona Meshtastic Community" class="md-nav__button md-logo" aria-label="Arizona Meshtastic Community" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    Arizona Meshtastic Community
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ArizonaMeshtasticCommunity/azmsh-site" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    azmsh-site
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="start-here.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start Here
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="how-to-test.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How To Test
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ &amp; Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="faq.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ &amp; Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#not-receiving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I'm not receiving every message, or no messages at all
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cant-send" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I can receive, but I can't send
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="I can receive, but I can't send">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-max-transmission-reached-no-acks-actually-means" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What "Max Transmission Reached" / no acks actually means
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix-it-in-order-of-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fix it, in order of impact
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#own-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I don't see my own messages (or replies) in the app or in #messages
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bluetooth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bluetooth won't pair or keeps dropping
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usb-not-detected" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My computer won't detect the node over USB
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wrong-location" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My node is in the wrong place on the map, or has no location
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forbidden-403" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The map / view says "Forbidden" or 403
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#claim-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claiming a node fails / "This interaction failed"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flashing-gotchas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flashing problems: boot loops, blank screen, bricking
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flashing problems: boot loops, blank screen, bricking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-you-flash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before you flash
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-screen-is-blank-or-its-boot-looping-after-a-flash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My screen is blank or it's boot-looping after a flash
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-node-is-completely-dead-the-flasher-cant-see-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My node is completely dead / the flasher can't see it
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dm-no-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DM says "No Channel" or shows an impersonation warning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DM says &quot;No Channel&quot; or shows an impersonation warning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-channel-when-sending-a-direct-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "No Channel" when sending a direct message
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#possible-impersonation-key-warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Possible impersonation" / key warning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#still-need-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Still need help?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="recommended-hardware.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recommended Hardware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="recommended-settings.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recommended Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="suggested_channels.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suggested Channels
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="host-a-node.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Host a Node
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reach_out.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reach Out
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#not-receiving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I'm not receiving every message, or no messages at all
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cant-send" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I can receive, but I can't send
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="I can receive, but I can't send">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-max-transmission-reached-no-acks-actually-means" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What "Max Transmission Reached" / no acks actually means
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix-it-in-order-of-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fix it, in order of impact
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#own-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I don't see my own messages (or replies) in the app or in #messages
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bluetooth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bluetooth won't pair or keeps dropping
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usb-not-detected" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My computer won't detect the node over USB
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wrong-location" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My node is in the wrong place on the map, or has no location
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forbidden-403" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The map / view says "Forbidden" or 403
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#claim-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claiming a node fails / "This interaction failed"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flashing-gotchas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flashing problems: boot loops, blank screen, bricking
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flashing problems: boot loops, blank screen, bricking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-you-flash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before you flash
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-screen-is-blank-or-its-boot-looping-after-a-flash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My screen is blank or it's boot-looping after a flash
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-node-is-completely-dead-the-flasher-cant-see-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My node is completely dead / the flasher can't see it
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dm-no-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DM says "No Channel" or shows an impersonation warning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DM says &quot;No Channel&quot; or shows an impersonation warning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-channel-when-sending-a-direct-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "No Channel" when sending a direct message
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#possible-impersonation-key-warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Possible impersonation" / key warning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#still-need-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Still need help?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  
+  
+
+
+<h1 id="faq-troubleshooting">FAQ &amp; Troubleshooting</h1>
+<p>Everything that commonly goes wrong, in one place. Already set up and stuck? Jump to your problem:</p>
+<ul>
+<li><a href="#not-receiving">I'm not receiving every message, or no messages at all</a></li>
+<li><a href="#cant-send">I can receive, but I can't send</a> (no acks / "Max Transmission Reached")</li>
+<li><a href="#own-messages">I don't see my own messages (or replies) in the app or in #messages</a></li>
+<li><a href="#bluetooth">Bluetooth won't pair or keeps dropping</a></li>
+<li><a href="#usb-not-detected">My computer won't detect the node over USB</a></li>
+<li><a href="#wrong-location">My node is in the wrong place on the map, or has no location</a></li>
+<li><a href="#forbidden-403">The map / view says "Forbidden" or 403</a></li>
+<li><a href="#claim-node">Claiming a node fails / "This interaction failed"</a></li>
+<li><a href="#flashing-gotchas">Flashing problems: boot loops, blank screen, bricking</a></li>
+<li><a href="#dm-no-channel">DM says "No Channel" or shows an impersonation warning</a></li>
+</ul>
+<p>New here and not set up yet? Start with the <a href="start-here.html">Start Here</a> guide; it walks you from an unboxed radio to your first acknowledged message.</p>
+<hr>
+<h2 id="not-receiving">I'm not receiving every message, or no messages at all</h2>
+<p>Missing some messages, or not seeing any traffic come in? Work through this in order.</p>
+<p><strong>1. Recheck every setting first.</strong> The most common cause is a single wrong setting. Go back through the <a href="start-here.html">Start Here</a> guide and confirm <strong>all</strong> of them match the Arizona values exactly, nothing more, nothing less:</p>
+<ul>
+<li><strong>Region</strong>, <strong>Preset</strong>, and especially the <strong>Frequency Slot</strong> (the <a href="start-here.html#step-3-get-the-arizona-radio-settings-from-discord">#1 missed setting</a>; leaving it on <code>0</code>/auto puts you on the wrong frequency).</li>
+<li>Your <strong>primary channel name + key</strong>, copied exactly. A <a href="start-here.html#step-4-set-up-your-primary-channel">renamed primary channel</a> drops you off the mesh.</li>
+</ul>
+<p>If you're not receiving a <strong>single</strong> message, it's almost always one of the above. Fix it and test again.</p>
+<p><strong>2. Settings confirmed but still missing traffic? Move and get higher.</strong> If your settings are definitely right and you still can't reliably receive (or can't transmit), it's a physical/RF problem, not a configuration one. Try different locations and antenna placement:</p>
+<ul>
+<li><strong>Get outside and get high.</strong> Height beats almost everything. A window, balcony, second floor, or rooftop will pull in far more than an interior room. Even a 30-second outdoor test tells you whether your building is the problem.</li>
+<li><strong>Try a better antenna.</strong> Most handhelds ship with a weak stock antenna. A good whip is the cheapest range upgrade you can make. See the <a href="recommended-hardware.html#antenna-guide">Antenna Guide</a>.</li>
+<li><strong>Try at a busier time of day.</strong> The mesh ebbs and flows. If nobody's transmitting when you test, you'll hear nothing.</li>
+</ul>
+<p><strong>3. Still struggling? Consider a more capable radio.</strong> If you've confirmed settings, moved around, tried different placement and an upgraded antenna, and reception is still poor, your hardware may be the limit. A higher-power radio or a rooftop relay node anchors coverage and pulls weak signals in. See <a href="recommended-hardware.html">Recommended Hardware</a> for a more powerful radio and rooftop options.</p>
+<div class="admonition tip">
+<p class="admonition-title">Missing only <em>some</em> messages is normal to a degree</p>
+<p>Meshtastic is a best-effort radio network, not the internet. Distant or low-power nodes won't always reach you, and busy-channel collisions can drop the occasional packet. If you're getting <em>most</em> traffic, your setup is working; the steps above help you catch more of it.</p>
+</div>
+<p>If you can receive fine but your own messages never get acknowledged, that's a transmit problem with its own fix-list below.</p>
+<hr>
+<h2 id="cant-send">I can receive, but I can't send</h2>
+<p>This is by far the most common issue people bring to the community: "I see everyone else's messages, but mine never get acknowledged," or "I keep getting <strong>Max Transmission Reached</strong>."</p>
+<div class="admonition success">
+<p class="admonition-title">If you receive ANY messages, your settings are already correct</p>
+<p>Receiving other people's traffic proves your <strong>region, preset, frequency slot, and primary channel</strong> are all set right; the radio is decoding the mesh. So this is <strong>not</strong> a settings problem. It's an <strong>asymmetric RF link</strong>: you can hear a strong, high-up node, but your lower-power signal can't make the trip back. The fix is physical, not in the app.</p>
+</div>
+<p>If you have <em>never</em> received a single message, that's a different problem; it's almost always a wrong <strong>Frequency Slot</strong> or a renamed primary channel. Recheck <a href="start-here.html#step-3-get-the-arizona-radio-settings-from-discord">Start Here → Step 3</a>.</p>
+<h3 id="what-max-transmission-reached-no-acks-actually-means">What "Max Transmission Reached" / no acks actually means</h3>
+<p>When you send on the primary channel, your node waits to hear the message relayed back (an implicit acknowledgement). If it never hears the relay after several attempts, it reports <strong>Max Transmission Reached</strong> or shows no acknowledgement. It means your packet isn't reaching a node that can repeat it: your <em>transmit</em> path is weak, even though your <em>receive</em> path is fine. Big rooftop nodes transmit at several watts from high up; a handheld indoors might be a fraction of a watt behind a wall.</p>
+<h3 id="fix-it-in-order-of-impact">Fix it, in order of impact</h3>
+<ol>
+<li><strong>Get outside.</strong> Walls, roofs, stucco with metal lath, and Low-E windows all crush a 915 MHz signal. Step <strong>completely outside</strong> and send <code>test</code> again. Even a 30-second outdoor test tells you whether your building is the problem.</li>
+<li><strong>Get high (height is might).</strong> Elevation beats almost everything else. Move to a <strong>second floor, balcony, or rooftop</strong>. For a fixed home node, put the antenna in the <strong>attic or on the roof</strong>, not on a desk. A basic antenna up high will out-perform an expensive antenna down low, every time.</li>
+<li><strong>Upgrade the antenna.</strong> Most handhelds ship with a weak stock antenna (often ~69% efficient). A good whip is the single cheapest range upgrade you can make. Handheld: the <a href="https://muzi.works/products/whip-antenna-17cm">Muziworks 17cm whip (~$12)</a> is the community favorite. See the full <a href="recommended-hardware.html#antenna-guide">Antenna Guide</a> for rooftop options.</li>
+<li><strong>Add a rooftop relay node.</strong> If you live in a dead spot, the real fix is a permanent node up high that relays for you. A <a href="recommended-hardware.html#rooftop-base-station-nodes">Station G2 or a solar rooftop node</a> on your roof anchors coverage for your whole area, and it relays <em>your</em> handheld back into the mesh. This is the #1 long-term fix.</li>
+<li><strong>Check power, then time of day.</strong> Solar/battery nodes often transmit at very low power (<strong>0.05W-0.5W</strong>). If you've maxed out placement and antenna, a <a href="recommended-hardware.html#rooftop-base-station-nodes">higher-power node (1W+)</a> may be the answer. The mesh also ebbs and flows; if nobody's on when you test, you'll hear nothing. Try again at a busier time.</li>
+</ol>
+<div class="admonition danger">
+<p class="admonition-title">Never transmit with the antenna disconnected</p>
+<p>Sending without an antenna can fry the radio. Always attach the antenna before powering on or transmitting.</p>
+</div>
+<p>Still stuck? Bring it to <strong>#i-need-help</strong> on Discord with your hardware, antenna, and where you tested from.</p>
+<p><a class="md-button md-button--primary" href="https://discord.gg/HrKtyuFEQk"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"></path></svg></span> Ask in #i-need-help</a></p>
+<hr>
+<h2 id="own-messages">I don't see my own messages (or replies) in the app or in #messages</h2>
+<p>A very common new-user worry: "I can see everyone else's traffic and lots of nodes, but I don't see my own <code>test</code> message land, or I don't see anyone's replies under it." There are a few different things going on here, and most of them are normal.</p>
+<p><strong>Where messages actually show up:</strong></p>
+<ul>
+<li><strong>In the Meshtastic app:</strong> your sent message appears in the channel thread with a small status icon. A <strong>checkmark / "Acknowledged"</strong> means a node heard you and relayed it back. <strong>Emoji tapbacks</strong> (number reactions) under your message come from auto-responders and tell you how many hops away each node was. Replies people type appear as new messages in the same channel, not always directly "under" yours.</li>
+<li><strong>In Discord <code>#messages</code>:</strong> this channel mirrors traffic that reaches the community MQTT server. <strong>Your message only appears there if your node (or a node that heard you) is uplinking to MQTT.</strong> If MQTT is off on your node and no nearby node relays you to MQTT, you can be fully on the mesh and still not see yourself in <code>#messages</code>. That is expected, not a fault.</li>
+</ul>
+<p><strong>Work through it:</strong></p>
+<ol>
+<li><strong>Look for the acknowledgement in the app first, not in Discord.</strong> A checkmark / "Acknowledged" on your message is the real proof you were heard. <code>#messages</code> is a convenience mirror, not the source of truth.</li>
+<li><strong>If you want to see yourself in <code>#messages</code>, turn on MQTT.</strong> Enable <strong>"OK to MQTT"</strong> and channel <strong>Uplink</strong>; see <a href="recommended-settings.html#mqtt">Recommended Settings → MQTT</a>. Give it a few minutes.</li>
+<li><strong>"I see nodes but no replies" usually means you are heard but your own transmit is weak.</strong> If your messages never get a checkmark, that is the classic receive-works/can't-send problem; work the <a href="#cant-send">I can receive, but I can't send</a> fix-list (get outside, get high, better antenna).</li>
+<li><strong>Missing <em>some</em> messages is normal.</strong> Meshtastic is best-effort radio, not the internet. Distant or busy-channel packets drop sometimes. Getting most traffic means your setup is working.</li>
+</ol>
+<hr>
+<h2 id="bluetooth">Bluetooth won't pair or keeps dropping</h2>
+<p>Can't get your phone to connect to the node over Bluetooth, or the connection keeps freezing or dropping? This is one of the most common snags people bring to <strong>#i-need-help</strong>, and it's almost always one of these.</p>
+<p><strong>Pairing won't complete / freezes on "Connecting":</strong></p>
+<ol>
+<li><strong>Use the right pairing code.</strong> If your node asks for a PIN, the default is usually <code>123456</code>, or it's shown on the device's screen, or printed in the device docs. Type it exactly.</li>
+<li><strong>Forget the device and retry.</strong> In your phone's <strong>Bluetooth settings</strong> (not just the Meshtastic app), forget/remove the node, then pair again from inside the Meshtastic app with <strong>+</strong> → select your device.</li>
+<li><strong>Toggle Bluetooth off and on</strong> on the phone, and <strong>power-cycle the node</strong> (off, wait 5 seconds, on).</li>
+<li><strong>Make sure only one phone is connected.</strong> A node holds one Bluetooth connection at a time. If another phone or tablet is already paired to it, your phone will get stuck connecting.</li>
+<li><strong>Grant location/Bluetooth permissions</strong> to the Meshtastic app. Android in particular won't scan for the node without the right permissions enabled.</li>
+</ol>
+<p><strong>It pairs but the connection is flaky or keeps dropping:</strong></p>
+<ul>
+<li><strong>Distance and obstructions matter.</strong> Bluetooth is short-range. A rooftop or far-room node will drop often. Stay close while configuring, then let it run.</li>
+<li><strong>Stuck after a firmware update or weird state?</strong> A node that connected fine before and suddenly won't is often fixed by a <strong>reboot</strong>, and failing that, <strong>re-flashing the same firmware version</strong> (back up your keys first; see <a href="#flashing-gotchas">Flashing problems</a>).</li>
+<li><strong>Configure over USB serial as a fallback.</strong> If Bluetooth is completely uncooperative, you can connect the node by USB cable and use the <a href="https://client.meshtastic.org">Meshtastic Web Client</a> (in Chrome or Edge) or the CLI to change settings, then sort out Bluetooth afterward.</li>
+</ul>
+<p>Still stuck? Bring it to <strong>#i-need-help</strong> with your device model and firmware version.</p>
+<p><a class="md-button md-button--primary" href="https://discord.gg/HrKtyuFEQk"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"></path></svg></span> Ask in #i-need-help</a></p>
+<hr>
+<h2 id="usb-not-detected">My computer won't detect the node over USB</h2>
+<p>Trying to flash or configure over USB (Web Flasher, <a href="https://client.meshtastic.org">Web Client</a>, or CLI) and your computer never sees the device? It's almost always the cable, the browser, or a driver, not a dead node.</p>
+<ol>
+<li><strong>Use a real data cable, not a charge-only cable.</strong> Many USB cables (especially ones that came with a battery pack) carry power but no data. Swap to a known-good cable and try a different USB port. This is the single most common cause.</li>
+<li><strong>Use Chrome or Edge.</strong> Web Serial (what the Flasher and Web Client use) only works in <strong>Chromium-based browsers</strong>. Firefox and Safari won't connect to the serial port. On a phone, use the app instead; mobile browsers can't do Web Serial.</li>
+<li><strong>Wake the device / put it in bootloader mode.</strong> If the port still doesn't appear, hold the <strong>BOOT/USR button while plugging in USB</strong> (ESP32 boards like Heltec, Station G2, T-Deck) so it enters download mode. nRF52 boards (RAK, T-Echo) usually appear as a <strong>USB drive</strong> in bootloader mode. See <a href="#flashing-gotchas">Flashing problems</a> for the per-chip details.</li>
+<li><strong>Windows: install the USB-serial driver.</strong> If Windows shows an unknown device, install the <strong>CP210x</strong> or <strong>CH340</strong> USB-to-UART driver (the chip varies by board; the device docs say which). After installing, unplug and replug.</li>
+<li><strong>macOS:</strong> modern macOS includes the driver, but you may need to <strong>approve the device</strong> under System Settings → Privacy &amp; Security if it's blocked the first time.</li>
+<li><strong>Still nothing?</strong> Try another computer to rule out the cable/port, then bring it to <strong>#i-need-help</strong> with your board model and OS.</li>
+</ol>
+<hr>
+<h2 id="wrong-location">My node is in the wrong place on the map, or has no location</h2>
+<p>Showing up in the middle of the desert, at 0,0, or not on the map at all? This is a position-data issue, not a connection problem.</p>
+<ul>
+<li><strong>Rooftop and indoor nodes often never get a GPS fix.</strong> Walls and roofs block GPS just like they block your signal, so a stationary node may report no location or a stale one.</li>
+<li><strong>The fix is to set a Fixed Position.</strong> In the app, enable <strong>Fixed Position</strong> and enter your coordinates manually so your node always reports the right spot. Full context and the recommended position intervals are on <a href="recommended-settings.html#broadcast-intervals">Recommended Settings → Broadcast Intervals</a>.</li>
+<li><strong>Grab your coordinates</strong> from any maps app (long-press your location → copy the latitude/longitude) and paste them in.</li>
+<li><strong>Wrong spot from earlier testing?</strong> If you moved the node or set coordinates while testing, update Fixed Position to the real location and <strong>save/send the config</strong>; the map updates after your next position broadcast.</li>
+<li><strong>Don't want to publish your exact home location?</strong> You can set Fixed Position to a nearby intersection rather than your doorstep, or leave position broadcast off entirely; you'll still be on the mesh, just without a precise pin.</li>
+</ul>
+<hr>
+<h2 id="forbidden-403">The map / view says "Forbidden" or 403</h2>
+<p>Visiting <a href="https://view.azmsh.net">view.azmsh.net</a> and getting <strong>Forbidden / 403</strong>? You almost certainly opened it <strong>before</strong> opting in on Discord, and your browser cached the denial.</p>
+<p><strong>Fix, in order:</strong></p>
+<ol>
+<li>In Discord, go to the <strong>#getting-started</strong> channel and <strong>react with the <img alt="🥧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f967.svg" title=":pie:"> pie emoji</strong> to grant yourself the access role. Do this <em>first</em>.</li>
+<li>Now open the map in an <strong>incognito/private window</strong>, or clear your cookies and cache for <code>azmsh.net</code> so the browser drops the old "denied" state.</li>
+<li>Still blocked after a few minutes? Ask in Discord; an admin can confirm your role.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">React first, then visit</p>
+<p>The order matters. If you visit before reacting, the site remembers the rejection until you clear the cache or use a fresh incognito window.</p>
+</div>
+<p><a class="md-button md-button--primary" href="https://discord.gg/HrKtyuFEQk"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"></path></svg></span> Get the access role on Discord</a></p>
+<hr>
+<h2 id="claim-node">Claiming a node fails / "This interaction failed"</h2>
+<p>The claim button in Discord sometimes times out, especially if your node hasn't been seen yet.</p>
+<p><strong>Two requirements before a claim will work:</strong></p>
+<ol>
+<li><strong>Your node must have hit MQTT at least once.</strong> It has to actually appear in the <strong>node-discovery</strong> list before it can be claimed. Turn on MQTT (see <a href="start-here.html#step-5-optional-turn-on-mqtt-for-the-map">Start Here, Step 5</a>) and give it a few minutes.</li>
+<li>
+<p>Use the slash command instead of the button if the button keeps failing:</p>
+<div class="highlight"><pre><span></span><code>/node action:claim node_identifier:&lt;your-node-id&gt;
+</code></pre></div>
+<p>Your node identifier can be the <strong>decimal</strong> node number or the <strong><code>!hex</code></strong> form (e.g. <code>!a1b2c3d4</code>). You can find it in the Meshtastic app under your node's details, or in the node-discovery list.</p>
+</li>
+</ol>
+<p>If you still get <strong>"This interaction failed,"</strong> wait a minute and run the slash command again. It's usually a transient timeout, not a permanent error.</p>
+<p>The full post-setup walkthrough (claim, opt in, read the map) lives on <a href="how-to-test.html">How To Test</a>.</p>
+<hr>
+<h2 id="flashing-gotchas">Flashing problems: boot loops, blank screen, bricking</h2>
+<p>Most "bricked" nodes aren't actually dead. They're just stuck after a flash, or were flashed with an option that doesn't suit the hardware. Here's how to avoid the common traps and recover a node that won't boot.</p>
+<h3 id="before-you-flash">Before you flash</h3>
+<p>Use the official <a href="https://flasher.meshtastic.org"><strong>Meshtastic Web Flasher</strong></a> in <strong>Google Chrome</strong> (other browsers frequently fail to connect to the serial port).</p>
+<div class="admonition warning">
+<p class="admonition-title">Leave “Install Meshtastic UI” UNCHECKED (the #1 flashing mistake)</p>
+<p>The web flasher may offer an <strong>"Install Meshtastic UI"</strong> option. <strong>Meshtastic UI (MUI)</strong> is a separate on-device interface designed for <strong>color touchscreen</strong> hardware (LilyGO T-Deck, SenseCAP Indicator, and similar). It is <strong>not</strong> built for the small OLED screens on common boards like the <strong>Heltec V3 and V4</strong>, which can boot-loop or show a <strong>blank/black screen</strong> if you flash MUI onto them. Unless you have a supported touchscreen device and specifically want the on-device UI, leave that checkbox <strong>unchecked</strong>; you can always use the phone app for the interface. (Note: this is different from <strong>InkHUD</strong>, the on-device UI for e-paper displays like the T-Echo. Neither belongs on a small-OLED Heltec.)</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Never power on or transmit without an antenna</p>
+<p>The radio's power amplifier can be permanently damaged if it transmits with no antenna attached. Screw the antenna on <strong>before</strong> powering the device or sending anything.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Back up your keys first</p>
+<p>Flashing can wipe your settings, including your node's identity keys. Export/back up your configuration from the Meshtastic app before updating, so you don't reappear as a brand-new node.</p>
+</div>
+<h3 id="my-screen-is-blank-or-its-boot-looping-after-a-flash">My screen is blank or it's boot-looping after a flash</h3>
+<ol>
+<li>Re-open the <a href="https://flasher.meshtastic.org">Web Flasher</a> in Chrome.</li>
+<li>Re-flash the <strong>same firmware version</strong>, but this time make sure <strong>"Install Meshtastic UI" is UNCHECKED</strong>.</li>
+<li>Let it complete and reboot. The screen issue is almost always that UI option on Heltec V3/V4.</li>
+</ol>
+<h3 id="my-node-is-completely-dead-the-flasher-cant-see-it">My node is completely dead / the flasher can't see it</h3>
+<p>The device probably needs to be put into <strong>DFU (bootloader) mode</strong> so the flasher can talk to it.</p>
+<ul>
+<li><strong>How to enter DFU varies by device.</strong> It usually means <strong>holding a button (often BOOT/USR) while plugging in USB or pressing reset</strong>. Check your specific device's documentation for the exact button combo.</li>
+<li>nRF52 devices (RAK, T-Echo, etc.) typically expose a <strong>USB drive</strong> when in bootloader mode. You can drag a firmware file onto it, or use the Web Flasher.</li>
+<li>ESP32 devices (Heltec, Station G2, T-Deck) enter download mode via the <strong>BOOT button</strong>; the Web Flasher will then detect the serial port.</li>
+</ul>
+<p>Once the device is in DFU/bootloader mode, the Web Flasher should detect it. Re-flash current firmware (UI option unchecked) and it should come back to life.</p>
+<hr>
+<h2 id="dm-no-channel">DM says "No Channel" or shows an impersonation warning</h2>
+<p>Both come down to key handshakes between two nodes.</p>
+<h3 id="no-channel-when-sending-a-direct-message">"No Channel" when sending a direct message</h3>
+<p>A direct message uses a <strong>per-node encrypted handshake</strong>. "No Channel" means your node and the other node haven't exchanged a good key yet.</p>
+<p><strong>Fix:</strong></p>
+<ol>
+<li>On <strong>both</strong> devices, <strong>forget / remove</strong> the other node.</li>
+<li>Bring the nodes back into range and let them re-exchange node info.</li>
+<li>Wait for the <strong>green lock</strong> icon to appear next to the node. That means the key handshake succeeded and DMs will work.</li>
+</ol>
+<h3 id="possible-impersonation-key-warning">"Possible impersonation" / key warning</h3>
+<p>This warning means a node is presenting <strong>low-entropy or duplicate keys</strong>, usually from very old firmware that generated weak keys.</p>
+<p><strong>Fix:</strong> on the affected node, <strong>regenerate its keys</strong> (flash current firmware and let it create fresh keys, or use the app's key-regeneration option). Then re-exchange node info so both sides record the new, unique key.</p>
+<hr>
+<h2 id="still-need-help">Still need help?</h2>
+<p>The community is friendly and fast. Start a thread in <strong>#i-need-help</strong> with your device, firmware version, and what you've already tried.</p>
+<p><a class="md-button md-button--primary" href="https://discord.gg/HrKtyuFEQk"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"></path></svg></span> Join the Discord</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Arizona Meshtastic Community &nbsp;·&nbsp; <a href="/accessibility.html">Accessibility</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy Policy</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/HrKtyuFEQk" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ArizonaMeshtasticCommunity" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/js/nodeData.js"></script>
+      
+        <script src="../assets/js/a11y.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
