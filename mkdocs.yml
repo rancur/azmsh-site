@@ -38,20 +38,22 @@ nav:
   - How To Test: docs/how-to-test.md
   - FAQ & Troubleshooting: docs/faq.md
   - Recommended Hardware: docs/recommended-hardware.md
-  - Recommended Settings: docs/recommended-settings.md
+  - Additional Settings: docs/additional-settings.md
   - Suggested Channels: docs/suggested_channels.md
   - Host a Node: docs/host-a-node.md
   - Reach Out: reach_out.md
 
 # Pages intentionally kept out of the top nav.
 # Redirect stubs (meta-refresh) so old and external links never 404:
-#   how-to-connect -> folded into Start Here
-#   what-now       -> renamed to How To Test
+#   how-to-connect       -> folded into Start Here
+#   what-now             -> renamed to How To Test
+#   recommended-settings -> superseded by Additional Settings
 # wismesh-repeater-mini-1w is a deep build guide linked from Recommended
 # Hardware; accessibility and privacy are linked from the footer.
 not_in_nav: |
   /docs/how-to-connect.md
   /docs/what-now.md
+  /docs/recommended-settings.md
   /docs/wismesh-repeater-mini-1w.md
   /accessibility.md
   /privacy.md
@@ -81,7 +83,7 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css # Accessibility (WCAG AA contrast) overrides
-  - assets/css/discord-gate.css # Discord-gated settings boxes on Start Here
+  - assets/css/discord-gate.css # Discord-gated settings boxes
 
 extra_javascript:
   - assets/js/nodeData.js # Node Info

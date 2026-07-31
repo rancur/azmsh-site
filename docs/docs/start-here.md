@@ -7,7 +7,7 @@ description: The first 30 minutes on the Arizona mesh. A single, in-order guide 
 
 # Start Here: Your First 30 Minutes
 
-New to the Arizona mesh? This is the page to get going. Follow the steps **in order, top to bottom** (don't skip ahead). By the end you'll have a working node, the right Arizona settings, and proof that the mesh can hear you. Once you're connected and want to fine-tune your node, the deeper settings reference (roles, broadcast intervals, MQTT) lives on [Recommended Settings](recommended-settings.md).
+New to the Arizona mesh? This is the page to get going. Follow the steps **in order, top to bottom** (don't skip ahead). By the end you'll have a working node, the right Arizona settings, and proof that the mesh can hear you. Once you're connected and want to fine-tune your node, the deeper settings reference (roles, broadcast intervals, MQTT) lives on [Additional Settings](additional-settings.md).
 
 !!! info "What you need before you begin"
     - A Meshtastic radio. Don't have one? See [Recommended Hardware](recommended-hardware.md). You can get on the mesh for about $30.
@@ -102,7 +102,7 @@ Want the extra Arizona community channels (azmsh, Weather, Traffic, Trivia)? Tho
 
 ## Step 5: (Optional) Turn on MQTT for the map
 
-MQTT puts your node on the community map and shares diagnostics. It does **not** carry your text messages. The full MQTT walkthrough, including the broker details, is on [Recommended Settings → MQTT](recommended-settings.md#mqtt).
+MQTT puts your node on the community map and shares diagnostics. It does **not** carry your text messages. The full MQTT walkthrough, including the broker details, is on [Additional Settings → MQTT](additional-settings.md#mqtt).
 
 ---
 
@@ -130,5 +130,5 @@ This is the moment of truth.
 - :material-test-tube: **Test your setup / see yourself on the map** → [How To Test](how-to-test.md)
 - :material-help-circle: **Can't send / no acks / "Max Transmission Reached"?** → [FAQ → I can receive, but I can't send](faq.md#cant-send)
 - :material-radio-tower: **Add community channels** → [Suggested Channels](suggested_channels.md)
-- :material-tune: **Tune your node (roles, intervals, MQTT)** → [Recommended Settings](recommended-settings.md)
+- :material-tune: **Tune your node (roles, intervals, MQTT)** → [Additional Settings](additional-settings.md)
 - :material-frequently-asked-questions: **Site says "Forbidden", node won't claim, flashing problems** → [FAQ & Troubleshooting](faq.md)

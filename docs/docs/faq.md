@@ -92,7 +92,7 @@ A very common new-user worry: "I can see everyone else's traffic and lots of nod
 **Work through it:**
 
 1. **Look for the acknowledgement in the app first, not in Discord.** A checkmark / "Acknowledged" on your message is the real proof you were heard. `#messages` is a convenience mirror, not the source of truth.
-2. **If you want to see yourself in `#messages`, turn on MQTT.** Enable **"OK to MQTT"** and channel **Uplink**; see [Recommended Settings → MQTT](recommended-settings.md#mqtt). Give it a few minutes.
+2. **If you want to see yourself in `#messages`, turn on MQTT.** Enable **"OK to MQTT"** and channel **Uplink**; see [Additional Settings → MQTT](additional-settings.md#mqtt). Give it a few minutes.
 3. **"I see nodes but no replies" usually means you are heard but your own transmit is weak.** If your messages never get a checkmark, that is the classic receive-works/can't-send problem; work the [I can receive, but I can't send](#cant-send) fix-list (get outside, get high, better antenna).
 4. **Missing *some* messages is normal.** Meshtastic is best-effort radio, not the internet. Distant or busy-channel packets drop sometimes. Getting most traffic means your setup is working.
 
@@ -140,7 +140,7 @@ Trying to flash or configure over USB (Web Flasher, [Web Client](https://client.
 Showing up in the middle of the desert, at 0,0, or not on the map at all? This is a position-data issue, not a connection problem.
 
 - **Rooftop and indoor nodes often never get a GPS fix.** Walls and roofs block GPS just like they block your signal, so a stationary node may report no location or a stale one.
-- **The fix is to set a Fixed Position.** In the app, enable **Fixed Position** and enter your coordinates manually so your node always reports the right spot. Full context and the recommended position intervals are on [Recommended Settings → Broadcast Intervals](recommended-settings.md#broadcast-intervals).
+- **The fix is to set a Fixed Position.** In the app, enable **Fixed Position** and enter your coordinates manually so your node always reports the right spot. Full context and the recommended position intervals are on [Additional Settings → Position](additional-settings.md#position).
 - **Grab your coordinates** from any maps app (long-press your location → copy the latitude/longitude) and paste them in.
 - **Wrong spot from earlier testing?** If you moved the node or set coordinates while testing, update Fixed Position to the real location and **save/send the config**; the map updates after your next position broadcast.
 - **Don't want to publish your exact home location?** You can set Fixed Position to a nearby intersection rather than your doorstep, or leave position broadcast off entirely; you'll still be on the mesh, just without a precise pin.
