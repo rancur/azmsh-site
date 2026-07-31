@@ -20,7 +20,7 @@ Everything that commonly goes wrong, in one place. Already set up and stuck? Jum
 - [Flashing problems: boot loops, blank screen, bricking](#flashing-gotchas)
 - [DM says "No Channel" or shows an impersonation warning](#dm-no-channel)
 
-New here and not set up yet? Start with the [How to Connect](how-to-connect.md) guide; it walks you from an unboxed radio to your first acknowledged message.
+New here and not set up yet? Start with the [Start Here](start-here.md) guide; it walks you from an unboxed radio to your first acknowledged message.
 
 ---
 
@@ -28,10 +28,10 @@ New here and not set up yet? Start with the [How to Connect](how-to-connect.md) 
 
 Missing some messages, or not seeing any traffic come in? Work through this in order.
 
-**1. Recheck every setting first.** The most common cause is a single wrong setting. Go back through the [How to Connect](how-to-connect.md) guide and confirm **all** of them match the Arizona values exactly, nothing more, nothing less:
+**1. Recheck every setting first.** The most common cause is a single wrong setting. Go back through the [Start Here](start-here.md) guide and confirm **all** of them match the Arizona values exactly, nothing more, nothing less:
 
-- **Region**, **Preset**, and especially the **Frequency Slot** (the [#1 missed setting](how-to-connect.md#step-4-join-the-discord-for-arizona-settings); leaving it on `0`/auto puts you on the wrong frequency).
-- Your **primary channel name + key**, copied exactly. A [renamed primary channel](how-to-connect.md#step-4-join-the-discord-for-arizona-settings) drops you off the mesh.
+- **Region**, **Preset**, and especially the **Frequency Slot** (the [#1 missed setting](start-here.md#step-3-get-the-arizona-radio-settings-from-discord); leaving it on `0`/auto puts you on the wrong frequency).
+- Your **primary channel name + key**, copied exactly. A [renamed primary channel](start-here.md#step-4-set-up-your-primary-channel) drops you off the mesh.
 
 If you're not receiving a **single** message, it's almost always one of the above. Fix it and test again.
 
@@ -57,7 +57,7 @@ This is by far the most common issue people bring to the community: "I see every
 !!! success "If you receive ANY messages, your settings are already correct"
     Receiving other people's traffic proves your **region, preset, frequency slot, and primary channel** are all set right; the radio is decoding the mesh. So this is **not** a settings problem. It's an **asymmetric RF link**: you can hear a strong, high-up node, but your lower-power signal can't make the trip back. The fix is physical, not in the app.
 
-If you have *never* received a single message, that's a different problem; it's almost always a wrong **Frequency Slot** or a renamed primary channel. Recheck [How to Connect → Step 4](how-to-connect.md#step-4-join-the-discord-for-arizona-settings).
+If you have *never* received a single message, that's a different problem; it's almost always a wrong **Frequency Slot** or a renamed primary channel. Recheck [Start Here → Step 3](start-here.md#step-3-get-the-arizona-radio-settings-from-discord).
 
 ### What "Max Transmission Reached" / no acks actually means
 
@@ -170,7 +170,7 @@ The claim button in Discord sometimes times out, especially if your node hasn't 
 
 **Two requirements before a claim will work:**
 
-1. **Your node must have hit MQTT at least once.** It has to actually appear in the **node-discovery** list before it can be claimed. Turn on MQTT (see [Recommended Settings → MQTT](recommended-settings.md#mqtt)) and give it a few minutes.
+1. **Your node must have hit MQTT at least once.** It has to actually appear in the **node-discovery** list before it can be claimed. Turn on MQTT (see [Start Here, Step 5](start-here.md#step-5-optional-turn-on-mqtt-for-the-map)) and give it a few minutes.
 2. Use the slash command instead of the button if the button keeps failing:
 
     ```
@@ -181,7 +181,7 @@ The claim button in Discord sometimes times out, especially if your node hasn't 
 
 If you still get **"This interaction failed,"** wait a minute and run the slash command again. It's usually a transient timeout, not a permanent error.
 
-The full post-setup walkthrough (claim, opt in, read the map) lives on [What Now?](what-now.md).
+The full post-setup walkthrough (claim, opt in, read the map) lives on [How To Test](how-to-test.md).
 
 ---
 

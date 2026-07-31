@@ -13,6 +13,9 @@ Arizona channel, watch the weather roll in from rooftop stations, keep an eye on
 even play a little trivia. Everything here is shared publicly so anyone in the community can
 hop on.
 
+Not set up yet? Do [Start Here](start-here.md) first. It covers your **primary** channel,
+which is a different thing from the community channels on this page.
+
 !!! tip "Two things to get right"
 
     - **Channel names are case-sensitive.** `Weather` and `weather` are *not* the same channel.
@@ -90,6 +93,14 @@ find the **Channels** editor, add a channel, and enter the **Name** and **Key** 
 Add any of these to join the conversation. Keys are shown in monospace so you can tell them
 apart at a glance (`AQ==` vs `Ww==`). The table scrolls sideways on small screens. Swipe to
 see every column.
+
+!!! note "These are secondary channels. Your primary is set up elsewhere"
+
+    Add these **alongside** your primary channel, not instead of it. The primary channel
+    name and key (plus region, preset, and frequency slot) are coordinated in
+    [Discord](https://discord.gg/HrKtyuFEQk) and covered in
+    [Start Here → Steps 3 and 4](start-here.md#step-3-get-the-arizona-radio-settings-from-discord).
+    Renaming your primary to one of the names below takes you off the mesh.
 
 | Channel Name (case sensitive) | Key | Size (iOS only) | Description |
 |:------------------------------|:----|:----------------|:------------|

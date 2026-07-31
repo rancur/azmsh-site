@@ -213,7 +213,7 @@ The nRF52840 chip flashes by drag-and-drop. No special software, just a web brow
 
 Flashing is not configuring. **Do not skip this part.** Set the node up the same way as every other node on the Arizona mesh:
 
-1. **Follow the [How to Connect](/docs/how-to-connect.html) guide** to pair the node and get it on the mesh.
+1. **Follow the [Start Here](start-here.md) guide** to pair the node and get it on the mesh.
 2. **Apply everything on the [Recommended Settings](/docs/recommended-settings.html) page**. Region, role, channels, and broadcast intervals all live there. Those settings keep the whole Arizona mesh healthy; this guide doesn't repeat them.
 
 ### Settings specific to this build
@@ -293,8 +293,8 @@ Want to go deeper on the RAK 1W kit and its power behavior? **Atlavox** has two 
 
 - [Recommended Hardware](/docs/recommended-hardware.html). See how this stacks up against other rooftop nodes
 - [Recommended Settings](/docs/recommended-settings.html). Full role and interval guidance for the Arizona mesh
-- [How to Connect](/docs/how-to-connect.html). Get your node on the Arizona mesh
-- [What Now?](/docs/what-now.html). Confirm the mesh can actually hear you
+- [Start Here](start-here.md). Get your node on the Arizona mesh
+- [How To Test](how-to-test.md). Confirm the mesh can actually hear you
 
 ---
 

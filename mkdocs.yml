@@ -30,10 +30,12 @@ site_url: https://azmsh.net
 repo_name: azmsh-site
 repo_url: https://github.com/ArizonaMeshtasticCommunity/azmsh-site
 
+# One linear newcomer journey (Home -> Start Here -> How To Test), then the
+# troubleshooting hub, then the reference pages.
 nav:
   - Home: index.md
-  - How to Connect: docs/how-to-connect.md
-  - What Now?: docs/what-now.md
+  - Start Here: docs/start-here.md
+  - How To Test: docs/how-to-test.md
   - FAQ & Troubleshooting: docs/faq.md
   - Recommended Hardware: docs/recommended-hardware.md
   - Recommended Settings: docs/recommended-settings.md
@@ -41,9 +43,16 @@ nav:
   - Host a Node: docs/host-a-node.md
   - Reach Out: reach_out.md
 
-# Accessibility and Privacy Policy are intentionally not in the top nav; they are
-# linked from the footer (see the `copyright` setting below).
+# Pages intentionally kept out of the top nav.
+# Redirect stubs (meta-refresh) so old and external links never 404:
+#   how-to-connect -> folded into Start Here
+#   what-now       -> renamed to How To Test
+# wismesh-repeater-mini-1w is a deep build guide linked from Recommended
+# Hardware; accessibility and privacy are linked from the footer.
 not_in_nav: |
+  /docs/how-to-connect.md
+  /docs/what-now.md
+  /docs/wismesh-repeater-mini-1w.md
   /accessibility.md
   /privacy.md
 
@@ -72,6 +81,7 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css # Accessibility (WCAG AA contrast) overrides
+  - assets/css/discord-gate.css # Discord-gated settings boxes on Start Here
 
 extra_javascript:
   - assets/js/nodeData.js # Node Info

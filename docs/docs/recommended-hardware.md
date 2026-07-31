@@ -12,7 +12,7 @@ New to Meshtastic? Here's what to buy. No monthly fees, no subscriptions. Just a
     **1. A handheld radio**. Carry it with you, pairs with your phone via Bluetooth<br>
     **2. A rooftop/attic node**. Put it up high at your home to keep you connected
 
-    That's it. Buy these two things, follow our [How to Connect](/docs/how-to-connect.html) guide, and you're on the mesh.
+    That's it. Buy these two things, follow our [Start Here](start-here.md) guide, and you're on the mesh.
 
 ---
 
@@ -404,7 +404,7 @@ For most Arizona rooftop nodes, an **omnidirectional fiberglass antenna** is the
 
 #### Next Steps
 
-- [How to Connect](/docs/how-to-connect.html). Set up your new radio and join the Arizona mesh
+- [Start Here](start-here.md). Set up your new radio and join the Arizona mesh
 - [Recommended Settings](/docs/recommended-settings.html). Configure your node for the Arizona network
 - [Official Meshtastic Hardware List](https://meshtastic.org/docs/hardware/devices/)
 - [Meshtastic Getting Started Guide](https://meshtastic.org/docs/getting-started/)
