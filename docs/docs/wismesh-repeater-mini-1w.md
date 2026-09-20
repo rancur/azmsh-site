@@ -7,7 +7,7 @@ description: A complete, beginner-friendly build guide for the WisMesh Repeater 
 
 # :material-tools: WisMesh Repeater Mini 1W. Solar Build Guide
 
-A complete, step-by-step guide to building a **1 watt (30 dBm) solar-powered rooftop node** that runs itself off the sun, 24/7. This is our **#1 recommended rooftop node**. And you don't need to solder a single thing to build it.
+A complete, step-by-step guide to building a **1 watt (30 dBm) solar-powered rooftop node** that runs itself off the sun, 24/7. This is our **recommended build-it-yourself rooftop node**. And you don't need to solder a single thing to build it.
 
 <figure style="margin: 0 auto; max-width: 420px;">
   <a href="../assets/images/wismesh-mini-1w-mast-mounted.jpg" class="glightbox" data-description="Finished WisMesh Repeater Mini 1W mounted vertically on a 10 ft mast with the Alfa 5.8 dBi whip antenna pointing up, secured with hose clamps. Build and photo by prayingmedic.">
@@ -31,7 +31,7 @@ You're putting a **RAK 1 Watt LoRa Booster board** inside the **solar enclosure 
 - **Runs itself off the sun.** The nRF52840 chip sips power, so the enclosure's small solar panel keeps the battery topped up and the node alive around the clock.
 - **Is legal at full power** when paired with the recommended 5.8 dBi antenna (more on the math below).
 
-**Why this build?** Our previous #1 rooftop pick, the Station G2, is **sold out and very hard to get**. This build delivers serious range and a self-sustaining solar node for around **$100-150 in parts**. And it's genuinely easy to put together.
+**Why this build?** We don't recommend any fixed node under **1 watt** any more, and almost every off-the-shelf solar node transmits at 22 dBm (0.16 W). See [Don't go below 1 watt](/docs/recommended-hardware.html#why-1-watt) for the reasoning. If you'd rather buy a 1W solar node fully assembled, get a [PeakMesh 1W](/docs/recommended-hardware.html#peakmesh-1w) instead. This build is for people who want to put it together themselves: serious range, self-sustaining on solar, around **$100-150 in parts**, and genuinely easy to assemble.
 
 !!! info "Arizona note"
     Solar nodes shine here. Pun intended. Just remember Arizona's extremes: 115F+ heat, intense UV, and monsoon storms. This enclosure is weatherproof, and prayingmedic's testing (below) shows it holds charge well even mounted in the worst-case orientation.

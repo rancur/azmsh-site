@@ -52,7 +52,7 @@ Make sure every setting on the [Recommended Settings](/docs/recommended-settings
 
 ### Still receiving or transmitting unreliably?
 
-A lot of solar and battery-powered nodes transmit at very low wattage: **0.05W to 0.5W**. If you've tried every location, gotten your node as high as possible, and confirmed your settings, it might be time to look at the **1W and higher** options on our [Recommended Hardware](/docs/recommended-hardware.html) page.
+A lot of solar and battery-powered nodes transmit at very low wattage: **0.05W to 0.5W**. If you've tried every location, gotten your node as high as possible, and confirmed your settings, it's probably the radio. We no longer recommend **any** fixed node under **1 watt (30 dBm)**, and once people get a 1W radio on the roof these problems mostly disappear. See [Don't go below 1 watt](/docs/recommended-hardware.html#why-1-watt) and pick one of the three rooftop options there.
 
 A better antenna is often the **single biggest** improvement you can make before upgrading the radio itself.
 
