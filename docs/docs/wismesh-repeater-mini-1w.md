@@ -31,7 +31,7 @@ You're putting a **RAK 1 Watt LoRa Booster board** inside the **solar enclosure 
 - **Runs itself off the sun.** The nRF52840 chip sips power, so the enclosure's small solar panel keeps the battery topped up and the node alive around the clock.
 - **Is legal at full power** when paired with the recommended 5.8 dBi antenna (more on the math below).
 
-**Why this build?** We don't recommend any fixed node under **1 watt** any more, and almost every off-the-shelf solar node transmits at 22 dBm (0.16 W). See [Don't go below 1 watt](/docs/recommended-hardware.html#why-1-watt) for the reasoning. If you'd rather buy a 1W solar node fully assembled, get a [PeakMesh 1W](/docs/recommended-hardware.html#peakmesh-1w) instead. This build is for people who want to put it together themselves: serious range, self-sustaining on solar, around **$100-150 in parts**, and genuinely easy to assemble.
+**Why this build?** We don't recommend any fixed node under **1 watt** any more, and almost every off-the-shelf solar node transmits at 22 dBm (0.16 W). See [Get at least 1 watt](/docs/recommended-hardware.html#why-1-watt) for the reasoning. If you'd rather buy a 1W solar node fully assembled, get a [PeakMesh 1W](/docs/recommended-hardware.html#peakmesh-1w) instead. This build is for people who want to put it together themselves: serious range, self-sustaining on solar, around **$100-150 in parts**, and genuinely easy to assemble.
 
 !!! info "Arizona note"
     Solar nodes shine here. Pun intended. Just remember Arizona's extremes: 115F+ heat, intense UV, and monsoon storms. This enclosure is weatherproof, and prayingmedic's testing (below) shows it holds charge well even mounted in the worst-case orientation.
